@@ -1,0 +1,663 @@
+/* ==================================================
+  FOOTER BASE
+  全体構造とカードデザイン
+===================================================== */
+.footer {
+  margin-top: 60px;
+  padding-top: 60px;
+  font-family: var(--font-base);
+  color: var(--color-text);
+  background-color: #fff;
+  position: relative;
+}
+
+.cv-visual{
+  width: 165px;
+  height: 190px;
+  position: absolute;
+  top: -200px;
+  left: 50%;
+  margin-left: -200px;
+  @include mobile-fablet{
+    width: 83px;
+    height: 95px;
+    top: -120px;
+    left: 50%;
+    margin-left: -150px;
+  }
+}
+
+
+.cv-container{
+  text-align: center;
+  padding-bottom: 70px;
+}
+
+.cv-caption{
+  margin: 0 auto 40px;
+  display: inline-block;
+  position: relative;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.ticker-link {
+  width: 100%;
+  padding-bottom: 20px;
+  margin-bottom: 60px;
+  overflow: hidden;
+  display: block;
+  background-color: #FFE588;
+  @include mobile-fablet{
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+  }
+}
+
+.ticker-wrapper {
+  display: flex;
+  width: max-content;
+  /* 初期位置をマイナス100%（画面外左）に設定し、右へ流す準備をする */
+  transform: translateX(-50%); 
+}
+
+.ticker-group {
+  display: flex;
+  flex-shrink: 0;
+  /* ご指定の向き：左から右へ */
+  animation: ticker-loop 30s linear infinite;
+}
+
+@keyframes ticker-loop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    /* 1つのグループ分だけ右にずれたら 0% に戻る */
+    transform: translateX(100%);
+  }
+}
+
+/* ホバー時に減速して止まる演出 */
+.ticker-link:hover .ticker-group {
+  animation-play-state: paused;
+}
+
+/* --- 滑らかなバウンズ (Bounce) --- */
+.ticker-item {
+  display: flex;
+  align-items: center;
+  padding-right: 40px;
+  font-family: "Lato", sans-serif;
+  font-size: 110px;
+  font-weight: 900;
+  color: #000 !important;
+  text-decoration: none;
+  position: relative;
+  //transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  will-change: transform; /* アニメーションのガタつき防止 */
+  @include mobile-fablet{
+    font-size: 55px;
+  }
+}
+
+.ticker-item:hover {
+  /* 1.1倍に拡大しつつ、少しだけ角度をつけるのが「こなれ感」のコツ */
+  transform: scale(1.12) translateY(-5px) rotate(-1deg);
+  z-index: 10;
+}
+
+/* ENTRY文字の重なり（袋文字） */
+.ticker-item::before {
+  content: "ENTRY";
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  color: #fff;
+  -webkit-text-stroke: 4px #000;
+  z-index: -1;
+  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  @include mobile-fablet{
+    top: 3px;
+    left: 3px;
+  }
+}
+
+/* ホバー時に後ろの黒文字（本体）と少しズレることで立体感を強調 */
+.ticker-item:hover::before {
+  transform: translate(6px, 6px);
+}
+
+/* 矢印の円 */
+.arrow-circle {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  font-size: 42px;
+  margin-left: 20px;
+  margin-top: 15px;
+  background-color: #fff;
+  border: 4px solid #000;
+  border-radius: 50%;
+  //box-shadow: 6px 6px 0px #000;
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  @include mobile-fablet{
+    width: 40px;
+    height: 40px;
+    font-size: 21px;
+    border: 2px solid #000;
+  }
+}
+
+.ticker-item:hover .arrow-circle {
+  transform: scale(1.1) translateY(-5px) rotate(-1deg);
+  box-shadow: 8px 8px 0px #000;
+}
+
+
+.footer-main-card {
+  background-color: #F2F2F2;
+  margin: 0;
+  border-radius: 80px 80px 0 0;
+  padding: 100px 60px 40px;
+  display: block;
+  @include mobile-fablet{
+    padding: 60px 40px;
+  }
+}
+
+.footer-content {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 280px 1fr 1fr;
+  gap: 60px;
+  padding-bottom: 60px;
+  @include mobile-fablet{
+    gap: 0;
+    padding-bottom: 0;
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==================================================
+  LINK STYLES
+  共通のリンク・リスト設定
+===================================================== */
+
+/* アイコン付きリンクの共通設定 */
+.quick-links a,
+.sub-links a,
+.footer-bottom a {
+  display: flex;
+  align-items: center;
+}
+
+/* FontAwesomeアイコンの色設定 */
+.quick-links i,
+.footer-outer .sub-links i,
+.footer-bottom i {
+  font-size: 10px;
+  margin-right: 8px;
+  color: var(--color-green);
+}
+
+/* 下部リンクのアイコンは少し控えめな色に */
+.sub-links i,
+.footer-bottom i {
+  color: #ccc;
+}
+
+/* ==================================================
+  LEFT COLUMN
+  ロゴ・住所・LINEバナー
+===================================================== */
+@include mobile-fablet{
+  .footer-info {
+    text-align: center;
+  }
+}
+.footer-info h2 {
+  margin-bottom: 35px;
+  @include mobile-fablet{
+    a{
+      display: block;
+      margin: 0 auto;
+      width: 200px;
+    }
+  }
+}
+
+.footer-info address {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  color: var(--color-sub-text);
+}
+
+.quick-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px 10px;
+  margin-bottom: 40px !important;
+}
+
+.quick-links a {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+footer .line-banner img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+/* ==================================================
+  NAVIGATION
+  各ナビゲーションブロック
+===================================================== */
+.nav-group {
+  border-top:#ddd solid 1px;
+  padding-top: 20px;
+  margin-bottom: 35px;
+}
+
+.nav-heading {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.nav-heading a {
+  display: flex;
+  align-items: center;
+}
+
+/* 見出し横の丸アイコン */
+.nav-heading a::before {
+  content: "\f054";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 10px;
+  color: #fff;
+  background-color: var(--color-green);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  padding-left:0;
+  flex-shrink: 0;
+}
+
+/* 通常のリスト項目 */
+.footer-nav ul li {
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: var(--color-sub-text);
+}
+@media (max-width: 768px) {
+  .footer-nav ul{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .footer-nav ul li{
+    width: 50%;
+    font-size: 13px;
+  }
+  .is-text-small{
+    font-size: 8px;
+  }
+}
+
+/* ==================================================
+  DEPARTMENT LIST
+  学科紹介（dl, dt, dd）
+===================================================== */
+@media (max-width: 768px) {
+  .dept-list{
+    display: block;
+  }
+}
+
+.dept-list dl {
+  margin-bottom: 20px;
+  font-size: 13px;
+}
+@include mobile-fablet{
+  .dept-list dl::after{ content: ""; clear: both;	height: 0; display: block; visibility: hidden; }
+}
+
+
+.dept-list dt {
+  font-weight: 700;
+  margin-bottom: 5px;
+  @include mobile-fablet{
+   width: 100%; 
+  }
+}
+
+.dept-list dd {
+  margin: 3px 0;
+  color: var(--color-sub-text);
+  line-height: 1.7;
+  @include mobile-fablet{
+    float: left;
+    width: 50%;
+  }
+}
+
+/* ==================================================
+  BOTTOM AREA
+  サブリンク・グループ校・コピーライト
+===================================================== */
+.footer-bottom {
+  padding: 40px 0;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  @include mobile-fablet{
+    flex-direction: column;
+  }
+}
+
+.footer-bottom p {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0 50px 0 0;
+  text-align: center;
+  @include mobile-fablet{
+    width: 100%;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+}
+
+.footer-bottom ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px 30px;
+  @include mobile-fablet{
+    display: block;
+    li{
+      margin: 8px 0;
+    }
+  }
+}
+
+.footer-bottom a {
+  font-size: 14px;
+  color: var(--color-sub-text);
+}
+
+.copyright {
+  text-align: center;
+  padding: 30px 0;
+  color: #888;
+  font-size: 12px;
+}
+
+.footer__group-warp{
+  width: 100%;
+  background-image: url(../images/common/footer_group_wrap.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-size: cover;
+  margin: 0 auto;
+  padding: 150px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+.footer__group-warp::before{
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.5);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* タイトル（学校法人平松学園グループ校） */
+.footer__group-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  margin: 0;
+  z-index: 2;
+}
+
+/* ナビゲーションコンテナ */
+.footer__nav {
+  width: 100%;
+  z-index: 2;
+}
+
+/* リスト（横並びのコントロール） */
+.footer__nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap; /* 画面幅が狭まった時に自動で折り返す */
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+/* リストアイテム（li） */
+.footer__nav-list li {
+  display: inline-block;
+}
+
+/* リンクテキスト（すべての a タグに対応） */
+.footer__nav-list a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  display: inline-flex;
+  align-items: center;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+/* 画像にある「＞」の矢印をCSSの擬似要素で完全再現 */
+.footer__nav-list a::before {
+  content: ''; 
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-top: 1.5px solid #ffffff;
+  border-right: 1.5px solid #ffffff;
+  
+  /* 45度回転させて「＞」の形にする */
+  transform: rotate(45deg);
+  margin-right: 10px;
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.3s ease;
+}
+
+/* ホバー時のインタラクション */
+.footer__nav-list a:hover::before {
+  opacity: 1;
+  transform: translateX(4px) rotate(45deg);
+}
+
+
+/* ==========================================================================
+   Footer Bottom Area Styles
+   ========================================================================== */
+
+.footer__bottom {
+  width: 100%;
+  background-color: #000000; /* 画像をベースにした黒背景 */
+  color: #ffffff;
+  padding: 30px 40px;
+  @include mobile-fablet{
+    padding: 30px 40px 100px;
+  }
+}
+
+.footer__bottom-inner {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between; /* 左右に綺麗に振り分ける */
+  align-items: flex-start;
+  gap: 40px;
+  @include mobile-fablet{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+  }
+}
+
+/* -----------------------------------------
+   左側：情報エリア
+   ----------------------------------------- */
+.footer__info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer__logo-text{
+  width: 250px;
+  height: auto;
+}
+
+.footer__address {
+  font-style: normal;
+  font-size: 0.85rem;
+  color: #cccccc;
+  line-height: 1.6;
+  display: flex;
+  align-items: center;
+  @include mobile-fablet{
+    display: block;
+  }
+}
+
+.footer__zip {
+  margin-right: 8px;
+}
+
+.footer__tel-fax {
+  display: block;
+  margin-left: 15px;
+  @include mobile-fablet{
+    margin-left: 0;
+  }
+}
+
+/* -----------------------------------------
+   右側：リンク・コピーライトエリア
+   ----------------------------------------- */
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  @include mobile-fablet{
+    align-items: flex-start;
+    width: 100%;
+  }
+}
+
+/* 上段：メインナビ（太字・矢印） */
+.footer__main-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 15px;
+  display: flex;
+  gap: 24px;
+  @include mobile-fablet{
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+.footer__main-list a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  transition: opacity 0.3s ease;
+}
+
+/* CSSによるシャープな矢印再現 */
+.footer__main-list a::before {
+  content: '';
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-top: 1.5px solid #ffffff;
+  border-right: 1.5px solid #ffffff;
+  transform: translateX(0) rotate(45deg); /* 初期状態 */
+  margin-right: 8px;
+  opacity: 0.7;
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.3s ease;
+}
+
+.footer__main-list a:hover {
+  opacity: 0.8;
+}
+
+/* 【重要】解決済みの「真横にスッと動く」指定 */
+.footer__main-list a:hover::before {
+  opacity: 1;
+  transform: translateX(4px) rotate(45deg);
+}
+
+/* 下段：サブナビ（細字・下線） */
+.footer__sub-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+  @include mobile-fablet{
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+.footer__sub-list a {
+  color: #cccccc;
+  text-decoration: underline;
+  text-underline-offset: 4px; /* 下線と文字の隙間を上品に空ける */
+  font-size: 0.8rem;
+  transition: color 0.3s ease;
+}
+
+.footer__sub-list a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* コピーライト */
+.footer__copyright {
+  margin: 12px 0 0 0;
+  font-size: 0.75rem;
+  color: #888888;
+  letter-spacing: 0.03em;
+}
+

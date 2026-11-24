@@ -1,0 +1,816 @@
+/* ==========================================================================
+  HEADER BASE STYLE
+========================================================================== */
+.site-header {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  padding: 0;
+  border-bottom: #ddd solid 1px;
+  transition: transform 0.4s ease, background 0.3s ease;
+
+  @include mobile-fablet {
+    position: fixed;
+  }
+}
+.site-header.__top{
+  position: absolute;
+  border-bottom: none;
+}
+
+/* --------------------------------------------------
+  【重要】スクロール固定時の制御スタイル
+  （全体を上から降らせつつ、サブ行を消してスマート化）
+----------------------------------------------------- */
+.site-header.is-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  padding: 8px 0; /* 固定時は少しスリムに */
+  
+  /* 上からスッと出てくるアニメーション */
+  transform: translateY(-100%);
+  animation: slideInDown 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+
+  /* 上段のLINEやアクセスボタンの行を完全非表示に */
+  .header-sub-row {
+    display: none !important;
+  }
+
+  /* 左右のインナー余白を適正化 */
+  .header-inner {
+    padding: 0 0 0 20px;
+  }
+
+  /* 固定時、LINEバナーの角丸を美しく調整 */
+  .line-banner img {
+    border-radius: 10px;
+  }
+
+  /* 固定時、ナビ全体の高さを少し抑える */
+  .pc-nav > ul > li {
+    padding: 10px 24px;
+    
+    > ul {
+      top: 100%; /* 高さが縮んだナビの直下にメガメニューを追従させる */
+    }
+  }
+
+  /* 固定時、学科紹介のワイドメガメニューの上辺位置を適正化 */
+  .pc-nav > ul > li:has(dl) > ul {
+    top: 70px; /* 固定時のヘッダー高さにシンクロ */
+  }
+}
+
+.site-header.is-fixed-out {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  padding: 8px 0;
+  z-index: 9999;
+  
+  /* 上へスライドアウトして消えるアニメーション */
+  transform: translateY(0);
+  animation: slideOutUp 0.3s cubic-bezier(0.55, 0.085, 0.68, 0.53) forwards;
+
+  /* 固定時と同じくサブナビ等は非表示状態をキープして美しく戻す */
+  .header-sub-row { display: none !important; }
+  .header-inner { padding: 0 0 0 20px; }
+  .pc-nav > ul > li { padding: 10px 24px; }
+}
+
+@keyframes slideInDown {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(0); }
+}
+
+/* 💡【新規追加】上部へ引っ込むアニメーション */
+@keyframes slideOutUp {
+  0% { 
+    transform: translateY(0); 
+    position: fixed;
+  }
+  99% {
+    position: fixed; /* アニメーション中、固定をキープ */
+  }
+  100% { 
+    transform: translateY(-100%); 
+    position: relative; /* 完全に隠れたら元のインライン位置へ戻す（瞬間を隠す保険） */
+  }
+}
+
+/* 上からスライドインするキーフレーム */
+@keyframes slideInDown {
+  to { transform: translateY(0); }
+}
+
+/* --------------------------------------------------
+  HEADER INNER ELEMENTS
+----------------------------------------------------- */
+.header-inner {
+  margin: 0 auto;
+  padding: 0 0 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-logo img {
+  height: 60px;
+  width: auto;
+  display: block;
+  @include mobile-fablet{
+    height: 50px;
+  }
+}
+
+.header-nav-area {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/* --------------------------------------------------
+  HEADER SUB ROW (上段案内エリア)
+----------------------------------------------------- */
+.header-sub-row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  top: -5px; /* ネガティブな歪みを防ぐため適正値に調整 */
+
+  .sub-links-bnr {
+    display: flex;
+    align-items: center;
+    gap: 21px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .sub-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    a {
+      text-decoration: none;
+      color: #000000;
+      font-size: 14px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 6px; /* アイコンと文字の間隔 */
+      transition: opacity 0.3s ease;
+
+      &:hover {
+        opacity: 0.7;
+      }
+
+      &::before {
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        content: "";
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+}
+
+.icon-access::before { background-image: url(../images/common/icon_mappin.png); }
+.icon-contact::before { background-image: url(../images/common/icon_mail.png); }
+
+.line-banner img {
+  border-radius: 0 0 0 10px;
+  display: block;
+}
+
+
+/* ==========================================================================
+  PC NAVIGATION & MEGA MENU (デザイン完全対応版)
+========================================================================== */
+.pc-nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  height: 100%;
+
+  /* --- 第1階層（親メニューリスト） --- */
+  > ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+
+    > li.has-sub {
+      position: relative; /* サブメニュー展開の基準点 */
+      padding: 20px 24px;
+      cursor: pointer;
+
+      /* 親項目同士の縦仕切り線（デザイン画像1枚目のグレー縦線） */
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 1px;
+        height: 18px;
+        background-color: #cccccc;
+      }
+
+      &:last-child::after {
+        display: none; /* 最後の要素の右仕切り線は消す */
+      }
+    }
+  }
+}
+
+/* -----------------------------------------
+  1. MAIN LINK & GREEN ARROW (画像1枚目デザイン)
+----------------------------------------- */
+.nav-main-link {
+  text-decoration: none;
+  color: #000000;
+  font-weight: 600;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  letter-spacing: 0.02em;
+  transition: color 0.3s ease;
+
+  /* 緑色の丸型下向き矢印アイコン */
+  .nav-main-arrow {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #c9db5f; /* デザインの鮮やかな黄緑 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.3s ease;
+
+    /* 下向きの小さな矢印 (∨) */
+    &::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-right: 1px solid #000;
+      border-bottom: 1px solid #000;
+      transform: translateY(-1px) rotate(45deg);
+      transition: transform 0.3s ease;
+    }
+  }
+
+  /* ホバー時＆メニュー展開時 */
+  &:hover,
+  .has-sub:hover & {
+    color: #2d6d43; /* 平松グリーン */
+
+    .nav-main-arrow {
+      background-color: #ffda1b; /* ホバー時にアクセントイエローへ変化 */
+      transform: rotate(180deg); /* 180度反転 */
+    }
+  }
+}
+
+/* -----------------------------------------
+  2. DROPDOWN & MEGA MENU BLOCK (画像2枚目デザイン)
+----------------------------------------- */
+.nav-sub-block {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%) translateY(15px);
+  background-color: #ffffff;
+  border: 2px solid #000000; /* デザイン通りの黒太枠 */
+  border-radius: 20px; /* 角丸指定 */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  padding: 20px 28px;
+  z-index: 9900;
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 0.3s ease, visibility 0.3s ease;
+
+  /* ★【上部の短い縦突起線】（デザイン画像2枚目の突き出た突起） */
+  &::before {
+    content: "";
+    position: absolute;
+    top: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 16px;
+    background-color: #000000;
+  }
+
+  /* シングル（通常幅：学校紹介・資格・入学案内など） */
+  &.-single {
+    width: max-content;
+    min-width: 240px;
+  }
+
+  /* メガサイズ（4カラム：学科紹介用） */
+  &.-mega {
+    width: 940px;
+    left: auto;
+    right: -630px; /* 位置を中央寄せ補正 */
+    transform: translateY(15px);
+
+    &::before {
+      left: 230px; /* 親の「学科紹介」の位置に合わせて突起線を調整 */
+    }
+  }
+}
+
+/* ホバー時に滑らかにフェード＆上昇展開 */
+.pc-nav > ul > li.has-sub:hover {
+  .nav-sub-block {
+    opacity: 1;
+    visibility: visible;
+
+    &.-single {
+      transform: translateX(-50%) translateY(0);
+    }
+    &.-mega {
+      transform: translateY(0);
+    }
+  }
+}
+
+/* -----------------------------------------
+  3. SUB MENU CONTENTS & ITEMS
+----------------------------------------- */
+/* サブメニューのトップ見出し（「学校紹介トップ →」など） */
+.nav-sub-ttl {
+  margin: 0 0 13px 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e5e5e5;
+
+  a {
+    font-size: 14px;
+    font-weight: 600;
+    color: #000000;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: #2d6d43;
+    }
+  }
+}
+
+/* 各メニュー項目の丸枠矢印アイコン (→) */
+.nav-link__arrow {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #cccccc;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  transition: all 0.25s ease;
+
+  /* 右向き矢印 (→) */
+  &::before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-top: 1px solid #000;
+    border-right: 1px solid #000;
+    transform: rotate(45deg);
+    margin-left: -2px;
+    transition: border-color 0.25s ease;
+  }
+}
+
+/* ホバー時の矢印丸アイコンのインタラクション */
+a:hover .nav-link__arrow {
+  background-color: #2d6d43;
+  border-color: #2d6d43;
+
+  &::before {
+    border-color: #ffffff; /* 矢印を白へ変化 */
+  }
+}
+
+/* リストアイテム一覧 */
+.nav-sub-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+
+  li a {
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 7px;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: #2d6d43;
+    }
+  }
+}
+
+/* -----------------------------------------
+  4. DEPARTMENT 4-COLUMN GRID (学科紹介メガメニュー)
+----------------------------------------- */
+.nav-dept-grid {
+  display: grid;
+  grid-template-columns: 200px 250px 1fr 1fr;
+  gap: 25px;
+  margin-top: 16px;
+}
+
+.nav-dept-col {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 学科紹介：学校名ヘッダー（黄色のアンダーライン付き） */
+.nav-dept-name {
+  margin: 0 0 12px 0;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #ffda1b; /* 黄色アンダーライン */
+
+  a {
+    font-size: 14px;
+    font-weight: 500;
+    color: #000000;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 1.35;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: #2d6d43;
+    }
+  }
+}
+
+
+
+
+/* ==========================================================================
+  HEADER CONVERSION BUTTONS (ぷっくりデザイン)
+========================================================================== */
+.header-btns {
+  display: flex;
+  gap: 12px;
+  margin-right: 20px;
+}
+
+.btn-oc, .btn-shiryo {
+  padding: 10px 22px;
+  border-radius: 12px;
+  border: 3px solid #000000;
+  font-weight: 900;
+  text-decoration: none;
+  color: #000000;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.btn-oc { 
+  background-color: #e86a92; 
+  &:hover {
+    transform: scale(1.1) rotate(4deg);
+    box-shadow: 2px 2px 0px #000000;
+    background-color: #FFCE1A;
+  }
+}
+
+.btn-shiryo { 
+  background-color: #c9db5f; 
+  &:hover {
+    transform: scale(1.1) rotate(-4deg);
+    box-shadow: 2px 2px 0px #000000;
+  }
+}
+
+
+/* ==========================================================================
+  HAMBURGER & SP NAV (スマホナビ・レスポンシブベース)
+========================================================================== */
+.menu-trigger {
+  display: none; /* 初期は非表示 */
+}
+
+@media (max-width: 1024px) {
+  .site-header {
+    padding: 15px 0;
+    background-color: #ffffff;
+    position: fixed;
+  }
+  .header-inner {
+    padding: 0 10px;
+  }
+  .pc-nav,
+  .header-nav-area {
+    display: none;
+  }
+}
+
+/* --- HAMBURGER MENU TRIGGER --- */
+.menu-trigger {
+  position: relative;
+  width: 40px;   /* クリックしやすいサイズ */
+  height: 40px;
+  cursor: pointer;
+  z-index: 99999; /* 最前面に */
+  left: -15px;
+  top: -4px;
+
+  @media (max-width: 1024px) {
+    display: block; /* スマホ・タブレットで表示 */
+  }
+
+  span {
+    display: block;
+    position: absolute;
+    left: 5px;
+    width: 30px;
+    height: 2px;
+    background-color: #000000;
+    border-radius: 2px;
+    transition: all 0.4s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+
+    &:nth-child(1) { top: 15px; }
+    &:nth-child(2) { top: 25px; }
+  }
+
+  &.active span {
+    &:nth-child(1) { transform: translateY(5px) rotate(-45deg); }
+    &:nth-child(2) { transform: translateY(-5px) rotate(45deg); }
+  }
+}
+
+
+/* ==========================================================================
+  SP NAV ACCORDION & MENU (スマホ専用展開画面)
+========================================================================== */
+.sp-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #ffffff;
+  z-index: 999;
+  transform: translateY(-100%);
+  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  padding: 100px 24px 100px;
+  overflow-y: auto;
+
+  &.open {
+    transform: translateY(0);
+  }
+}
+
+.sp-main-list {
+  list-style: none;
+  margin-bottom: 40px;
+  padding: 0;
+}
+
+/* 親リンクとプラスボタンの配置 */
+.parent-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0;
+  border-bottom: 1px solid #e0e0e0;
+  cursor: pointer;
+
+  span:first-child {
+    font-size: 18px;
+    font-weight: 600;
+    color: #000000;
+  }
+
+  a {
+    padding: 0 !important;
+    border: none !important;
+  }
+}
+
+/* + アイコンパーツ */
+.acc-icon {
+  width: 32px;
+  height: 32px;
+  background-color: #c9db5f; /* デザインの黄緑 */
+  border-radius: 50%;
+  position: relative;
+  border: 1px solid #000000;
+  transition: background-color 0.3s;
+
+  &::before, &::after {
+    content: "";
+    position: absolute;
+    background-color: #000000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &::before { width: 14px; height: 2px; }
+  &::after { width: 2px; height: 14px; transition: 0.3s; }
+}
+
+/* 開いている時のアコーディオン変化 */
+.has-child.active {
+  .acc-icon {
+    background-color: #ffda1b; /* 開いている時は黄色に */
+    &::after {
+      transform: translate(-50%, -50%) rotate(90deg);
+      opacity: 0; /* 縦線を消してマイナスにする */
+    }
+  }
+}
+
+/* --- サブメニュー（初期状態は非表示） --- */
+.sp-sub-menu {
+  display: none; 
+  background-color: #fcfcf5;
+  padding: 10px 20px;
+  list-style: none;
+
+  li a {
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 15px 0;
+    color: #333333;
+    text-decoration: none;
+    border-bottom: 1px solid #eee;
+  }
+}
+
+/* 学科紹介：学校名見出しのスタイル */
+.sp-dept-ttl {
+  font-size: 15px;
+  font-weight: 900;
+  color: #2d6d43; /* 学校カラー */
+  margin: 20px 0 10px;
+  border-left: 4px solid #c9db5f;
+  padding-left: 10px;
+}
+
+.sp-dept-group ul {
+  list-style: none;
+  padding-bottom: 10px;
+  padding-left: 0;
+}
+
+/* --- スマホ用CVボタンエリア (ぷっくりデザイン) --- */
+.sp-nav-btns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 40px;
+
+  @include mobile-fablet {
+    grid-template-columns: 1fr;
+    margin-bottom: 20px;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 64px;
+    font-size: 16px;
+    font-weight: 900;
+    text-decoration: none;
+    color: #000000;
+    border: 3px solid #000000;
+    border-radius: 12px;
+    box-shadow: 0 4px 0 #000000; /* デザインの影 */
+
+    @include mobile-fablet {
+      width: 100%;
+    }
+  }
+}
+
+.sp-btn-oc { background-color: #e86a92; }
+.sp-btn-shiryo { background-color: #c9db5f; }
+
+/* --- LINE & SUB LINKS --- */
+.sp-nav-line {
+  margin-bottom: 40px;
+  img {
+    width: 100%;
+    border-radius: 15px;
+    height: auto;
+    display: block;
+  }
+}
+
+.sp-sub-links {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  list-style: none;
+  padding: 0;
+
+  a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #000000;
+    text-decoration: none;
+  }
+}
+
+
+/* ==========================================================================
+  SIDE OC BUTTON (右側固定追従ボタン)
+========================================================================== */
+.side-oc-btn {
+  position: fixed;
+  right: -3px;
+  top: 50%;
+  transform: translateY(-50%) scale(1);
+  z-index: 999;
+  background-color: #ffda1b;
+  border: 3px solid #000000;
+  padding: 30px 10px 40px;
+  writing-mode: vertical-rl;
+  font-weight: 900;
+  font-size: 15px;
+  border-radius: 15px 0 0 15px;
+  transform-origin: right center;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  backface-visibility: hidden;
+  will-change: transform;
+  text-decoration: none;
+  color: #000000;
+
+  .arrow-circle {
+    width: 19px;
+    height: 19px;
+    font-size: 12px;
+    position: absolute;
+    right: 11px;
+    bottom: 11px;
+    border: 2px solid #000000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &:hover {
+    transform: translateY(-50%) scale(1.2);
+    background-color: #ffffff;
+    box-shadow: 4px 4px 0px #000000;
+  }
+
+  @include mobile-fablet {
+    right: 110px;
+    top: auto;
+    bottom: 33px;
+    width: calc(100% - 140px);
+    writing-mode: horizontal-tb;
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+    transform: none !important; /* 横並び時のブレを防ぐ */
+
+    .arrow-circle {
+      right: 15px;
+    }
+  }
+}

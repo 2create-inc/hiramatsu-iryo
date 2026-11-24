@@ -1,0 +1,324 @@
+/* ==========================================================================
+   CONTACT FORM 7 OPTIMIZED STYLES (お問い合わせフォーム)
+   ========================================================================== */
+.section-contact {
+  width: 100%;
+  padding: 60px 0 100px;
+
+  @include mobile-fablet {
+    padding: 40px 0 60px;
+  }
+}
+
+.section-contact .section__inner{
+  padding: 7.5%;
+  background-color: #F7F7F7;
+  border-radius: 20px;
+}
+
+/* 導入テキスト */
+.contact-lead {
+  margin-bottom: 48px;
+
+  .contact-lead__text {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.8;
+    color: #333333;
+    margin: 0;
+
+    @include mobile-fablet {
+      font-size: 0.875rem;
+      line-height: 1.65;
+    }
+  }
+}
+
+/* フォーム全体コンテナ */
+.contact-form {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  @include mobile-fablet {
+    gap: 24px;
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.form-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+
+  .form-label__title {
+    font-size: 1rem;
+    font-weight: 700; /* ご指示通り上限700 */
+    color: #000000;
+    letter-spacing: 0.02em;
+  }
+
+  .form-label__badge {
+    font-size: 0.725rem;
+    font-weight: 700;
+    color: #ffffff;
+    padding: 3px 10px;
+    border-radius: 6px;
+    letter-spacing: 0.03em;
+    line-height: 1;
+
+    &.-required { background-color: #eb5757; }
+    &.-optional { background-color: #828282; }
+  }
+
+  @include mobile-fablet {
+    .form-label__title { font-size: 0.925rem; }
+    .form-label__badge { font-size: 0.675rem; padding: 2px 8px; }
+  }
+}
+
+/* -----------------------------------------
+   INPUT, SELECT, TEXTAREA BASE STYLES
+   ----------------------------------------- */
+/* CF7の入力要素を包含する span.wpcf7-form-control-wrap の崩れ防止 */
+.wpcf7-form-control-wrap {
+  width: 100%;
+  display: block;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 16px 20px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #000000;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+
+  &::placeholder {
+    color: #bdbdbd;
+    font-weight: 500;
+  }
+
+  /* 💡 フォーカス時の平松グリーン枠 ＋ エレガントシャドウ */
+  &:focus {
+    border-color: #2d6d43;
+    box-shadow: 0 0 0 3px rgba(45, 109, 67, 0.12);
+  }
+
+  @include mobile-fablet {
+    padding: 12px 16px;
+    font-size: 0.875rem;
+    border-radius: 8px;
+  }
+}
+
+/* カスタムセレクト矢印 */
+.form-select-wrap {
+  position: relative;
+  width: 50%;
+  @include mobile-fablet{
+    width: 100%;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-70%) rotate(45deg);
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid #333333;
+    border-bottom: 2px solid #333333;
+    pointer-events: none;
+  }
+
+  .form-select {
+    appearance: none;
+    cursor: pointer;
+    padding-right: 48px;
+  }
+}
+
+.form-address-block {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-zip-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  .prefix {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #333333;
+  }
+
+  .form-input.-zip {
+    max-width: 240px;
+
+    @include mobile-fablet {
+      max-width: 180px;
+    }
+  }
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 160px;
+  line-height: 1.6;
+}
+
+/* -----------------------------------------
+   CF7 ACCEPTANCE CHECKBOX (同意チェックボックス)
+   ----------------------------------------- */
+.form-submit-block {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.form-privacy-note {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #333333;
+  margin: 0;
+  text-align: center;
+
+  a {
+    color: #333333;
+    font-weight: 700;
+    text-decoration: underline;
+
+    &:hover { color: #2d6d43; }
+  }
+}
+
+/* CF7 [acceptance] の独自のHTML構造に合わせたチェックボックス装飾 */
+.form-agree-wrap {
+  .wpcf7-acceptance .wpcf7-list-item-label {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #000000;
+    cursor: pointer;
+  }
+
+  input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #2d6d43; /* 平松グリーン */
+    margin-right: 8px;
+    cursor: pointer;
+    vertical-align: sub;
+  }
+}
+
+/* -----------------------------------------
+   CF7 SUBMIT BUTTON (コンテナラッパー構造で完璧再現)
+   ----------------------------------------- */
+.contact-submit-btn-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+
+  /* 💡 ラッパーの ::after で右端の「白丸内黒矢印 (→)」を描画 */
+  &::after {
+    content: "";
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 28px;
+    height: 28px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    pointer-events: none;
+    transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+    
+    /* 矢印の先端 */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Cpath fill='none' stroke='%23000' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' d='M2 1l3 3-3 3'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  /* 💡 ラッパーホバー時に中の丸矢印を右へ4pxスライド */
+  &:hover::after {
+    transform: translateY(-50%) translateX(4px);
+  }
+
+  @include mobile-fablet {
+    max-width: 100%;
+  }
+}
+
+/* CF7の [submit] ボタン本体 */
+.contact-submit-btn {
+  width: 100%;
+  height: 60px;
+  background-color: #c5dc68; /* アクセントライムグリーン */
+  border: none;
+  border-radius: 8px;
+  font-size: 1.05rem;
+  font-weight: 700; /* 上限700 */
+  color: #000000;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  padding: 0 48px 0 32px;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s ease;
+  appearance: none;
+  -webkit-appearance: none;
+
+  &:hover {
+    background-color: #b7ce59;
+  }
+
+  @include mobile-fablet {
+    height: 52px;
+    font-size: 0.95rem;
+  }
+}
+
+/* -----------------------------------------
+   CF7 ERROR / SUCCESS MESSAGE STYLES (エラー表示補正)
+   ----------------------------------------- */
+.wpcf7-not-valid-tip {
+  color: #eb5757;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-top: 6px;
+}
+
+.wpcf7-response-output {
+  margin: 20px 0 0 0 !important;
+  padding: 16px !important;
+  border-radius: 12px !important;
+  font-size: 0.9rem !important;
+  font-weight: 700 !important;
+  text-align: center;
+  border: 2px solid #2d6d43 !important;
+  background-color: #f7f9f7 !important;
+  color: #2d6d43 !important;
+}

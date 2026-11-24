@@ -1,0 +1,1460 @@
+/* ==========================================================================
+   ABOUT SCHOOL SECTION (どんな学校？エリア)
+   ========================================================================== */
+
+.section-about-school {
+  width: 100%;
+  padding: 80px 20px;
+  background-color: #ffffff;
+  @include mobile-fablet{
+    padding: 20px 0;
+  }
+}
+
+
+/* -----------------------------------------
+   CARD LIST LAYOUT (グリッドシステム)
+   ----------------------------------------- */
+.about-card-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  /* PC時はきれいな2カラム */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 48px 40px; /* 縦の隙間: 48px / 横の隙間: 40px */
+
+  @include mobile-fablet{
+    grid-template-columns: 1fr; /* スマホ時は1カラムに */
+    gap: 32px 0;
+  }
+}
+
+/* 5番目のカード（奇数）を1カラムの幅いっぱいにしないためのデザイン処理 */
+.about-card-list__item {
+  &:nth-child(5) {
+    /* PC表示の際、5枚目だけ左側に寄せ、右側を空けて画像と同じバランスに */
+    grid-column: 1 / 2;
+    
+    @include mobile-fablet{
+      grid-column: auto;
+    }
+  }
+}
+
+/* -----------------------------------------
+   CARD COMPONENT & MOTION (リンク・ホバー演出)
+   ----------------------------------------- */
+.about-card-link {
+  display: block;
+  text-decoration: none;
+  color: #000000;
+  width: 100%;
+}
+
+.about-card-link__img-wrap {
+  width: 100%;
+  /*aspect-ratio: 16 / 9;  画像の比率をきれいに維持 */
+  aspect-ratio: 31 / 14;
+
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  background-color: #f5f5f5;
+  
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+}
+
+/* テキストと矢印を包むエリア */
+.about-card-link__body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4px;
+}
+
+/* カード見出し */
+.about-card-link__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 0.02em;
+  
+  .pdf-label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-left: 6px;
+    color: #666666;
+  }
+
+  @include mobile-fablet{
+    font-size: 1.1rem;
+  }
+}
+
+/* -----------------------------------------
+   ABOUT CARD LINK - ARROW & HOVER MOTION
+   ----------------------------------------- */
+/* カード全体（親要素） */
+.about-card-link {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: #000000;
+  height: 100%;
+
+  /* 💡 カードホバー時に矢印を連動スライド＆カラーシフト */
+  &:hover {
+    /* サムネイル画像の拡大（既存モーションとの調和） */
+    .about-card-link__img-wrap img {
+      transform: scale(1.03);
+    }
+
+    /* 矢印の右スライド ＋ カラー反転 */
+    .about-card-link__arrow {
+      transform: translateX(5px);
+      border-color: #2d6d43;       /* 平松グリーン */
+      background-color: #2d6d43;
+
+      &::before {
+        background-color: #ffffff; /* 横棒を白へ */
+      }
+      &::after {
+        border-color: #ffffff;     /* くの字先端を白へ */
+      }
+    }
+  }
+}
+
+/* 矢印の丸枠ベース */
+.about-card-link__arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;            /* カードのサイズ感に合わせて40pxに最適化（PC時） */
+  height: 50px;
+  border: 1px solid #dcdcdc;
+  background-color: #ffffff;
+  border-radius: 50%;
+  position: relative;
+  flex-shrink: 0;
+  /* 心地よいスライドイージング */
+  transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1),
+              background-color 0.3s ease,
+              border-color 0.3s ease;
+
+  /* 矢印の水平軸（横棒） */
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 18px;
+    height: 1px;
+    background-color: #000000;
+    transition: background-color 0.3s ease;
+  }
+
+  /* 矢印の先端（くの字） */
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%) rotate(-45deg);
+    width: 9px;
+    height: 9px;
+    border-right: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    transition: border-color 0.3s ease;
+  }
+
+  @include mobile-fablet {
+    width: 32px;
+    height: 32px;
+
+    &::before {
+      width: 12px;
+    }
+    &::after {
+      right: 10px;
+      width: 5px;
+      height: 5px;
+    }
+  }
+}
+
+
+/* ==========================================================================
+   CAMPUSLIFE POINTS STYLE (ジグザグレイアウト)
+   ========================================================================== */
+
+.section-campuslife-school {
+  width: 100%;
+  padding: 100px 20px;
+  background-color: #ffffff;
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    padding: 60px 16px;
+  }
+}
+
+.point-list {
+  display: flex;
+  flex-direction: column;
+  gap: 120px; /* 各POINT間のダイナミックな余白 */
+
+  @media (max-width: 768px) {
+    gap: 60px;
+  }
+}
+
+/* 各POINTアイテムの基本Flex配置 */
+.point-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  width: 100%;
+
+  /* 💡【自動ジグザグ化】偶数番目（POINT 02）の並び順を左右反転させる */
+  &:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  @media (max-width: 960px) {
+    gap: 40px;
+  }
+
+  /* タブレット・スマホ：縦並びにして画像を上に、テキストを下にする */
+  @media (max-width: 768px) {
+    flex-direction: column-reverse !important; /* 偶数奇数関係なく「上が画像、下がテキスト」にする */
+    gap: 24px;
+  }
+}
+
+/* --- テキストブロック --- */
+.point-item__text-block {
+  flex: 1;
+  max-width: 480px;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+  }
+}
+
+/* 数字（背景の巨大文字）とラベルを重ねるエリア */
+.point-item__num-wrap {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  height: 80px;
+  margin-bottom: 16px;
+}
+
+/* 背景に配置される巨大な「01, 02, 03」の数字 */
+.point-item__num {
+  position: absolute;
+  right:0;
+  bottom: -15px;
+  font-size: 150px;
+  font-weight: 900;
+  line-height: 1;
+  color: #f7f7f7;
+  z-index: 1;
+  font-family: var(--font-en);
+  user-select: none;
+}
+
+/* 緑色の「POINT. 01」ラベル */
+.point-item__label {
+  position: relative;
+  z-index: 2;
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: #2d6d43;
+  font-weight: 800;
+  font-family: var(--font-en);
+  letter-spacing: 0.05em;
+  margin-bottom: 8px;
+}
+
+/* 各ポイントの大見出し */
+.point-item__title {
+  font-size: 1.85rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #000000;
+  margin: 0 0 24px 0;
+  letter-spacing: 0.03em;
+
+  br {
+    @media (max-width: 768px) {
+      display: none; /* スマホ時は1行にまとめてスッキリ見せる */
+    }
+  }
+
+  @media (max-width: 960px) {
+    font-size: 1.6rem;
+  }
+  @media (max-width: 768px) {
+    font-size: 1.4rem;
+    margin-bottom: 16px;
+  }
+}
+
+/* 本文 */
+.point-item__description {
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.75;
+  color: #333333;
+  margin: 0;
+  letter-spacing: 0.02em;
+
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+    line-height: 1.65;
+  }
+}
+
+/* --- 画像ブロック --- */
+.point-item__img-block {
+  flex: 1.2; /* テキストより少しだけ画像の方を広くみせる比率 */
+  width: 100%;
+  aspect-ratio: 16 / 10.5; /* 画像の比率を固定 */
+  border-radius: 24px; /* デザイン通りの優しい大きな角丸 */
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.03);
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  @media (max-width: 768px) {
+    flex: none;
+    aspect-ratio: 16 / 10; /* スマホではやや横長にして見やすく */
+    border-radius: 16px;
+  }
+}
+/* ==========================================================================
+   STUDENT VOICE SECTION (在学生のホンネエリア)
+   ========================================================================== */
+
+.section-student-voice {
+  width: 100%;
+  padding: 100px 20px;
+  background-color: #f6f8f8; /* 画像をベースにした非常に淡いグレーベージュの背景 */
+  border-radius: 40px 40px 0 0; /* セクション全体の大きな角丸 */
+
+  @media (max-width: 768px) {
+    padding: 60px 16px;
+    border-radius: 24px;
+  }
+}
+
+/* -----------------------------------------
+   HEADER (左右の手描き風2本線付きタイトル)
+   ----------------------------------------- */
+.voice-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 56px;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    gap: 12px;
+    margin-bottom: 36px;
+  }
+}
+
+.voice-header__title {
+  font-size: 1.85rem;
+  font-weight: 700;
+  line-height: 1.45;
+  color: #000000;
+  letter-spacing: 0.03em;
+  margin: 0;
+
+  .highlight {
+    color: #2d6d43; /* 平松学園のテーマグリーン */
+    font-weight: 800;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 1.35rem;
+  }
+}
+
+/* CSS擬似要素とTransformを駆使し、斜め2本線を完全再現 */
+.voice-header__deco {
+  position: relative;
+  width: 77px;
+  height: 103px;
+  flex-shrink: 0;
+}
+
+
+
+
+/* -----------------------------------------
+   GRID & CARDS (質問カードレイアウト)
+   ----------------------------------------- */
+.voice-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr; /* スマホ時は1カラム */
+    gap: 20px;
+  }
+}
+
+.voice-card {
+  background-color: #ffffff;
+  border-radius: 20px; /* ふっくらとした大きめの角丸 */
+  padding: 40px 32px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.01);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border: 2px solid transparent;
+
+  @media (max-width: 768px) {
+    padding: 30px 20px;
+  }
+}
+
+/* Q1〜Q4の番号ラベル */
+.voice-card__q-num {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #2d6d43; /* 深みのある知的で優しいグリーン */
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  line-height: 1;
+}
+
+/* 質問テキスト */
+.voice-card__question {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.6;
+  color: #000000;
+  margin: 0;
+  letter-spacing: 0.02em;
+
+  @media (max-width: 768px) {
+    font-size: 0.95rem;
+  }
+}
+
+/* ==========================================================================
+   FACILITIES & EQUIPMENT SECTION (施設・設備紹介)
+   ========================================================================== */
+.section-facilities {
+  width: 100%;
+  padding: 80px 20px;
+  background-color: #ffffff;
+}
+
+/* -----------------------------------------
+   GRID SYSTEM (1pxの格子境界線を美しく再現)
+   ----------------------------------------- */
+.facilities-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  border-top: 1px solid #e2e8f0;
+  border-left: 1px solid #e2e8f0;
+  margin-bottom: 56px;
+
+  @media (max-width: 1100px) {
+    grid-template-columns: repeat(2, 1fr); /* 中画面では2列に折り返し */
+  }
+  @media (max-width: 580px) {
+    grid-template-columns: 1fr; /* スマホでは1列に */
+  }
+}
+
+/* -----------------------------------------
+   FACILITIES CARD COMPONENT
+   ----------------------------------------- */
+.facilities-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 24px 20px;
+  background-color: #ffffff;
+  text-decoration: none;
+  color: #000000;
+  position: relative;
+  
+  /* 格子の線を外枠のみ重ねずに表現するCSSトリック */
+  border-right: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+  
+  /* 重なり順と浮き上がる滑らかなtransition */
+  z-index: 1;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, z-index 0s;
+
+  &:hover {
+    background-color: #fcfcf5; /* お馴染みの親しみやすい薄いベージュ */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    z-index: 2; /* 影を綺麗に見せるために重なり順を手前に上げる */
+
+    /* 矢印（↓）をスッと少し下に動かして視線をマップに誘導する */
+    .facilities-card__arrow {
+      transform: translateY(3px);
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 20px 16px;
+  }
+}
+
+/* アイコン：学科ごとの優しいテーマカラーをここで定義（Sass変数風） */
+.facilities-card__icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px; /* ぷっくり角丸 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+  }
+}
+
+/* 各学科のパステルカラー背景（デザインデータに合わせて微調整してください） */
+.facilities-card.-lab .facilities-card__icon { background-color: #f2f7e7; }  /* 臨床検査：黄緑 */
+.facilities-card.-eng .facilities-card__icon { background-color: #fde8e8; }  /* 臨床工学：赤・桃 */
+.facilities-card.-opt .facilities-card__icon { background-color: #e3effd; }  /* 視能訓練：青 */
+.facilities-card.-pt .facilities-card__icon { background-color: #fdf0df; }   /* 理学療法：オレンジ */
+.facilities-card.-ot .facilities-card__icon { background-color: #eaf6ee; }   /* 作業療法：緑 */
+.facilities-card.-st .facilities-card__icon { background-color: #fef0f4; }   /* 言語聴覚：ピンク */
+.facilities-card.-judo .facilities-card__icon { background-color: #f5f0fb; } /* 柔道整復：紫 */
+.facilities-card.-dh .facilities-card__icon { background-color: #e5f6fd; }   /* 歯科衛生：水色 */
+
+/* テキストコンテナ */
+.facilities-card__text {
+  flex: 1;
+  min-width: 0; /* はみ出し・三点リーダー・折り返しバグ防止 */
+}
+
+/* 学科名 */
+.facilities-card__name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0 0 4px 0;
+  letter-spacing: 0.02em;
+  white-space: nowrap; /* テキストの意図しない折り返しを防ぐ */
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
+}
+
+/* 学校名（サブテキスト） */
+.facilities-card__school {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #718096; /* 落ち着いたグレー */
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /* 横幅が狭まった場合は自動で...にする安全設計 */
+}
+
+/* 矢印（↓）をCSSのボーダーと疑似要素だけでシャープに再現 */
+.facilities-card__arrow {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  display: inline-block;
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+
+  /* 矢印の「軸（縦棒）」 */
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0.5px;
+    height: 12px;
+    background-color: #2d3748; /* 暗いグレー、または黒 */
+  }
+
+  /* 矢印の「先端（Ｖの形）」 */
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    width: 5px;
+    height: 5px;
+    border-right: 1.5px solid #2d3748;
+    border-bottom: 1.5px solid #2d3748;
+  }
+}
+
+/* ==========================================================================
+   FLOOR GUIDE COMPONENT (フロア案内パーツ)
+   ========================================================================== */
+
+.floor-guide {
+  width: 100%;
+  margin: 0 auto;
+  padding: 48px 40px;
+  background-color: #f7f8f8; /* 全体の薄いグレー背景 */
+  border-radius: 24px;
+
+  @include mobile-fablet {
+    padding: 32px 16px;
+    border-radius: 16px;
+  }
+}
+
+/* -----------------------------------------
+   HEADER (学校名・対象学科)
+   ----------------------------------------- */
+.floor-guide__header {
+  text-align: center;
+  margin-bottom: 36px;
+
+  @include mobile-fablet {
+    margin-bottom: 24px;
+  }
+}
+
+.floor-guide__school-name {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: #2d6d43; /* テーマグリーン */
+  letter-spacing: 0.03em;
+  margin: 0 0 8px 0;
+
+  @include mobile-fablet {
+    font-size: 1.35rem;
+  }
+}
+
+.floor-guide__departments {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #333333;
+  margin: 0;
+  letter-spacing: 0.02em;
+
+  @include mobile-fablet {
+    font-size: 0.85rem;
+  }
+}
+
+/* -----------------------------------------
+   BODY (フロア行のリスト)
+   ----------------------------------------- */
+.floor-guide__body {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.floor-guide__body.-one-col{
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* 各フロアの1行 */
+.floor-guide__row {
+  display: flex;
+  align-items: center;
+  padding: 18px 24px;
+  border-bottom: 1px solid #e0e0e0;
+  background-color: transparent;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  /* 偶数行（4F, 2F）を白背景にしてストライプを再現 */
+  &:nth-child(even) {
+    background-color: #ffffff;
+  }
+
+  @include mobile-fablet {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 12px;
+    gap: 12px;
+  }
+}
+
+/* 左側：階数（5F, 4F...） */
+.floor-guide__floor {
+  width: 90px;
+  flex-shrink: 0;
+  font-family: var(--font-en);
+  font-size: 2rem;
+  font-weight: 800;
+  color: #2d6d43;
+  line-height: 1;
+
+  @include mobile-fablet {
+    width: 100%;
+    font-size: 1.6rem;
+    border-bottom: 2px solid #2d6d43;
+    padding-bottom: 4px;
+  }
+}
+
+/* 右側：部屋リスト（横並びで自動折り返し） */
+.floor-guide__room-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px 28px;
+  flex: 1;
+
+  @include mobile-fablet {
+    gap: 12px 16px;
+    width: 100%;
+  }
+}
+
+/* -----------------------------------------
+   ROOM LINK & INTERACTION (部屋名＋↓矢印)
+   ----------------------------------------- */
+.floor-guide__room-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  color: #000000;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  transition: color 0.3s ease;
+
+  /* 部屋名（アンダーライン） */
+  .name {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 1px;
+    transition: text-decoration-color 0.3s ease;
+  }
+
+  /* ↓ 矢印アイコン */
+  .arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), background-color 0.3s ease, color 0.3s ease;
+    position: relative;
+  }
+  /* ホバー時のインタラクション（矢印が少し下に沈んで緑に変化） */
+  &:hover {
+    color: #2d6d43;
+
+    .name {
+      text-decoration-color: #2d6d43;
+    }
+
+    .arrow {
+      transform: translateY(3px);
+      background-color: #2d6d43;
+      color: #ffffff;
+    }
+  }
+
+  @include mobile-fablet {
+    font-size: 0.85rem;
+
+    .arrow {
+      width: 16px;
+      height: 16px;
+      font-size: 0.65rem;
+    }
+  }
+}
+
+
+.floor-guide__room-link .arrow::before{
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 7px;
+    background-color: #000;
+  }
+.floor-guide__room-link .arrow::after {
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    width: 5px;
+    height: 5px;
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+
+.floor-guide__room-link:hover .arrow::before{
+  background-color: #fff;
+}
+.floor-guide__room-link:hover .arrow::after{
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+
+
+
+/* ==========================================================================
+   FLOOR GUIDE - MULTI COLUMN EXTENSION (大分リハビリテーション専門学校用)
+   ========================================================================== */
+
+.floor-guide.-reha {
+  max-width: 1200px; /* 3カラムが見やすくなるよう幅をやや広く調整 */
+
+  /* 3カラムグリッド構造 */
+  .floor-guide__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    align-items: end; /* 1F（下辺）のラインが綺麗に揃うよう下揃えに設定 */
+
+    @include mobile-fablet {
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+  }
+
+  /* 各学科カラム */
+  .floor-guide__col {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  /* フロア枠本体 */
+  .floor-guide__body {
+    background-color: #ffffff;
+    overflow: hidden;
+  }
+
+  /* 各フロア行 */
+  .floor-guide__row {
+    display: flex;
+    align-items: center;
+    padding: 14px 16px;
+    border-bottom: 1px solid #e0e0e0;
+    background-color: #ffffff;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    /* 偶数行（6F, 4F, 2F）をゼブラ柄（灰背景）に設定 */
+    &:nth-child(even) {
+      background-color: #f7f8f8;
+    }
+
+    @include mobile-fablet {
+      padding: 12px 14px;
+    }
+  }
+
+  /* 階数テキスト（5F, 4F...） */
+  .floor-guide__floor {
+    width: 50px;
+    font-size: 1.6rem;
+
+    @include mobile-fablet {
+      width: 45px;
+      font-size: 1.35rem;
+      border-bottom: none; /* 縦並びにならず横並びをキープ */
+      padding-bottom: 0;
+    }
+  }
+
+  /* 室名リストの余白調整 */
+  .floor-guide__room-list {
+    gap: 8px 16px;
+  }
+
+  /* 該当なしフロア（「ー」表示） */
+  .floor-guide__empty {
+    font-size: 0.9rem;
+    color: #a0a0a0;
+    padding-left: 4px;
+  }
+
+  /* 下部の学科名見出し */
+  .floor-guide__col-title {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #000000;
+    text-align: center;
+    margin: 20px 0 0 0;
+    letter-spacing: 0.03em;
+
+    @include mobile-fablet {
+      font-size: 1.1rem;
+      margin-top: 14px;
+    }
+  }
+}
+
+
+/* ==========================================================================
+   FACILITY DETAIL SECTION (各学科の実習室一覧)
+   ========================================================================== */
+
+.section-facility-detail {
+  width: 100%;
+  padding: 60px 20px 100px;
+  background-color: #ffffff;
+}
+
+/* -----------------------------------------
+   HEADER (左側グリーンアンダーバータイトル)
+   ----------------------------------------- */
+.facility-detail-header {
+  border-bottom: 1px solid #e2e8f0; /* 全体のベース細線 */
+  padding-bottom: 16px;
+  margin-bottom: 48px;
+
+  @media (max-width: 768px) {
+    margin-bottom: 32px;
+    padding-bottom: 12px;
+  }
+}
+
+/* -----------------------------------------
+   GRID LAYOUT (美しい3カラム)
+   ----------------------------------------- */
+.facility-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 64px 40px; /* 縦の余白を多め（64px）にとることで窮屈さを排除 */
+  width: 100%;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr); /* タブレット時は2列 */
+    gap: 48px 32px;
+  }
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr; /* スマホ時は1列 */
+    gap: 40px 0;
+  }
+}
+
+/* -----------------------------------------
+   CARD COMPONENT & ZOOM INTERACTION
+   ----------------------------------------- */
+.facility-detail-card {
+  width: 100%;
+}
+
+.facility-detail-card__link {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: #000000;
+  height: 100%;
+
+  /* ホバー時に写真が吸い込まれるようにズームする連動設定 */
+  &:hover {
+    .facility-detail-card__img-wrap img {
+      transform: scale(1.04);
+    }
+    .facility-detail-card__title {
+      color: #2d6d43; /* ホバー時にタイトルをほんのりテーマグリーンに */
+    }
+  }
+}
+
+/* サムネイル画像（大きめのぷっくり角丸） */
+.facility-detail-card__img-wrap {
+  width: 100%;
+  aspect-ratio: 16 / 11; /* デザイン画像をベースにした美しい横長比率 */
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  background-color: #f0f0f0; /* グレーのプレースホルダー */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    /* モーション：滑らかにじわっと拡大縮小させる */
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+
+  @media (max-width: 768px) {
+    border-radius: 16px;
+    margin-bottom: 16px;
+  }
+}
+
+/* カードテキストエリア */
+.facility-detail-card__info {
+  display: flex;
+  flex-direction: column;
+  padding: 0 4px;
+}
+
+/* 階数 ＋ 教室名見出し */
+.facility-detail-card__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin: 0 0 8px 0;
+  letter-spacing: 0.02em;
+  transition: color 0.3s ease;
+
+  /* 階数（1F, 2F, 3F）を少し離してあげる */
+  .floor {
+    margin-right: 6px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 1.15rem;
+  }
+}
+
+/* 使用学科（淡いグレー） */
+.facility-detail-card__dep {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #999999;
+  margin: 0 0 16px 0;
+  letter-spacing: 0.03em;
+
+  @media (max-width: 768px) {
+    margin-bottom: 12px;
+  }
+}
+
+/* 教室の簡単な説明 */
+.facility-detail-card__desc {
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.7;
+  margin: 0;
+  letter-spacing: 0.01em;
+  
+  /* テキストの最後の行を少し整えるための両端揃え */
+  text-align: justify;
+
+  @media (max-width: 768px) {
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+}
+/* ==========================================================================
+   HISTORY SECTION (沿革・タイムライン)
+   ========================================================================== */
+
+.section-history {
+  width: 100%;
+  padding: 100px 20px;
+  background-color: #ffffff;
+}
+
+.history-container {
+  display: flex;
+  flex-direction: column;
+  gap: 120px; /* 年代ブロックごとの余白 */
+
+  @media (max-width: 768px) {
+    gap: 60px;
+  }
+}
+
+/* -----------------------------------------
+   LAYOUT BLOCK (左右分割レイアウト)
+   ----------------------------------------- */
+.history-block {
+  display: flex;
+  align-items: flex-start; /* 上揃え */
+  justify-content: space-between;
+  gap: 60px;
+  width: 100%;
+  position: relative;
+  
+  /* 区切り線（2枚目以降のブロック境界） */
+  &:not(:first-child) {
+    border-top: 1px solid #e2e8f0;
+    padding-top: 80px;
+
+    @media (max-width: 768px) {
+      padding-top: 40px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column; /* スマホ時は縦に並べる */
+    gap: 32px;
+  }
+}
+
+/* --- 左側：固定される巨大年代エリア --- */
+.history-block__year {
+  flex-shrink: 0;
+  width: 240px;
+  /* 💡【アートディレクション】スクロール中、年代が左上に綺麗に追従固定するマジック */
+  position: sticky;
+  top: 120px; /* 固定ヘッダー（約70px〜）に被らないスマートな位置 */
+  z-index: 10;
+
+  @media (max-width: 768px) {
+    position: relative;
+    top: 0;
+    width: 100%;
+  }
+}
+
+.year-range {
+  font-size: 60px;
+  font-weight: 400;
+  color: #2d6d43;
+  line-height: 1.15;
+  margin: 0;
+  font-family: var(--font-en);
+
+  span {
+    font-size: 4rem;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 3.5rem;
+    span { font-size: 3rem; }
+  }
+}
+
+/* --- 右側：タイムラインリスト --- */
+.history-block__timeline {
+  flex: 1;
+  max-width: 800px;
+  width: 100%;
+}
+
+.timeline-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px; /* 年表行ごとの隙間 */
+  margin: 0;
+  padding: 0;
+}
+
+/* タイムラインの1行（年月 ＋ 出来事） */
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  width: 100%;
+
+  @media (max-width: 640px) {
+    flex-direction: column; /* 超小型スマホ用：縦並びにして見やすさ向上 */
+    gap: 6px;
+  }
+}
+
+/* 年月（dt） */
+.timeline-item__date {
+  width: 200px;
+  flex-shrink: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #000000;
+  margin: 0;
+  text-align: right; /* PC時は右寄せにして右列の出来事と近づける */
+
+  span {
+    font-weight: 500;
+    color: #4a5568; /* 元号や月は少し柔らかいグレーに */
+  }
+
+  @media (max-width: 768px) {
+    width: 160px;
+  }
+  @media (max-width: 640px) {
+    width: 100%;
+    text-align: left; /* スマホ時は左寄せ */
+  }
+}
+
+/* 出来事内容（dd） */
+.timeline-item__content {
+  flex: 1;
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.6;
+  color: #000000;
+  margin: 0;
+  position: relative;
+  padding-left: 24px; /* 点（Bullet）を表示するための余白 */
+
+  /* 💡【アートディレクション】タイムラインの目印（グリーンの点）を再現 */
+  &::before {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 0.5em; /* テキストの1行目の高さ中央に吸着 */
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #2d6d43; /* 平松グリーンの点 */
+  }
+
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+  }
+}
+
+/* ==========================================================================
+   FAQ SECTION (よくある質問)
+   ========================================================================== */
+
+.section-faq {
+  width: 100%;
+  padding: 100px 20px;
+  background-color: #ffffff;
+}
+
+
+/* ==========================================================================
+   FAQ ACCORDION COMPONENT (よくある質問パーツ)
+   ========================================================================== */
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  margin: 0 auto 80px;
+
+  @include mobile-fablet {
+    gap: 12px;
+  }
+}
+
+.faq-item {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+  /* 開いている時のカード外枠強調 */
+  &.is-active {
+    border-color: #2d6d43;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  }
+
+  @include mobile-fablet {
+    border-radius: 14px;
+  }
+}
+
+/* -----------------------------------------
+   QUESTION (質問タップエリア)
+   ----------------------------------------- */
+.faq-item__question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 24px 32px;
+  cursor: pointer;
+  user-select: none;
+  margin: 0;
+
+  @include mobile-fablet {
+    padding: 18px 20px;
+    gap: 12px;
+  }
+}
+
+/* 緑色の大きな「Q」アイコン */
+.faq-item__q-icon {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #2d6d43; /* 平松テーマグリーン */
+  line-height: 1;
+  flex-shrink: 0;
+
+  @include mobile-fablet {
+    font-size: 1.5rem;
+  }
+}
+
+/* 質問テキスト */
+.faq-item__q-text {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #000000;
+  line-height: 1.5;
+  flex: 1;
+  letter-spacing: 0.02em;
+
+  @include mobile-fablet {
+    font-size: 0.95rem;
+  }
+}
+
+/* 右側の丸型プラス（＋）アイコン */
+.faq-item__toggle-icon {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  border: 1px solid #dcdcdc;
+  border-radius: 50%;
+  background-color: #ffffff;
+  flex-shrink: 0;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+
+  /* ＋マークの十字線（縦横） */
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: #333333;
+    transform: translate(-50%, -50%);
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 0.3s ease;
+  }
+
+  /* 横線 */
+  &::before {
+    width: 16px;
+    height: 1.5px;
+  }
+
+  /* 縦線 */
+  &::after {
+    width: 1.5px;
+    height: 16px;
+  }
+
+  @include mobile-fablet {
+    width: 36px;
+    height: 36px;
+
+    &::before { width: 12px; }
+    &::after { height: 12px; }
+  }
+}
+
+/* ホバー時の挙動 */
+.faq-item__question:hover {
+  .faq-item__toggle-icon {
+    border-color: #000000;
+  }
+}
+
+/* --- 開いている時のアイコン変化（45度回転させて×にする演出） --- */
+.faq-item.is-active {
+  .faq-item__toggle-icon {
+    border-color: #2d6d43;
+    background-color: #f2f7e7;
+
+    &::before {
+      transform: translate(-50%, -50%) rotate(45deg);
+      background-color: #2d6d43;
+    }
+    &::after {
+      transform: translate(-50%, -50%) rotate(45deg);
+      background-color: #2d6d43;
+    }
+  }
+}
+
+/* -----------------------------------------
+   ANSWER (回答エリア)
+   ----------------------------------------- */
+.faq-item__answer {
+  display: none; /* JSのslideToggle用にデフォルト非表示 */
+  margin: 0;
+  border-top: 1px dashed #e2e8f0;
+  background-color: #fbfcfb;
+}
+
+.faq-item__answer-inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 24px 32px 28px;
+
+  @include mobile-fablet {
+    padding: 18px 20px 22px;
+    gap: 12px;
+  }
+}
+
+/* 回答の「A」アイコン */
+.faq-item__a-icon {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #e86a92; /* アクセントのピンク色 */
+  line-height: 1;
+  flex-shrink: 0;
+
+  @include mobile-fablet {
+    font-size: 1.35rem;
+  }
+}
+
+.faq-item__a-text {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333333;
+  line-height: 1.75;
+  letter-spacing: 0.02em;
+
+  p {
+    margin: 0;
+  }
+
+  @include mobile-fablet {
+    font-size: 0.875rem;
+    line-height: 1.65;
+  }
+}

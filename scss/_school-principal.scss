@@ -1,0 +1,1115 @@
+/* ==========================================================================
+   SCHOOL DETAIL MODULES (学校詳細ページ統合モジュール)
+   ========================================================================== */
+
+/* -----------------------------------------
+   1. COMMON MESSAGE BLOCK (校長 ＆ メッセージ)
+   ----------------------------------------- */
+.section-school-principal,
+.section-school-message {
+  width: 100%;
+  padding: 80px 0;
+
+  @include mobile-fablet {
+    padding: 48px 0;
+  }
+}
+
+.school-principal-container,
+.school-message-container {
+  display: grid;
+  grid-template-columns: 1fr 440px; /* 標準：文章左 / 写真右 */
+  gap: 60px;
+  align-items: center;
+  margin-top: 48px;
+
+  /* 💡 反転モディファイア：写真左 / 文章右 */
+  &.-reverse {
+    grid-template-columns: 440px 1fr;
+
+    @include mobile-desktop {
+      grid-template-columns: 380px 1fr;
+    }
+
+    @include mobile-fablet {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @include mobile-desktop {
+    grid-template-columns: 1fr 380px;
+    gap: 40px;
+  }
+
+  @include mobile-fablet {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    margin-top: 32px;
+  }
+}
+
+/* メッセージ文章領域 */
+.school-principal__content,
+.school-message__content {
+  display: flex;
+  flex-direction: column;
+  min-width: 0; /* Gridはみ出し崩れ防止 */
+}
+
+.school-principal__catch,
+.school-message__catch {
+  font-size: 1.85rem;
+  font-weight: 700; /* 上限700制限 */
+  line-height: 1.4;
+  color: #2d6d43; /* 平松グリーン */
+  margin: 0 0 32px 0;
+  letter-spacing: 0.02em;
+
+  @include mobile-fablet {
+    font-size: 1.45rem;
+    margin-bottom: 24px;
+  }
+}
+
+.school-principal__body,
+.school-message__body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  p {
+    font-size: 0.925rem;
+    font-weight: 500;
+    line-height: 1.85;
+    color: #333333;
+    margin: 0;
+    text-align: justify;
+    letter-spacing: 0.01em;
+  }
+
+  @include mobile-fablet {
+    gap: 16px;
+
+    p {
+      font-size: 0.85rem;
+      line-height: 1.75;
+    }
+  }
+}
+
+/* 写真 ＆ プロフィール領域 */
+.school-principal__profile,
+.school-message__profile {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+}
+
+.school-principal-photo,
+.school-message-photo {
+  width: 100%;
+  margin: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: #f7f8f8;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+
+  @include mobile-fablet {
+    border-radius: 12px;
+  }
+}
+
+.school-principal-info,
+.school-message-info {
+  text-align: center;
+
+  .school-principal-info__title,
+  .school-message-info__title {
+    margin: 0;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 12px;
+
+    .label {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: #555555;
+    }
+
+    .name {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #000000;
+      letter-spacing: 0.05em;
+    }
+  }
+
+  .school-principal-info__sub,
+  .school-message-info__sub {
+    font-size: 0.775rem;
+    font-weight: 500;
+    color: #666666;
+    margin: 6px 0 0 0;
+    letter-spacing: 0.01em;
+    line-height: 1.5;
+  }
+
+  @include mobile-fablet {
+    .school-principal-info__title,
+    .school-message-info__title {
+      gap: 10px;
+
+      .label {
+        font-size: 0.8rem;
+      }
+
+      .name {
+        font-size: 1.2rem;
+      }
+    }
+
+    .school-principal-info__sub,
+    .school-message-info__sub {
+      font-size: 0.725rem;
+    }
+  }
+}
+
+/* -----------------------------------------
+   2. OUTLINE BANNER & FACULTY (概要 ＆ 教員)
+   ----------------------------------------- */
+.section-school-outline {
+  width: 100%;
+  padding: 80px 0 100px;
+
+  @include mobile-fablet {
+    padding: 48px 0 60px;
+  }
+}
+
+.school-outline-banner {
+  width: 100%;
+  min-height: 320px;
+  background-color: #b0b0b0;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  margin-top: 36px;
+
+  .school-outline-banner__txt {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #000000;
+    text-align: center;
+    margin: 0;
+    letter-spacing: 0.02em;
+  }
+
+  @include mobile-fablet {
+    min-height: 220px;
+    padding: 24px;
+    border-radius: 12px;
+    margin-top: 24px;
+
+    .school-outline-banner__txt {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+.school-faculty-block {
+  margin-top: 80px;
+
+  @include mobile-fablet {
+    margin-top: 48px;
+  }
+}
+
+.school-faculty-group {
+  margin-bottom: 64px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include mobile-fablet {
+    margin-bottom: 44px;
+  }
+}
+
+.school-faculty-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px 48px;
+  margin-top: 32px;
+
+  @include mobile-desktop {
+    gap: 32px 32px;
+  }
+
+  @include mobile-fablet {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-top: 20px;
+  }
+}
+
+.school-faculty-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+
+  .school-faculty-card__photo {
+    width: 100%;
+    margin: 0 0 16px 0;
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: #b0b0b0;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      aspect-ratio: 4 / 3;
+    }
+
+    @include mobile-fablet {
+      border-radius: 12px;
+      margin-bottom: 12px;
+    }
+  }
+
+  .school-faculty-card__body {
+    display: flex;
+    flex-direction: column;
+
+    .role {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: #666666;
+      margin: 0 0 4px 0;
+    }
+
+    .name {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #000000;
+      margin: 0 0 12px 0;
+      letter-spacing: 0.02em;
+
+      .honorific {
+        font-size: 0.95rem;
+        font-weight: 500;
+        margin-left: 4px;
+      }
+    }
+
+    .subject-dl {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 12px 0;
+
+      .badge {
+        font-size: 0.725rem;
+        font-weight: 700;
+        color: #2d6d43;
+        border: 1px solid #2d6d43;
+        border-radius: 4px;
+        padding: 2px 8px;
+        flex-shrink: 0;
+        line-height: 1.3;
+      }
+
+      .txt {
+        font-size: 0.825rem;
+        font-weight: 700;
+        color: #333333;
+        margin: 0;
+        line-height: 1.4;
+      }
+    }
+
+    .desc {
+      font-size: 0.875rem;
+      font-weight: 500;
+      line-height: 1.75;
+      color: #444444;
+      margin: 0;
+      text-align: justify;
+    }
+
+    @include mobile-fablet {
+      .name {
+        font-size: 1.15rem;
+
+        .honorific {
+          font-size: 0.875rem;
+        }
+      }
+
+      .subject-dl {
+        align-items: flex-start;
+
+        .badge {
+          margin-top: 1px;
+        }
+
+        .txt {
+          font-size: 0.775rem;
+        }
+      }
+
+      .desc {
+        font-size: 0.825rem;
+        line-height: 1.65;
+      }
+    }
+  }
+}
+
+
+/* ==========================================================================
+   SCHOOL ACCESS SECTION (アクセス セクション)
+   ========================================================================== */
+
+.section-school-school-access,
+.section-school-access {
+  width: 100%;
+  padding: 80px 0 100px;
+
+  @include mobile-fablet {
+    padding: 48px 0 60px;
+  }
+}
+
+.school-access-container {
+  margin-top: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+
+  @include mobile-fablet {
+    margin-top: 24px;
+    gap: 20px;
+  }
+}
+
+/* -----------------------------------------
+   1. MAP CONTAINER (Googleマップ枠)
+   ----------------------------------------- */
+.school-access-map {
+  width: 100%;
+  height: 480px; /* PC時の標準マップ高さ */
+  background-color: #e8ece9; /* マップ読み込み前ダミー色 */
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+
+  iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: none;
+  }
+
+  @include mobile-desktop {
+    height: 400px;
+  }
+
+  @include mobile-fablet {
+    height: 280px;
+    border-radius: 12px;
+  }
+}
+
+/* -----------------------------------------
+   2. ADDRESS INFO (住所・電話番号)
+   ----------------------------------------- */
+.school-access-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  /* 校名 */
+  .school-access-info__name {
+    font-size: 1.15rem;
+    font-weight: 700; /* ご指示通り上限 700 */
+    color: #000000;
+    margin: 0;
+    letter-spacing: 0.02em;
+    line-height: 1.4;
+  }
+
+  /* 住所 ＋ TEL / FAX 横並び */
+  .school-access-info__detail {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #333333;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+    letter-spacing: 0.01em;
+    line-height: 1.6;
+
+    .address {
+      font-weight: 500;
+    }
+
+    .contact {
+      font-weight: 500;
+    }
+  }
+
+  @include mobile-fablet {
+    gap: 6px;
+
+    .school-access-info__name {
+      font-size: 1rem;
+    }
+
+    .school-access-info__detail {
+      font-size: 0.825rem;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2px;
+    }
+  }
+}
+
+
+/* ==========================================================================
+   SCHOOL INTRO CARDS (学校紹介 4校縦型カードナビゲーション)
+   ========================================================================== */
+
+.school-intro-block {
+  margin-top: 80px;
+
+  @include mobile-fablet {
+    margin-top: 56px;
+  }
+}
+
+/* 4列グリッド配置 */
+.school-intro-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 36px;
+
+  @include mobile-desktop {
+    gap: 16px;
+  }
+
+  @include mobile-fablet {
+    grid-template-columns: repeat(2, 1fr); /* スマホ時は2列×2行 */
+    gap: 16px;
+    margin-top: 24px;
+  }
+}
+
+/* 縦型写真カード本体 */
+.school-intro-card {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 480px; /* PC時の縦長カード高さ */
+  //border-radius: 20px;
+  overflow: hidden;
+  text-decoration: none;
+  background-color: #f7f8f8;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+
+  /* 写真画像エリア */
+  .school-intro-card__img {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    border-radius: 20px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+  }
+
+  /* 💡 写真の上に被さる白背景の縦書きラベルタグ */
+  .school-intro-card__label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.92); /* ほんのり透ける上品な白 */
+    backdrop-filter: blur(4px); /* グラスモーフィズム効果 */
+    padding: 24px 12px;
+    border-bottom-right-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.06);
+    pointer-events: none; /* チラつき防止 */
+
+    /* 縦書きテキスト指定 */
+    .txt {
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      font-size: 0.95rem;
+      font-weight: 700; /* ご指示通り上限 700 */
+      color: #000000;
+      letter-spacing: 0.15em;
+      line-height: 1.4;
+    }
+
+    /* 縦書きに合わせた右下・斜め矢印SVG */
+    .arrow {
+      width: 24px;
+      height: 24px;
+      border: 1px solid #dcdcdc; /* 薄いグレーの丸枠線 */
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      background-color: #ffffff;
+      
+      /* 共通化されている右向きロング矢印SVG (→) */
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='8' viewBox='0 0 10 8'%3E%3Cpath fill='none' stroke='%23333333' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round' d='M0 4h8M5 1l3 3-3 3'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.25s ease, background-color 0.25s ease;
+      pointer-events: none; /* チラつき防止 */
+    }
+  }
+
+  /* 💡 ホバー時インタラクション（画像が優しくズーム ＋ 矢印が右上へスライド） */
+  &:hover {
+    .school-intro-card__img img {
+      transform: scale(1.05);
+    }
+
+    .school-intro-card__label .arrow {
+      border-color: #2d6d43;
+      background-color: #f7f9f7;
+      /* 右へスライド（縦書きラベル内でも自然に動作） */
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='8' viewBox='0 0 10 8'%3E%3Cpath fill='none' stroke='%232d6d43' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round' d='M0 4h8M5 1l3 3-3 3'/%3E%3C/svg%3E");
+    }
+  }
+
+  @include mobile-desktop {
+    height: 400px;
+
+    .school-intro-card__label {
+      padding: 18px 10px;
+
+      .txt {
+        font-size: 0.875rem;
+      }
+    }
+  }
+
+  @include mobile-fablet {
+    height: 280px;
+    border-radius: 14px;
+
+    .school-intro-card__label {
+      padding: 14px 8px;
+      border-bottom-right-radius: 12px;
+
+      .txt {
+        font-size: 0.8rem;
+        letter-spacing: 0.1em;
+      }
+
+      .arrow {
+        width: 20px;
+        height: 20px;
+        background-size: 8px 6px;
+      }
+    }
+  }
+}
+
+/* ==========================================================================
+   SECTION: NEWS & BLOG 2COLUMN MODULE (新着情報 ＆ ブログ統合モジュール)
+   ========================================================================== */
+
+.section-school-newsblog {
+  width: 100%;
+  padding: 80px 0 100px;
+
+  @include mobile-fablet {
+    padding: 48px 0 60px;
+  }
+}
+
+/* PC左右2カラムレイアウト */
+.newsblog-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px 64px;
+
+  @include mobile-desktop {
+    gap: 40px 40px;
+  }
+
+  @include mobile-fablet {
+    grid-template-columns: 1fr; /* スマホ時は上下に縦積み */
+    gap: 56px;
+  }
+}
+
+.newsblog-col {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+/* -----------------------------------------
+   1. COLUMN HEADER & MORE BUTTON
+   ----------------------------------------- */
+.newsblog-col__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  .hiramatsu-support-header{
+    margin-bottom: 0;
+  }
+
+  @include mobile-fablet {
+    margin-bottom: 20px;
+  }
+}
+
+
+
+/* 一覧を見る（丸囲み矢印ボタン） */
+.newsblog-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  transition: opacity 0.25s ease;
+
+  .txt {
+    font-size: 0.875rem;
+    font-weight: 700; /* ご指示通り上限 700 */
+    color: #000000;
+    letter-spacing: 0.02em;
+    pointer-events: none;
+  }
+
+  /* 丸囲み矢印アイコン (先ほど共通化した正円矢印) */
+  .arrow {
+    width: 52px;
+    height: 52px;
+    border: 1px solid #dcdcdc;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    background-color: #ffffff;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='14' viewBox='0 0 18 14'%3E%3Cpath fill='none' stroke='%23333333' stroke-width='1' stroke-linecap='round' stroke-linejoin='round' d='M0 7h15M10 2l5 5-5 5'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.25s ease, background-color 0.25s ease;
+  }
+
+  &:hover {
+    .arrow {
+      border-color: #2d6d43;
+      background-color: #f7f9f7;
+      /* グリーン用矢印SVG（18px×14px） */
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='14' viewBox='0 0 18 14'%3E%3Cpath fill='none' stroke='%232d6d43' stroke-width='1' stroke-linecap='round' stroke-linejoin='round' d='M0 7h15M10 2l5 5-5 5'/%3E%3C/svg%3E");
+      transform: translateX(5px);
+    }
+  }
+
+  @include mobile-fablet {
+    .txt {
+      font-size: 0.8rem;
+    }
+
+    .arrow {
+      width: 26px;
+      height: 26px;
+      background-size: 8px 6px;
+    }
+  }
+}
+
+/* -----------------------------------------
+   2. CATEGORY TAB LIST
+   ----------------------------------------- */
+.newsblog-tab-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+
+  li {
+    margin: 0;
+  }
+
+  .tab-btn {
+    border: none;
+    background: transparent;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #888888;
+    cursor: pointer;
+    transition: color 0.2s ease, background-color 0.2s ease;
+
+    &:hover {
+      color: #333333;
+      background-color: #f0f2f0;
+    }
+
+    /* アクティブ選択時（薄グレー背景 ＋ 黒文字） */
+    &.-active {
+      background-color: #eeeef0;
+      color: #000000;
+    }
+  }
+
+  @include mobile-fablet {
+    margin-bottom: 20px;
+    gap: 6px 8px;
+
+    .tab-btn {
+      padding: 5px 12px;
+      font-size: 0.775rem;
+    }
+  }
+}
+
+/* -----------------------------------------
+   3. ARTICLE LIST & BADGES
+   ----------------------------------------- */
+.newsblog-article-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+
+  .newsblog-article-item {
+    border-bottom: 1px solid #e8ece9;
+
+    &:first-child {
+      border-top: 1px solid #e8ece9;
+    }
+  }
+
+  .article-link {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 18px 0;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+
+    .meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+
+      .date {
+        font-family: var(--font-en);
+        font-size: 0.85rem;
+        font-weight: 500;
+        color: #999999;
+        letter-spacing: 0.02em;
+      }
+    }
+
+    /* 記事タイトル */
+    .title {
+      font-size: 0.925rem;
+      font-weight: 700; /* 上限 700 */
+      color: #000000;
+      line-height: 1.6;
+      margin: 0;
+      letter-spacing: 0.01em;
+      transition: color 0.2s ease;
+    }
+
+    /* ホバー時：タイトルが平松グリーンへチェンジ */
+    &:hover {
+      .title {
+        color: #2d6d43;
+      }
+    }
+  }
+
+  @include mobile-fablet {
+    .article-link {
+      padding: 14px 0;
+      gap: 6px;
+
+      .meta .date {
+        font-size: 0.775rem;
+      }
+
+      .title {
+        font-size: 0.85rem;
+        line-height: 1.55;
+      }
+    }
+  }
+}
+
+/* 各種カテゴリバッジ (デザイン画像の色味を精密抽出) */
+.badge {
+  font-size: 0.725rem;
+  font-weight: 700;
+  color: #ffffff;
+  padding: 3px 12px;
+  border-radius: 12px;
+  display: inline-block;
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+
+  /* 入試情報：エメラルドグリーン */
+  &.-entrance {
+    background-color: #2ea894;
+  }
+
+  /* お知らせ：ネイビー / ダークブルー */
+  &.-info {
+    background-color: #38426b;
+  }
+
+  /* ブログ：ブラウン */
+  &.-blog {
+    background-color: #8c5311;
+  }
+
+  /* イベント：イエローオレンジ */
+  &.-event {
+    background-color: #e2ab00;
+  }
+
+  /* 学科バッジ：ライムグリーン */
+  &.-dept {
+    background-color: #b3cc36;
+  }
+
+  @include mobile-fablet {
+    font-size: 0.675rem;
+    padding: 2px 10px;
+  }
+}
+
+/* ==========================================================================
+   SCHOOL DISCLOSURE SECTION (情報公開 セクション)
+   ========================================================================== */
+
+.section-school-disclosure {
+  width: 100%;
+  padding: 80px 0 100px;
+
+  @include mobile-fablet {
+    padding: 48px 0 60px;
+  }
+}
+
+/* 2カラムグリッド配置 */
+.school-disclosure-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px 64px;
+  margin-top: 40px;
+
+  @include mobile-desktop {
+    gap: 32px 40px;
+  }
+
+  @include mobile-fablet {
+    grid-template-columns: 1fr; /* スマホ時1列 */
+    gap: 32px;
+    margin-top: 28px;
+  }
+}
+
+.school-disclosure-col {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+
+  @include mobile-fablet {
+    gap: 28px;
+  }
+}
+
+/* 各項目グループ */
+.school-disclosure-group {
+  display: flex;
+  flex-direction: column;
+
+  /* 緑色の小見出し */
+  .group-ttl {
+    font-size: 0.95rem;
+    font-weight: 700; /* ご指示通り上限 700 */
+    color: #2d6d43; /* 平松グリーン */
+    margin: 0 0 10px 0;
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+
+    @include mobile-fablet {
+      font-size: 0.875rem;
+      margin-bottom: 8px;
+    }
+  }
+
+  /* インライン横並びリンク */
+  .link-inline-list {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #333333;
+    margin: 0;
+    line-height: 1.8;
+
+    .sep {
+      color: #bbbbbb;
+      margin: 0 6px;
+    }
+
+    @include mobile-fablet {
+      font-size: 0.825rem;
+    }
+  }
+
+  /* シラバスリスト */
+  .syllabus-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.875rem;
+      color: #333333;
+
+      .label {
+        font-weight: 500;
+      }
+    }
+
+    @include mobile-fablet {
+      li {
+        font-size: 0.825rem;
+      }
+    }
+  }
+}
+
+/* -----------------------------------------
+   PDF ICON & LINK STYLE (緑色ドキュメントアイコン)
+   ----------------------------------------- */
+.pdf-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: #333333;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+
+  /* 💡 デザイン忠実：緑色の小さな書類SVGアイコン */
+  .icon-pdf {
+    width: 14px;
+    height: 16px;
+    display: inline-block;
+    flex-shrink: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='16' viewBox='0 0 14 16'%3E%3Cpath fill='none' stroke='%232d6d43' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round' d='M2 1h7l3 3v11H2zM9 1v3h3M4 7h6M4 10h6M4 13h4'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: transform 0.2s ease;
+  }
+
+  /* ホバー時：テキストが平松グリーンへチェンジ ＋ アイコンが1px上へ */
+  &:hover {
+    color: #2d6d43;
+
+    .icon-pdf {
+      transform: translateY(-1px);
+    }
+  }
+}
+
+/* -----------------------------------------
+   LOWER CARD: 職業実践専門課程 (グレー枠カード)
+   ----------------------------------------- */
+.school-disclosure-card {
+  background-color: #f7f8f8;
+  border-radius: 20px;
+  padding: 40px 48px;
+  margin-top: 60px;
+
+  /* カード内大見出し */
+  .card-main-ttl {
+    font-size: 1.2rem;
+    font-weight: 700; /* 上限 700 */
+    color: #000000;
+    margin: 0 0 32px 0;
+    letter-spacing: 0.02em;
+  }
+
+  /* カード内2×2グリッド */
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 36px 64px;
+
+    @include mobile-desktop {
+      gap: 28px 40px;
+    }
+
+    @include mobile-fablet {
+      grid-template-columns: 1fr; /* スマホ時1列 */
+      gap: 24px;
+    }
+  }
+
+  @include mobile-fablet {
+    border-radius: 14px;
+    padding: 24px 20px;
+    margin-top: 40px;
+
+    .card-main-ttl {
+      font-size: 1.05rem;
+      margin-bottom: 20px;
+    }
+  }
+}

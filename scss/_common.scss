@@ -1,0 +1,422 @@
+body {
+  background-image: url(../images/common/body_logo.png);
+  background-position: right top;
+  background-size: 596px 617px;
+  background-repeat: no-repeat;
+}
+
+/* ==================================================
+  ページ見出し
+===================================================== */
+.section-page-mv {
+  width: 100%;
+}
+
+/* ページヘッダー（タイトル＋パンくず） */
+.page-header {
+  width: 100%;
+  margin: 0 auto;
+  padding: 60px 40px 20px;
+  text-align: center;
+  @include mobile-fablet{
+    padding: 100px 20px 20px;
+  }
+}
+
+/* タイトルエリア */
+.page-header h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #000000;
+  margin: 0 0 40px 0;
+  line-height: 1.4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  @include mobile-fablet{
+    font-size: 1.5rem;
+  }
+}
+
+/* 英字サブタイトル */
+.page-header h1 .en {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #4caf50;
+  letter-spacing: 0.05em;
+  font-family: "Lato", sans-serif;
+}
+
+/* パンくずリスト */
+.pankuzu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: flex-start; /* 左寄せ */
+  gap: 12px; /* 項目間の隙間 */
+}
+
+.pankuzu-list li {
+  font-size: 0.75rem;
+  color: #333333;
+  letter-spacing: 0.03em;
+  display: inline-flex;
+  align-items: center;
+}
+
+.pankuzu-list li a {
+  color: #888888;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.pankuzu-list li a:hover {
+  color: #000000;
+}
+
+/* CSSの擬似要素でパンくずの区切り「 / 」を自動挿入（HTMLを汚さない手法） */
+.pankuzu-list li:not(:last-child)::after {
+  content: '/';
+  margin-left: 12px;
+  color: #b5b5b5;
+}
+
+/* メインビジュアル画像エリア */
+.page-mv {
+  width: 100%;
+  height: 430px;
+  overflow: hidden;
+  @include mobile-fablet{
+    height: auto;
+  }
+}
+
+.page-mv img {
+  width: 100%;
+  height: auto;
+  vertical-align: bottom; /* 画像下部の不要な隙間をクリア */
+  display: block;
+  object-fit: cover; /* 万が一比率が変わっても崩れないための保険 */
+}
+
+
+/* ==================================================
+共通コンテンツ幅
+===================================================== */
+.section__inner {
+  max-width: var(--inner-width);
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+
+/* ==================================================
+共通の大見出し（
+===================================================== */
+.headline2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #000000;
+  margin: 0 0 48px 0;
+  letter-spacing: 0.03em;
+  
+  @include mobile-fablet{
+    font-size: 1.3rem;
+    margin-bottom: 32px;
+  }
+}
+
+.underline-header {
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 16px;
+    margin-bottom: 48px;
+}
+
+.headline2_underline-style{
+  font-size: 26px;
+  font-weight: 700;
+  color: #000000;
+  letter-spacing: 0.03em;
+  margin: 0;
+  position: relative;
+  display: inline-block;
+
+  /* タイトルの下だけにテーマグリーンの太線を重ねる */
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -17px; /* 親のpadding-bottom(16px) + 枠線1pxにジャストフィットさせる位置 */
+    width: 100px;
+    height: 2px;
+    background-color: #2d6d43;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 1.3rem;
+    &::after {
+      bottom: -13px;
+    }
+  }
+}
+
+.headline3{
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #2d6d43;
+  margin: 0 0 28px 0;
+  letter-spacing: 0.03em;
+}
+
+
+
+/* ==========================================================================
+   CONVERSION AREA (シンプル統合版)
+   ========================================================================== */
+
+.section-conversion {
+  width: 100%;
+  padding:90px 20px 20px;
+  background-color: #ffffff;
+}
+
+.conversion-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  @include mobile-fablet{
+    gap: 12px;
+  }
+}
+
+/* -----------------------------------------
+   1. OPEN CAMPUS BANNER (上段：画像1枚)
+   ----------------------------------------- */
+.banner-oc {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  border-radius: 24px;
+  /* モーション：ホバー時の浮き上がり設定 */
+  border: 1px solid #dcdcdc;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.01);
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), 
+  border-color 0.3s ease, 
+  box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  @include mobile-fablet{
+    border-radius: 12px;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 23px;
+    @include mobile-fablet{
+    border-radius: 11px;
+  }
+  }
+  &:hover {
+    transform: translateY(-4px);
+    border-color: #000000;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  }
+}
+
+/* -----------------------------------------
+   2. CONVERSION CARDS (下段2カラムボタン)
+   ----------------------------------------- */
+.conversion-links {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  @include mobile-fablet{
+    grid-template-columns: 1fr; /* スマホ時は縦に並べる */
+    gap: 12px;
+  }
+}
+
+/* ==========================================================================
+   CONVERSION CARD - ARROW & HOVER INTERACTION
+   ========================================================================== */
+/* コンバージョンカード本体（親要素） */
+.conversion-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px 40px;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;      /* POPかつ洗練された黒太枠 */
+  border-radius: 20px;
+  text-decoration: none;
+  color: #000000;
+  transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1),
+              box-shadow 0.35s cubic-bezier(0.25, 1, 0.5, 1),
+              background-color 0.3s ease,
+              border-color 0.3s ease;
+
+  /* 💡 カードホバー時に浮き上がり ＋ 矢印の連動スライド＆カラー反転 */
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    border-color: #2d6d43;        /* 平松グリーン枠線へシフト */
+
+    /* 矢印アイコンの連動アニメーション */
+    .conversion-card__arrow {
+      transform: translateX(6px);  /* カードが大きめのため少し深めの6pxスライド */
+      border-color: #2d6d43;
+      background-color: #2d6d43;  /* 枠内を平松グリーンで塗りつぶし */
+
+      &::before {
+        background-color: #ffffff; /* 横棒を白へ変色 */
+      }
+      &::after {
+        border-color: #ffffff;     /* くの字先端を白へ変色 */
+      }
+    }
+  }
+
+  @include mobile-fablet {
+    padding: 20px 24px;
+    border-radius: 14px;
+  }
+}
+
+/* テキストエリア */
+.conversion-card__body {
+  display: flex;
+  flex-direction: column;
+}
+
+.conversion-card__en {
+  font-family: var(--font-en);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #2d6d43;                 /* 英字ラベルのグリーンアクセント */
+  letter-spacing: 0.05em;
+  margin-bottom: 4px;
+
+  @include mobile-fablet {
+    font-size: 0.75rem;
+  }
+}
+
+.conversion-card__title {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #000000;
+  margin: 0;
+  letter-spacing: 0.02em;
+
+  @include mobile-fablet {
+    font-size: 1.1rem;
+  }
+}
+
+/* -----------------------------------------
+   ARROW COMPONENT (50px 精度矢印アイコン)
+   ----------------------------------------- */
+.conversion-card__arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #dcdcdc;
+  background-color: #ffffff;
+  border-radius: 50%;
+  position: relative;
+  flex-shrink: 0;
+  /* スライドイージング（0.25, 1, 0.5, 1 で上品に減速） */
+  transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1),
+              background-color 0.3s ease,
+              border-color 0.3s ease;
+
+  /* 矢印の水平軸（横棒） */
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 18px;
+    height: 1px;
+    background-color: #000000;
+    transition: background-color 0.3s ease;
+  }
+
+  /* 矢印の先端（くの字） */
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%) rotate(-45deg);
+    width: 8px;
+    height: 8px;
+    border-right: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    transition: border-color 0.3s ease;
+  }
+
+  @include mobile-fablet {
+    width: 40px;
+    height: 40px;
+
+    &::before {
+      width: 14px;
+    }
+    &::after {
+      right: 13px;
+      width: 6px;
+      height: 6px;
+    }
+  }
+}
+
+/* ==================================================
+セクションレインボーボーダー
+===================================================== */
+.section-rainbow-border:after {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 10px;
+    background: url(../images/study-support/skillup_section_border.png) repeat-x center top;
+    background-size: auto 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+
+/* ==================================================
+アニメーションの基本設定
+===================================================== */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* クラスがついた時の状態 */
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 時間差（ディレイ）用の設定：10個目まで対応 */
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+.delay-4 { transition-delay: 0.4s; }
+.delay-5 { transition-delay: 0.5s; }
+.delay-6 { transition-delay: 0.6s; }
+.delay-7 { transition-delay: 0.7s; }
+.delay-8 { transition-delay: 0.8s; }

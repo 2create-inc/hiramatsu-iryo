@@ -1,0 +1,2080 @@
+.section-desc{
+  margin-bottom: 80px;
+}
+
+
+.license-block{
+  margin-bottom: 64px;
+}
+
+.license-block__title{
+  color: #2d6d43;
+  margin-bottom: 20px;
+}
+
+.license-list {
+  margin-bottom: 30px;
+}
+
+.license-list li{
+  position: relative;
+  padding-left: 30px;
+  margin: 5px 0;
+}
+.license-list li::before{
+  display: block;
+  content: "";
+  position: absolute;
+  left: 12px;
+  top: 8px;
+  width: 10px;
+  height: 10px;
+  background-color: #2d6d43;
+  border-radius: 10px;
+}
+
+
+
+
+/* ==========================================================================
+   Certifications & Employment SECTION (資格取得実績)
+   ========================================================================== */
+.section-employment {
+  width: 100%;
+  padding: 80px 20px;
+  background-color: #ffffff;
+}
+
+/* -----------------------------------------
+   GRID SYSTEM (1pxの格子境界線を美しく再現)
+   ----------------------------------------- */
+.employment-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  border-top: 1px solid #e2e8f0;
+  border-left: 1px solid #e2e8f0;
+
+  @media (max-width: 1100px) {
+    grid-template-columns: repeat(2, 1fr); /* 中画面では2列に折り返し */
+  }
+  @media (max-width: 580px) {
+    grid-template-columns: 1fr; /* スマホでは1列に */
+  }
+}
+
+/* -----------------------------------------
+   employment CARD COMPONENT
+   ----------------------------------------- */
+.employment-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 24px 20px;
+  background-color: #ffffff;
+  text-decoration: none;
+  color: #000000;
+  position: relative;
+  
+  /* 格子の線を外枠のみ重ねずに表現するCSSトリック */
+  border-right: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+  
+  /* 重なり順と浮き上がる滑らかなtransition */
+  z-index: 1;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, z-index 0s;
+
+  &:hover {
+    background-color: #fcfcf5; /* お馴染みの親しみやすい薄いベージュ */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    z-index: 2; /* 影を綺麗に見せるために重なり順を手前に上げる */
+
+    /* 矢印（↓）をスッと少し下に動かして視線をマップに誘導する */
+    .employment-card__arrow {
+      transform: translateY(3px);
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 20px 16px;
+  }
+}
+
+/* アイコン：学科ごとの優しいテーマカラーをここで定義（Sass変数風） */
+.employment-card__icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px; /* ぷっくり角丸 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+  }
+}
+
+/* 各学科のパステルカラー背景（デザインデータに合わせて微調整してください） */
+.employment-card.-lab .employment-card__icon,.employment-header.-lab .employment-header__icon { background-color: #f2f7e7; }  /* 臨床検査：黄緑 */
+.employment-card.-eng .employment-card__icon,.employment-header.-eng .employment-header__icon { background-color: #fde8e8; }  /* 臨床工学：赤・桃 */
+.employment-card.-opt .employment-card__icon,.employment-header.-opt .employment-header__icon{ background-color: #e3effd; }  /* 視能訓練：青 */
+.employment-card.-pt .employment-card__icon,.employment-header.-pt .employment-header__icon{ background-color: #fdf0df; }   /* 理学療法：オレンジ */
+.employment-card.-ot .employment-card__icon,.employment-header.-ot .employment-header__icon{ background-color: #eaf6ee; }   /* 作業療法：緑 */
+.employment-card.-st .employment-card__icon,.employment-header.-st .employment-header__icon{ background-color: #fef0f4; }   /* 言語聴覚：ピンク */
+.employment-card.-judo .employment-card__icon,.employment-header.judo .employment-header__icon{ background-color: #f5f0fb; } /* 柔道整復：紫 */
+.employment-card.-dh .employment-card__icon,.employment-header.dh .employment-header__icon{ background-color: #e5f6fd; }   /* 歯科衛生：水色 */
+
+/* テキストコンテナ */
+.employment-card__text {
+  flex: 1;
+  min-width: 0; /* はみ出し・三点リーダー・折り返しバグ防止 */
+}
+
+/* 学科名 */
+.employment-card__name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0 0 4px 0;
+  letter-spacing: 0.02em;
+  white-space: nowrap; /* テキストの意図しない折り返しを防ぐ */
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
+}
+
+/* 学校名（サブテキスト） */
+.employment-card__school {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #718096; /* 落ち着いたグレー */
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /* 横幅が狭まった場合は自動で...にする安全設計 */
+}
+
+/* 矢印（↓）をCSSのボーダーと疑似要素だけでシャープに再現 */
+.employment-card__arrow {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  display: inline-block;
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+
+  /* 矢印の「軸（縦棒）」 */
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0.5px;
+    height: 12px;
+    background-color: #2d3748; /* 暗いグレー、または黒 */
+  }
+
+  /* 矢印の「先端（Ｖの形）」 */
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    width: 5px;
+    height: 5px;
+    border-right: 1.5px solid #2d3748;
+    border-bottom: 1.5px solid #2d3748;
+  }
+}
+
+
+/* ==========================================================================
+   SECTION EMPLOYMENT (就職実績エリア)
+   ========================================================================== */
+/* -----------------------------------------
+   1. HEADER (大見出し ＋ アイコン)
+   ----------------------------------------- */
+.employment-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e2e8f0;
+  margin-bottom: 40px;
+
+  @include mobile-fablet {
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+  }
+}
+
+.employment-header__icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background-color: #f2f7e7; /* 臨床検査学科の淡い黄緑カラー */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+  }
+}
+
+.employment-header__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #000000;
+  margin: 0;
+  letter-spacing: 0.02em;
+
+  span {
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: #333333;
+    margin-left: 4px;
+  }
+
+  @include mobile-fablet {
+    font-size: 1.2rem;
+
+    span {
+      font-size: 0.95rem;
+      display: block;
+      margin-left: 0;
+      margin-top: 2px;
+    }
+  }
+}
+
+/* -----------------------------------------
+   2. HOSPITALS LIST (都道府県・エリア別実績)
+   ----------------------------------------- */
+.employment-hospitals {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: 64px;
+
+  @include mobile-fablet {
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+}
+
+.employment-hospitals__block {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.employment-hospitals__category {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #000000;
+  margin: 0;
+  padding-left: 10px;
+  border-left: 3.5px solid #2d6d43; /* 平松グリーンアクセント */
+  line-height: 1.2;
+}
+
+.employment-hospitals__list {
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 2.1;
+  color: #333333;
+  margin: 0;
+  letter-spacing: 0.01em;
+  text-align: justify;
+
+  @include mobile-fablet {
+    font-size: 0.8rem;
+    line-height: 1.9;
+  }
+}
+
+/* -----------------------------------------
+   3. STATS & INFOGRAPHICS (グラフ2カラム)
+   ----------------------------------------- */
+.employment-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  margin-bottom: 80px;
+  @include mobile-fablet {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 48px;
+  }
+}
+
+/* グラフ共通背景カード */
+.employment-graph-card {
+  background-color: #f7f8f8;
+  border-radius: 24px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include mobile-fablet {
+    border-radius: 16px;
+  }
+}
+
+.employment-popular {
+  width: 100%;
+}
+
+.employment-popular__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #000000;
+  margin: 0 0 24px 0;
+  letter-spacing: 0.02em;
+
+  @include mobile-fablet {
+    font-size: 1.1rem;
+    margin-bottom: 16px;
+  }
+}
+
+.employment-popular__grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+
+  @include mobile-fablet {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+.employment-popular__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.employment-popular__img-wrap {
+  width: 100%;
+  aspect-ratio: 16 / 11;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #c4c4c4; /* デザイン上のグレープレースホルダー */
+  margin-bottom: 12px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+
+  @include mobile-fablet {
+    border-radius: 12px;
+  }
+}
+
+.employment-popular__name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #000000;
+  margin: 0;
+  letter-spacing: 0.02em;
+
+  @include mobile-fablet {
+    font-size: 0.95rem;
+  }
+}
+
+/* ==========================================================================
+   NATIONAL EXAMINATION SECTION (学習サポート)
+   ========================================================================== */
+
+/* リード文 */
+.exam-lead {
+  color: #000000;
+  margin-bottom: 48px;
+  letter-spacing: 0.02em;
+  line-height: 1.75;
+
+  @include mobile-fablet {
+    font-size: 0.95rem;
+    margin-bottom: 32px;
+  }
+}
+
+/* -----------------------------------------
+   1. 5 POINTS GRID (5つのポイント)
+   ----------------------------------------- */
+.exam-points {
+  margin-bottom: 64px;
+
+  @include mobile-fablet {
+    margin-bottom: 48px;
+  }
+}
+
+.exam-points__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #2d6d43; /* テーマグリーン */
+  margin: 0 0 28px 0;
+  letter-spacing: 0.03em;
+
+  @include mobile-fablet {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+}
+
+/* 5カラム均等グリッド */
+.exam-points__grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 25px;
+
+  @include mobile-desktop {
+    grid-template-columns: repeat(3, 1fr); /* タブレット〜小画面PC: 3列+2列 */
+    gap: 20px 16px;
+  }
+
+  @include mobile-fablet {
+    grid-template-columns: repeat(2, 1fr); /* スマホ: 2列 */
+    gap: 12px;
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr; /* 超小型スマホ: 1列 */
+  }
+}
+
+/* 各ポイントカード */
+.exam-card {
+  background-color: #f7f8f8;
+  border-radius: 20px;
+  padding: 32px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include mobile-fablet {
+    border-radius: 14px;
+    padding: 24px 12px 20px;
+  }
+}
+
+.exam-card__icon {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  @include mobile-fablet {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 12px;
+  }
+}
+
+.exam-card__title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #000000;
+  margin: 0 0 12px 0;
+  letter-spacing: 0.02em;
+
+  @include mobile-fablet {
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+}
+
+.exam-card__desc {
+  font-weight: 500;
+  line-height: 1.6;
+  margin: 0;
+  letter-spacing: 0.01em;
+  text-align: left;
+
+  @include mobile-fablet {
+    font-size: 0.775rem;
+    line-height: 1.5;
+  }
+}
+
+/* -----------------------------------------
+   2. AUDIT BANNER (聴講生制度バナー)
+   ----------------------------------------- */
+.audit-banner {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 10px 0;
+
+  @include mobile-fablet {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    text-align: center;
+  }
+}
+
+/* 左側：丸型バッジ */
+.audit-banner__badge {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background-color: #2d6d43; /* 平松グリーン */
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(45, 109, 67, 0.15);
+
+  .sub {
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+    opacity: 0.9;
+    letter-spacing: 0.05em;
+  }
+
+  .main {
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.05em;
+  }
+
+  @include mobile-fablet {
+    width: 150px;
+    height: 150px;
+
+    .sub { font-size: 0.725rem; }
+    .main { font-size: 1.35rem; }
+  }
+}
+
+/* 右側：コンテンツ詳細 */
+.audit-banner__content {
+  flex: 1;
+}
+
+.audit-banner__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #000000;
+  margin: 0 0 12px 0;
+  letter-spacing: 0.02em;
+
+  @include mobile-fablet {
+    font-size: 1.05rem;
+    line-height: 1.45;
+    margin-bottom: 10px;
+
+    br {
+      display: none; /* スマホ時は1行にまとめて可読性を高める */
+    }
+  }
+}
+
+.audit-banner__note {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #666666;
+  margin: 0 0 16px 0;
+  letter-spacing: 0.01em;
+
+  @include mobile-fablet {
+    font-size: 0.75rem;
+    margin-bottom: 12px;
+  }
+}
+
+.audit-banner__desc {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #000000;
+  margin: 0;
+  letter-spacing: 0.02em;
+
+  @include mobile-fablet {
+    font-size: 0.875rem;
+  }
+}
+
+
+/* ==========================================================================
+   SCHEDULE SECTION (学習対策スケジュールパーツ)
+   ========================================================================== */
+
+.schedule-section {
+  width: 100%;
+  background-color: #F7F7F7;
+  padding: 5% 0;
+}
+
+/* 1. 小見出し (学習対策スケジュール) */
+.schedule-section__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #2d6d43; /* 平松学園テーマグリーン */
+  margin: 0 0 28px 0;
+  letter-spacing: 0.03em;
+
+  @include mobile-fablet {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+}
+
+.schedule-section__title span{
+  font-size: 0.875rem;
+  color: #000;
+  font-weight: 400;
+  position: relative;
+  left: 5px;
+  top: -1px;
+  @include mobile-fablet{
+    display: block;
+    left: 0;
+    top: 0;
+  }
+}
+
+/* 2. 背景カードコンテナ */
+.schedule-card {
+  background-color: #fff;
+  border-radius: 24px;
+  padding: 40px 36px 36px;
+  width: 100%;
+
+  @include mobile-fablet {
+    border-radius: 16px;
+    padding: 24px 16px 20px;
+  }
+}
+
+/* 例表記テキスト */
+.schedule-card__example {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #333333;
+  margin: 0 0 20px 0;
+  letter-spacing: 0.02em;
+
+  @include mobile-fablet {
+    font-size: 0.85rem;
+    margin-bottom: 14px;
+  }
+}
+
+/* 3. スケジュール表 画像ラッパー */
+.schedule-card__img-wrap {
+  width: 100%;
+  margin-bottom: 24px;
+  overflow-x: auto; /* スマホで表画像が溢れた場合に横スクロール可能にする安全設計 */
+  -webkit-overflow-scrolling: touch;
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    min-width: 680px; /* 画像内の文字潰れ・視認性低下を防ぐための最小保持幅 */
+    margin: 0 auto;
+  }
+
+  @include mobile-fablet {
+    margin-bottom: 16px;
+  }
+}
+
+/* 4. 注記テキスト */
+.schedule-card__note {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #333333;
+  margin: 0;
+  letter-spacing: 0.01em;
+
+  @include mobile-fablet {
+    font-size: 0.775rem;
+  }
+}
+
+/* ==========================================================================
+   EXAM RESULT & CLINICAL TRAINING SECTION (実績 ＋ 臨床実習)
+   ========================================================================== */
+
+/* -----------------------------------------
+   1. EXAM RESULT SECTION (国家試験実績)
+   ----------------------------------------- */
+.exam-result-section {
+  width: 100%;
+  margin-top: 64px;
+
+  @include mobile-fablet {
+    margin-top: 48px;
+  }
+}
+
+/* 緑小見出し */
+.exam-result-section__title {
+  font-size: 1.25rem;
+  font-weight: 700; /* ご指定通り700へ統一 */
+  color: #2d6d43; /* 平松グリーン */
+  margin: 0 0 24px 0;
+  letter-spacing: 0.03em;
+
+  @include mobile-fablet {
+    font-size: 1.1rem;
+    margin-bottom: 16px;
+  }
+}
+
+.exam-result-section__header {
+  margin-bottom: 40px;
+
+  @include mobile-fablet {
+    margin-bottom: 24px;
+  }
+}
+
+/* 大見出し「全員受験・全員合格」を目指します。 */
+.exam-result-section__catch {
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: #000000;
+  margin: 0 0 12px 0;
+  letter-spacing: 0.02em;
+
+  @include mobile-fablet {
+    font-size: 1.35rem;
+    line-height: 1.35;
+  }
+}
+
+/* リード文章 */
+.exam-result-section__desc {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #333333;
+  margin: 0;
+  line-height: 1.7;
+
+  @include mobile-fablet {
+    font-size: 0.85rem;
+  }
+}
+
+/* -----------------------------------------
+   2. YELLOW RESULT BANNER (全国平均以上！バナー)
+   ----------------------------------------- */
+.exam-result-banner {
+  img{
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+
+/* -----------------------------------------
+   3. CLINICAL TRAINING SECTION (臨床実習)
+   ----------------------------------------- */
+.clinical-training-section {
+  width: 100%;
+  margin-top: 80px;
+
+  @include mobile-fablet {
+    margin-top: 56px;
+  }
+}
+
+.clinical-training-section__desc {
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.75;
+  margin-bottom: 40px;
+
+  @include mobile-fablet {
+    font-size: 0.875rem;
+    line-height: 1.65;
+    margin-bottom: 24px;
+
+    br { display: none; }
+  }
+}
+
+/* 3カラムカードグリッド */
+.clinical-training-grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+
+  @include mobile-tablet {
+    grid-template-columns: 1fr; /* タブレット・スマホ時は1列 */
+    gap: 20px;
+  }
+}
+
+/* カード共通 */
+.clinical-card {
+  background-color: #f7f8f8;
+  border-radius: 20px;
+  padding: 36px 28px 40px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.03);
+  }
+
+  @include mobile-fablet {
+    border-radius: 14px;
+    padding: 24px 20px;
+  }
+}
+
+.clinical-card__title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #2d6d43; /* 平松グリーン */
+  text-align: center;
+  margin: 0 0 20px 0;
+  line-height: 1.45;
+  letter-spacing: 0.02em;
+
+  @include mobile-fablet {
+    font-size: 1.05rem;
+    margin-bottom: 12px;
+
+    br { display: none; }
+  }
+}
+
+.clinical-card__desc {
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.75;
+  margin: 0;
+  letter-spacing: 0.01em;
+
+  .note {
+    display: block;
+    font-size: 0.8rem;
+    color: #666666;
+    margin-top: 8px;
+  }
+
+  @include mobile-fablet {
+    font-size: 0.825rem;
+    line-height: 1.65;
+  }
+}
+
+
+/* ==========================================================================
+   SKILL UP COURSE SECTION (スキルアップ講座)
+   ========================================================================== */
+
+.section-skillup {
+  width: 100%;
+  padding: 80px 20px 100px;
+  background-color: #F7F7F7;
+  border-radius: 80px 80px 0 0;
+  position: relative;
+
+  @include mobile-fablet {
+    padding: 40px 16px 60px;
+  }
+}
+
+.section-skillup:after{
+  display: block;
+  content: "";
+  width: 100%;
+  height: 10px;
+  background: url(../images/study-support/skillup_section_border.png) repeat-x center top;
+  background-size: auto 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+/* -----------------------------------------
+   1. HEADER (ヘッダー ＋ バッジ)
+   ----------------------------------------- */
+.skillup-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 36px;
+
+  @include mobile-fablet {
+    margin-bottom: 24px;
+  }
+}
+
+.skillup-header__badge {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #000000;
+  margin: 0 0 6px 0;
+
+  span {
+    color: #e67200; /* オレンジ強調 */
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
+
+  @include mobile-fablet {
+    font-size: 0.85rem;
+    span { font-size: 0.95rem; }
+  }
+}
+
+.skillup-header__title {
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: #000000;
+  margin: 0;
+  letter-spacing: 0.03em;
+
+  @include mobile-fablet {
+    font-size: 1.4rem;
+  }
+}
+
+/* -----------------------------------------
+   2. LEAD & COPY (キャッチコピーエリア)
+   ----------------------------------------- */
+.skillup-lead {
+  text-align: center;
+  margin-bottom: 56px;
+
+  @include mobile-fablet {
+    margin-bottom: 36px;
+  }
+}
+
+.skillup-lead__copy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 0 0 16px 0;
+
+  .sub {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #000;
+    border-top: 2px solid #ED9226;
+    border-bottom: 2px solid #ED9226;
+    padding: 1px 0;
+  }
+
+  .main {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #e67200; /* オレンジのアクセントカラー */
+    letter-spacing: 0.02em;
+  }
+
+  @include mobile-fablet {
+    flex-direction: column;
+    gap: 6px;
+
+    .sub { font-size: 0.85rem; }
+    .main { font-size: 1.25rem; }
+  }
+}
+
+.skillup-lead__desc {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #333333;
+  margin: 0;
+
+  @include mobile-fablet {
+    font-size: 0.85rem;
+  }
+}
+
+/* -----------------------------------------
+   3. CONTENT GRID (左右2カラムレイアウト)
+   ----------------------------------------- */
+.skillup-content {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 48px;
+  align-items: start;
+
+  @include mobile-desktop {
+    grid-template-columns: 1fr 320px;
+    gap: 32px;
+  }
+
+  @include mobile-fablet {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+/* -----------------------------------------
+   3-A. LEFT LIST (講座リスト)
+   ----------------------------------------- */
+.skillup-list {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.skillup-item {
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 28px;
+
+  &:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+}
+
+.skillup-item__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #000000;
+  margin: 0 0 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  .icon {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  @include mobile-fablet {
+    font-size: 1.1rem;
+  }
+}
+
+.skillup-item__desc {
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.7;
+  color: #333333;
+  margin: 0 0 14px 0;
+
+  @include mobile-fablet {
+    font-size: 0.825rem;
+  }
+}
+
+/* 実績バッジ（手話検定） */
+.skillup-item__result {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 5px 20px;
+  font-size: 0.85rem;
+  color: #000000;
+  width: 100%;
+
+  .year {
+    font-weight: 700;
+    color: #666666;
+    position: relative;
+    top: 2px;
+  }
+
+  .rank {
+    font-weight: 700;
+
+    .num {
+      font-family: var(--font-en);
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #e67200;
+      margin: 0 2px;
+    }
+  }
+
+  @include mobile-fablet {
+    flex-wrap: wrap;
+    gap: 8px 12px;
+    padding: 8px 14px;
+    font-size: 0.8rem;
+
+    .rank .num { font-size: 1.15rem; }
+  }
+}
+
+/* -----------------------------------------
+   3-B. RIGHT STUDENT CARD (右側学生カード)
+   ----------------------------------------- */
+.skillup-student-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* オレンジ太枠付きの画像コンテナ */
+.skillup-student-card__inner {
+  position: relative;
+  width: 100%;
+  border: 3px solid #e67200; /* オレンジ太枠 */
+  border-radius: 20px;
+  background-color: #ffffff;
+  margin-bottom: 16px;
+  overflow: hidden;
+
+  @include mobile-fablet {
+    border-radius: 16px;
+    padding: 12px;
+  }
+}
+
+/* 上部に重なるオレンジリボンバッジ */
+.skillup-student-card__badge {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background:url(../images/study-support/skillbadge_bg.png) center center no-repeat;
+  background-size: contain;
+  width: 225px;
+  height: 32px;
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 3px 20px;
+  white-space: nowrap;
+
+  @include mobile-fablet {
+    font-size: 0.775rem;
+    padding: 4px 14px;
+    top: -14px;
+  }
+}
+
+/* サムネイル画像 */
+.skillup-student-card__img-wrap {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+/* 学生プロファイルテキスト */
+.skillup-student-card__info {
+  .school {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #666666;
+    margin: 0 0 4px 0;
+  }
+
+  .name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #000000;
+    margin: 0 0 4px 0;
+
+    .grade {
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+  }
+
+  .from {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #888888;
+    margin: 0;
+  }
+
+  @include mobile-fablet {
+    .school { font-size: 0.75rem; }
+    .name { font-size: 1rem; .grade { font-size: 0.8rem; } }
+    .from { font-size: 0.7rem; }
+  }
+}
+
+
+/* ==========================================================================
+   ANNUAL SCHEDULE SECTION (年間スケジュール)
+   ========================================================================== */
+
+/* -----------------------------------------
+   2 COLUMN GRID (左右2列レイアウト)
+   ----------------------------------------- */
+.schedule-annual-grid {
+  list-style: none;
+  padding: 0;
+  margin: 36px 0 0 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* PC: 均等2カラム */
+  gap: 20px 24px; /* 縦20px / 横24px */
+
+  @include mobile-fablet {
+    grid-template-columns: 1fr; /* スマホ: 1カラムにスタック */
+    gap: 12px;
+    margin-top: 24px;
+  }
+}
+
+/* -----------------------------------------
+   ANNUAL CARD COMPONENT (月別カード)
+   ----------------------------------------- */
+.annual-card {
+  background-color: #f7f8f8; /* プロジェクト共通淡いグレー背景 */
+  border-radius: 20px;
+  padding: 24px 28px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  min-height: 120px;
+
+  @include mobile-fablet {
+    border-radius: 14px;
+    padding: 18px 20px;
+    gap: 16px;
+    min-height: auto;
+  }
+}
+
+/* 左側：月表示 (緑色) */
+.annual-card__month {
+  width: 90px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
+  color: #2d6d43; /* 平松学園テーマグリーン */
+  line-height: 1;
+
+  .num {
+    font-family: var(--font-en);
+    font-size: 2.75rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .unit {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-left: 2px;
+  }
+
+  @include mobile-fablet {
+    width: 70px;
+
+    .num { font-size: 2.15rem; }
+    .unit { font-size: 1.05rem; }
+  }
+}
+
+/* 中央：縦区切り線 */
+.annual-card__divider {
+  width: 1px;
+  height: 48px;
+  background-color: #e0e0e0;
+  flex-shrink: 0;
+
+  @include mobile-fablet {
+    height: 36px;
+  }
+}
+
+/* 右側：イベントリスト */
+.annual-card__events {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+
+  li {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #333333;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+    position: relative;
+    padding-left: 14px;
+    display: flex;
+    align-items: center;
+
+    /* 緑の箇条書きドットアイコン */
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: #2d6d43; /* テーマグリーンの丸ドット */
+    }
+  }
+
+  @include mobile-fablet {
+    gap: 4px;
+
+    li {
+      font-size: 0.875rem;
+      padding-left: 12px;
+
+      &::before {
+        width: 5px;
+        height: 5px;
+      }
+    }
+  }
+}
+
+
+/* ==========================================================================
+   CAREER SUPPORT SECTION (進路サポート・就職活動)
+   ========================================================================== */
+
+/* サブヘッダー（平松学園独自の支援体制） */
+.support-sub-ttl {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #2d6d43; /* 平松グリーン */
+  margin: 56px 0 36px 0;
+  letter-spacing: 0.03em;
+
+  @include mobile-fablet {
+    font-size: 1.1rem;
+    margin: 36px 0 24px 0;
+  }
+}
+
+/* -----------------------------------------
+   1. ZIGZAG LIST (ジグザグ配置)
+   ----------------------------------------- */
+.career-support-list {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+
+  @include mobile-fablet {
+    gap: 48px;
+  }
+}
+
+.career-support-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 56px;
+  width: 100%;
+
+  /* 💡【自動ジグザグ交差】02（偶数番目）を左右反転させる */
+  &:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  /* 03の実績ブロック（1列ワイド化） */
+  &.-wide {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  @include mobile-tablet {
+    gap: 32px;
+  }
+
+  /* スマホ表示時は上が画像、下がテキストに標準化 */
+  @include mobile-fablet {
+    flex-direction: column-reverse !important;
+    gap: 20px;
+  }
+}
+
+/* --- テキストブロック --- */
+.career-support-item__text-block {
+  flex: 1;
+  max-width: 480px;
+
+  @include mobile-fablet {
+    max-width: 100%;
+  }
+}
+
+/* 緑の「01」「02」「03」番号 */
+.career-support-item__num {
+  font-family: var(--font-en);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #2d6d43;
+  display: block;
+  margin-bottom: 6px;
+
+  @include mobile-fablet {
+    font-size: 1.15rem;
+  }
+}
+
+.career-support-item__title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #000000;
+  line-height: 1.35;
+  margin: 0 0 20px 0;
+  letter-spacing: 0.02em;
+
+  @include mobile-fablet {
+    font-size: 1.3rem;
+    margin-bottom: 14px;
+
+    br { display: none; }
+  }
+}
+
+/* 箇条書き（緑色の丸ドット付き） */
+.career-support-item__bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  li {
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 1.7;
+    color: #333333;
+    position: relative;
+    padding-left: 16px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.65em;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: #2d6d43;
+    }
+  }
+
+  @include mobile-fablet {
+    gap: 8px;
+
+    li {
+      font-size: 0.825rem;
+      line-height: 1.6;
+
+      &::before {
+        width: 5px;
+        height: 5px;
+      }
+    }
+  }
+}
+
+/* --- 画像ブロック --- */
+.career-support-item__img-block {
+  flex: 1.1;
+  width: 100%;
+  aspect-ratio: 16 / 10.5;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #f0f0f0;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  @include mobile-fablet {
+    flex: none;
+    border-radius: 14px;
+    aspect-ratio: 16 / 10;
+  }
+}
+
+/* -----------------------------------------
+   STATS GRID (03 8学科全体実績カード - 画像版)
+   ----------------------------------------- */
+.career-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  width: 100%;
+  align-items: stretch;
+
+  @include mobile-fablet {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+/* カード共通基準構造 */
+.career-stats-card {
+  .career-stats-card-inner {
+    background-color: #f7f8f8;
+    border: 2px solid transparent;
+    padding: 36px 32px 32px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    @include mobile-fablet {
+      border-radius: 16px;
+      padding: 24px 20px 20px;
+      min-height: auto;
+    }
+  }
+}
+
+/* カードタイトル */
+.career-stats-card__title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #000000;
+  text-align: center;
+  margin: 0 0 24px 0;
+  letter-spacing: 0.02em;
+
+  @include mobile-fablet {
+    font-size: 1rem;
+    margin-bottom: 16px;
+  }
+}
+
+/* グラフ画像エリア */
+.career-stats-card__img-wrap {
+  width: auto;
+  margin: 0 auto;
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+/* 下部キャプション注記 */
+.career-stats-card__note {
+  font-size: 0.85rem;
+  font-weight: 500;
+  line-height: 1.7;
+  color: #333333;
+  margin: 0;
+  width: 100%;
+  position: relative;
+  padding-left: 16px;
+  letter-spacing: 0.01em;
+
+  /* 緑色の先頭ドット */
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.65em;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #2d6d43;
+  }
+
+  @include mobile-fablet {
+    font-size: 0.775rem;
+    line-height: 1.6;
+
+    &::before {
+      width: 5px;
+      height: 5px;
+    }
+  }
+}
+
+/* ==========================================================================
+   JOB FLOW SECTION (就職活動の流れパーツ)
+   ========================================================================== */
+
+.job-flow-section {
+  width: 100%;
+  margin-top: 64px;
+
+  @include mobile-fablet {
+    margin-top: 48px;
+  }
+}
+
+/* 2ステップフローリスト */
+.job-flow-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+  @include mobile-fablet {
+    flex-direction: column; /* スマホ時は縦並びに変更 */
+    gap: 12px;
+  }
+}
+
+/* ステップカード共通 */
+.job-flow-item {
+  flex: 1;
+  background-color: #f7f8f8; /* プロジェクト共通の淡いグレー背景 */
+  border-radius: 16px;
+  padding: 32px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 100px;
+  transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.03);
+  }
+
+  @include mobile-fablet {
+    width: 100%;
+    border-radius: 12px;
+    padding: 20px 16px;
+    min-height: auto;
+  }
+}
+
+.job-flow-item__text {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #000000;
+  line-height: 1.5;
+  margin: 0;
+  letter-spacing: 0.02em;
+
+  @include mobile-fablet {
+    font-size: 0.95rem;
+
+    br {
+      display: none; /* スマホ時は1行でスマートに自動折り返し */
+    }
+  }
+}
+
+/* -----------------------------------------
+   GREEN ARROW (CSS擬似要素による緑の三角形矢印)
+   ----------------------------------------- */
+.job-flow-arrow {
+  flex-shrink: 0;
+  width: 0;
+  height: 0;
+
+  /* PC表示時：右向きの三角形 (▶) */
+  border-style: solid;
+  border-width: 10px 0 10px 16px;
+  border-color: transparent transparent transparent #2d6d43; /* テーマグリーン */
+
+  @include mobile-fablet {
+    /* スマホ表示時：下向きの三角形 (▼) に自動回転切り替え */
+    border-width: 14px 10px 0 10px;
+    border-color: #2d6d43 transparent transparent transparent;
+    margin: 4px 0;
+  }
+}
+
+
+/* ==========================================================================
+   TRANSFER INFO SECTION (大学編入情報)
+   ========================================================================== */
+
+.transfer-info-section {
+  width: 100%;
+  margin-top: 80px;
+
+  @include mobile-fablet {
+    margin-top: 56px;
+  }
+}
+
+.transfer-info-section__lead {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #000000;
+  margin: 0 0 36px 0;
+  letter-spacing: 0.02em;
+
+  @include mobile-fablet {
+    font-size: 0.9rem;
+    margin-bottom: 24px;
+  }
+}
+
+/* -----------------------------------------
+   GREEN BAR HEADLINE (緑縦バー付き小見出し)
+   ----------------------------------------- */
+.headline-bar {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #000000;
+  margin: 0 0 32px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  letter-spacing: 0.02em;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 30px;
+    background-color: #2d6d43;
+  }
+
+  @include mobile-fablet {
+    margin-bottom: 20px;
+  }
+}
+
+/* -----------------------------------------
+   2 COLUMN CONTENT GRID (2カラム構造)
+   ----------------------------------------- */
+.transfer-info-content {
+  display: grid;
+  grid-template-columns: 1.4fr 0.6fr;
+  gap: 48px;
+  align-items: start;
+
+  @include mobile-desktop {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+/* -----------------------------------------
+   LEFT: CHART AREA (左側：併修図表)
+   ----------------------------------------- */
+.transfer-info-chart {
+  width: 100%;
+}
+
+.transfer-info-chart__img-wrap {
+  width: 100%;
+  margin-bottom: 12px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    min-width: 520px; /* 図表内の数値・文字潰れを防ぐ最小担保幅 */
+
+    @include mobile-fablet {
+      min-width: 480px;
+    }
+  }
+}
+
+
+/* -----------------------------------------
+   RIGHT: QUALIFICATIONS AREA (右側：資格リスト)
+   ----------------------------------------- */
+.transfer-info-qualifications {
+  width: 100%;
+}
+
+.transfer-info-qualifications__catch {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #2d6d43;
+  line-height: 1.55;
+  margin: 0 0 20px 0;
+  letter-spacing: 0.02em;
+
+  @include mobile-fablet {
+    font-size: 1.05rem;
+    margin-bottom: 16px;
+  }
+}
+
+/* 資格リスト (緑丸ドット付き) */
+.transfer-info-qualifications__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+
+  li {
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.5;
+    position: relative;
+    padding-left: 12px;
+    letter-spacing: 0.01em;
+
+    /* 緑の箇条書き丸ドット */
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.55em;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: #2d6d43;
+    }
+
+    .sub {
+      font-size: 0.8rem;
+      font-weight: 400;
+      display: inline-block;
+      margin-top: 2px;
+      display: block;
+    }
+  }
+
+  @include mobile-fablet {
+
+    li {
+      font-size: 0.825rem;
+
+      &::before {
+        width: 5px;
+        height: 5px;
+      }
+    }
+  }
+}
+
+/* ==========================================================================
+   CAREER PATH SECTION (主な進路先)
+   ========================================================================== */
+
+.career-path-section {
+  width: 100%;
+  margin-top: 80px;
+
+  @include mobile-fablet {
+    margin-top: 56px;
+  }
+}
+
+/* -----------------------------------------
+   1. NUMBERED ITEMS (01, 02 見出しブロック)
+   ----------------------------------------- */
+.career-path-item {
+  margin-bottom: 40px;
+
+  @include mobile-fablet {
+    margin-bottom: 28px;
+  }
+}
+
+.career-path-item__title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #2d6d43; /* 平松グリーン */
+  margin: 0 0 10px 0;
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  letter-spacing: 0.02em;
+
+  .num {
+    font-family: var(--font-en);
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .text {
+    line-height: 1.4;
+  }
+
+  @include mobile-fablet {
+    font-size: 1.1rem;
+    gap: 8px;
+
+    .num {
+      font-size: 1.3rem;
+    }
+  }
+}
+
+.career-path-item__desc {
+  font-size: 0.95rem;
+  margin: 0;
+  line-height: 1.7;
+
+  @include mobile-fablet {
+    font-size: 0.85rem;
+  }
+}
+
+/* -----------------------------------------
+   2. RESULT CARD (淡グレー背景実績カード)
+   ----------------------------------------- */
+.career-path-card {
+  background-color: #f7f8f8; /* プロジェクト共通淡グレー背景 */
+  border-radius: 24px;
+  padding: 48px 40px 40px;
+  margin-top: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  @include mobile-fablet {
+    border-radius: 16px;
+    padding: 28px 20px 24px;
+    margin-top: 32px;
+    gap: 28px;
+  }
+}
+
+.career-path-block {
+  width: 100%;
+
+  /* 先ほど定義した緑縦バー付き見出しの余白調整 */
+  .headline-bar {
+    margin-bottom: 20px;
+
+    @include mobile-fablet {
+      margin-bottom: 14px;
+    }
+  }
+}
+
+/* 大学・大学院進学実績（2カラム） */
+.career-path-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px 40px;
+
+  @include mobile-desktop {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
+
+/* 実績リスト（緑丸ドット付き） */
+.career-path-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  li {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    position: relative;
+    padding-left: 16px;
+    letter-spacing: 0.01em;
+
+    /* 緑の箇条書き丸ドット */
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.55em;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: #2d6d43;
+    }
+
+    /* 「ほか多数」のテキスト */
+    &.more {
+      padding-left: 16px;
+
+      &::before {
+        display: none; /* 「ほか多数」はドット非表示 */
+      }
+    }
+  }
+
+  @include mobile-fablet {
+    gap: 8px;
+
+    li {
+      font-size: 0.825rem;
+
+      &::before {
+        width: 5px;
+        height: 5px;
+      }
+
+      &.more {
+        padding-left: 0;
+      }
+    }
+  }
+}

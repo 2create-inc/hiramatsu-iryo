@@ -1,0 +1,795 @@
+/* ==========================================================================
+   ONLINE STEPS BLOCK (参加手順)
+   ========================================================================== */
+
+.section-online-steps {
+  width: 100%;
+  padding: 60px 0;
+
+  @include mobile-fablet {
+    padding: 36px 0;
+  }
+}
+
+/* リード文 */
+.online-steps-lead {
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.85;
+  color: #333333;
+  margin: 32px 0 40px 0;
+  letter-spacing: 0.01em;
+
+  @include mobile-fablet {
+    font-size: 0.875rem;
+    line-height: 1.7;
+    margin: 20px 0 28px 0;
+
+    br {
+      display: none; /* スマホ時は自然折り返し */
+    }
+  }
+}
+
+/* 1〜3ステップカードリスト */
+.online-step-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @include mobile-fablet {
+    gap: 16px;
+  }
+}
+
+.online-step-card {
+  background-color: #f7f8f8;
+  border-radius: 16px;
+  padding: 28px 36px;
+  display: flex;
+  align-items: center; /* 上下中央配置 */
+  gap: 32px;
+
+  @include mobile-fablet {
+    padding: 20px;
+    gap: 16px;
+    border-radius: 12px;
+    align-items: flex-start;
+  }
+}
+
+/* 左側：大きなステップ数字 */
+.online-step-card__num {
+  font-family: var(--font-en);
+  font-size: 3.25rem;
+  font-weight: 700; /* ご指示通り上限700 */
+  color: #2d6d43; /* 平松グリーン */
+  line-height: 1;
+  flex-shrink: 0;
+  padding-right: 28px;
+  border-right: 1px solid #e0e0e0; /* 数字右側の縦切り線 */
+
+  @include mobile-fablet {
+    font-size: 2.25rem;
+    padding-right: 16px;
+  }
+}
+
+/* 右側：コンテンツエリア */
+.online-step-card__body {
+  flex: 1;
+
+  .ttl {
+    font-size: 1rem;
+    font-weight: 700; /* 太字上限700 */
+    color: #000000;
+    margin: 0;
+    line-height: 1.6;
+    letter-spacing: 0.01em;
+
+    /* STEP 3内のインラインリンク */
+    .link-text {
+      color: #2d6d43;
+      text-decoration: underline;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: #c5dc68; /* ライムグリーン */
+      }
+    }
+  }
+
+  .sub {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #666666;
+    margin: 6px 0 0 0;
+    line-height: 1.6;
+  }
+
+  /* STEP 1：件名・入力項目リスト */
+  .info-dl {
+    margin: 12px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    .row {
+      display: flex;
+      align-items: baseline;
+      font-size: 0.875rem;
+      line-height: 1.65;
+      color: #555555;
+
+      dt {
+        font-weight: 500;
+        color: #888888;
+        width: 80px;
+        flex-shrink: 0;
+      }
+
+      dd {
+        margin: 0;
+        flex: 1;
+        color: #333333;
+
+        strong {
+          font-weight: 700;
+          color: #000000;
+        }
+      }
+    }
+  }
+
+  @include mobile-fablet {
+    .ttl {
+      font-size: 0.875rem;
+      line-height: 1.55;
+    }
+
+    .sub {
+      font-size: 0.8rem;
+    }
+
+    .info-dl .row {
+      font-size: 0.8rem;
+      flex-direction: column;
+      gap: 2px;
+
+      dt {
+        width: auto;
+      }
+    }
+  }
+}
+
+
+/* ==========================================================================
+   MAILTO BUTTON GRID (お申し込みメール送付先)
+   ========================================================================== */
+
+.online-mailto-block {
+  margin-top: 64px;
+
+  @include mobile-fablet {
+    margin-top: 48px;
+  }
+}
+
+/* 学校グループ 2カラムグリッド */
+.online-mailto-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px 48px;
+  margin-top: 32px;
+
+  @include mobile-desktop {
+    gap: 32px 32px;
+  }
+
+  @include mobile-fablet {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    margin-top: 24px;
+  }
+}
+
+.online-mailto-group {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  /* 校名見出し (平松グリーン) */
+  .school-ttl {
+    font-size: 0.95rem;
+    font-weight: 700; /* ご指示通り上限700 */
+    color: #2d6d43; /* 平松グリーン */
+    margin: 0;
+    letter-spacing: 0.02em;
+
+    @include mobile-fablet {
+      font-size: 0.875rem;
+    }
+  }
+
+  /* ボタンの縦並びスタック */
+  .btn-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+/* メール送信ボタン (白背景・グレー角丸枠線) */
+.online-mailto-btn {
+  width: 100%;
+  height: 56px;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+
+  /* ボタン内中央テキスト */
+  .txt {
+    font-size: 0.95rem;
+    font-weight: 700; /* 上限700 */
+    color: #000000;
+    letter-spacing: 0.02em;
+    pointer-events: none; /* チラつき防止 */
+  }
+
+  /* 右側の丸囲み矢印アイコン */
+  .arrow {
+    width: 28px;
+    height: 28px;
+    border: 1px solid #dcdcdc;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    
+    /* 共通化された軸線付きロング矢印SVG (→) */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='10' viewBox='0 0 12 10'%3E%3Cpath fill='none' stroke='%23333333' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' d='M0 5h10M6 1l4 4-4 4'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.25s ease, background-color 0.25s ease;
+    pointer-events: none; /* チラつき防止 */
+  }
+
+  /* ホバー時：枠線が緑色へ変化 ＋ 矢印が右へ3pxスライド */
+  &:hover {
+    border-color: #2d6d43;
+    box-shadow: 0 4px 16px rgba(45, 109, 67, 0.1);
+
+    .arrow {
+      border-color: #2d6d43;
+      background-color: #f7f9f7;
+      transform: translateX(3px);
+    }
+  }
+
+  @include mobile-fablet {
+    height: 48px;
+    padding: 0 16px;
+    border-radius: 10px;
+
+    .txt {
+      font-size: 0.85rem;
+    }
+
+    .arrow {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+
+
+/* ==========================================================================
+   ONLINE MANUAL INTRO SECTION (操作マニュアル冒頭・背景 #F7F7F7)
+   ========================================================================== */
+
+.section-online-manual {
+  width: 100%;
+  background-color: #f7f7f7; /* セクション全体にグレー背景 */
+  padding: 80px 0;
+
+  @include mobile-fablet {
+    padding: 48px 0;
+  }
+}
+
+/* 導入メッセージ */
+.manual-intro-lead {
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.85;
+  color: #333333;
+  margin: 32px 0 36px 0;
+  letter-spacing: 0.01em;
+
+  @include mobile-fablet {
+    font-size: 0.875rem;
+    line-height: 1.7;
+    margin: 20px 0 28px 0;
+  }
+}
+
+/* 環境説明グループ (緑色見出し ＋ 文章) */
+.manual-env-group {
+  margin-bottom: 24px;
+}
+
+.manual-env-ttl {
+  font-size: 1rem;
+  font-weight: 700; /* ご指示通り太字上限700 */
+  color: #2d6d43; /* 平松グリーン */
+  margin: 0 0 8px 0;
+  letter-spacing: 0.01em;
+
+  @include mobile-fablet {
+    font-size: 0.925rem;
+  }
+}
+
+.manual-env-desc {
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.8;
+  color: #333333;
+  margin: 0;
+
+  .sub {
+    font-size: 0.85rem;
+    color: #666666;
+  }
+
+  @include mobile-fablet {
+    font-size: 0.825rem;
+    line-height: 1.7;
+  }
+}
+
+/* 区切り用薄い水平線 */
+.manual-intro-divider {
+  border: none;
+  border-top: 1px solid #e0e0e0;
+  margin: 28px 0;
+}
+
+/* -----------------------------------------
+   DEVICE NAV CARDS (2カラムデバイス選択カード)
+   ----------------------------------------- */
+.manual-device-nav {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  margin-top: 40px;
+
+  @include mobile-fablet {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 28px;
+  }
+}
+
+/* 白背景のアンカーカード本体 */
+.manual-device-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8e4;
+  border-radius: 20px;
+  padding: 36px 24px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+
+  /* 上部：緑色線画イラスト枠 */
+  .manual-device-card__icon {
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none; /* チラつき防止 */
+
+    img {
+      max-height: 100%;
+      width: auto;
+      display: block;
+    }
+  }
+
+  /* 下部：テキスト ＋ 丸囲み↓アイコン */
+  .manual-device-card__txt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    pointer-events: none; /* チラつき防止 */
+
+    .label-main {
+      font-size: 1rem;
+      font-weight: 700; /* 太字上限700 */
+      color: #000000;
+      line-height: 1.4;
+      letter-spacing: 0.02em;
+    }
+    .label-sub {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px; /* テキストと丸枠矢印の隙間 */
+      font-size: 1rem;
+      font-weight: 700; /* 上限700 */
+      color: #000000;
+      line-height: 1.4;
+      letter-spacing: 0.02em;
+      margin-top: 4px;
+    }
+
+    /* 丸囲みの「↓」アイコン */
+    .arrow-down {
+      width: 24px;
+      height: 24px;
+      border: 1px solid #dcdcdc;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      
+      /* 軸線付き下向きロング矢印SVG (↓) */
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='12' viewBox='0 0 10 12'%3E%3Cpath fill='none' stroke='%23333333' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' d='M5 0v10M1 6l4 4 4-4'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.3s ease, background-color 0.3s ease;
+    }
+  }
+
+  /* ホバー時：枠線が緑色へ変化 ＋ 3px浮き上がり ＋ ↓アイコンが3px下に沈み込み */
+&:hover {
+    border-color: #2d6d43;
+    box-shadow: 0 8px 24px rgba(45, 109, 67, 0.12);
+
+    .manual-device-card__txt .arrow-down {
+      border-color: #2d6d43;
+      background-color: #f7f9f7;
+      /* 下向きスライド（緑色軸線SVGが自然に沈み込む） */
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='12' viewBox='0 0 10 12'%3E%3Cpath fill='none' stroke='%232d6d43' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' d='M5 0v10M1 6l4 4 4-4'/%3E%3C/svg%3E");
+      transform: translateY(3px);
+    }
+  }
+
+  @include mobile-fablet {
+    border-radius: 14px;
+    padding: 24px 16px 20px;
+    gap: 14px;
+
+    .manual-device-card__icon {
+      height: 48px;
+    }
+
+    .manual-device-card__txt {
+      .label-main,
+      .label-sub {
+        font-size: 0.875rem;
+      }
+
+      .arrow-down {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}
+
+/* ==========================================================================
+   SP MANUAL BLOCK (スマートフォン・タブレットをご利用の方)
+   ========================================================================== */
+
+.manual-section {
+  margin-top: 64px;
+
+  @include mobile-fablet {
+    margin-top: 48px;
+  }
+}
+
+.manual-content-body {
+  margin-top: 28px;
+}
+
+/* -----------------------------------------
+   1. PREPARATION GROUPS (端末の準備 & インストール)
+   ----------------------------------------- */
+.manual-prep-group {
+  margin-bottom: 28px;
+}
+
+.manual-prep-ttl {
+  font-size: 0.95rem;
+  font-weight: 700; /* 太字上限700 */
+  color: #2d6d43; /* 平松グリーン */
+  margin: 0 0 8px 0;
+  letter-spacing: 0.01em;
+
+  @include mobile-fablet {
+    font-size: 0.875rem;
+  }
+}
+
+.manual-prep-desc {
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.8;
+  color: #333333;
+  margin: 0;
+
+  @include mobile-fablet {
+    font-size: 0.825rem;
+    line-height: 1.7;
+  }
+}
+
+/* アプリインストールリンク（緑丸ドット付き） */
+.manual-app-link-list {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  li {
+    display: flex;
+    align-items: center;
+
+    .app-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.9rem;
+      font-weight: 700; /* 上限700 */
+      color: #333333;
+      text-decoration: underline;
+      transition: color 0.2s ease;
+
+      /* 緑色の中丸ドット */
+      &::before {
+        content: "●";
+        color: #2d6d43;
+        font-size: 0.65rem;
+      }
+
+      /* 右側の斜め上矢印アイコン (外部リンクSVG) */
+      .icon-external {
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'%3E%3Cpath fill='none' stroke='%23333333' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' d='M3 1h6v6M9 1L3.5 6.5'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: transform 0.2s ease;
+      }
+
+      &:hover {
+        color: #2d6d43;
+
+        .icon-external {
+          transform: translate(2px, -2px);
+        }
+      }
+    }
+  }
+
+  @include mobile-fablet {
+    li .app-link {
+      font-size: 0.825rem;
+    }
+  }
+}
+
+/* -----------------------------------------
+   2. STEP CARDS (白枠カード & 2カラムレイアウト)
+   ----------------------------------------- */
+.manual-step-box {
+  background-color: #ffffff;
+  border: 1px solid #e2e8e4;
+  border-radius: 20px;
+  padding: 32px 36px;
+  margin-bottom: 32px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+
+  .box-ttl {
+    font-size: 1.2rem;
+    font-weight: 700; /* 上限700 */
+    color: #2d6d43; /* 平松グリーン */
+    margin: 0 0 24px 0;
+    letter-spacing: 0.01em;
+  }
+
+  @include mobile-fablet {
+    padding: 20px;
+    border-radius: 14px;
+    margin-bottom: 20px;
+
+    .box-ttl {
+      font-size: 1.05rem;
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.manual-step-box.no-border-no-bg{
+  background-color: transparent;
+  border:none;
+  border-radius: 20px;
+  padding: 32px 36px;
+  margin-bottom: 32px;
+}
+
+/* 2カラムレイアウト (左：解説文章 / 右：キャプチャ画像) */
+.manual-step-row {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 36px;
+  align-items: center;
+
+  @include mobile-desktop {
+    grid-template-columns: 1fr 320px;
+    gap: 24px;
+  }
+
+  @include mobile-fablet {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+/* ナンバリング手順リスト（緑丸数字） */
+.manual-instruction-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 0.925rem;
+    font-weight: 500;
+    line-height: 1.65;
+    color: #333333;
+
+    /* 緑色の円形ナンバリングアイコン ①, ②, ③... */
+    .num {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background-color: #2d6d43;
+      color: #ffffff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .txt {
+      flex: 1;
+
+      .sub {
+        display: block;
+        font-size: 0.825rem;
+        color: #666666;
+        margin-top: 4px;
+      }
+    }
+  }
+
+  @include mobile-fablet {
+    gap: 12px;
+
+    li {
+      font-size: 0.85rem;
+
+      .num {
+        width: 20px;
+        height: 20px;
+        font-size: 0.7rem;
+      }
+    }
+  }
+}
+
+/* 右側：キャプチャ画像埋め込み枠 */
+.manual-step-row__img {
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+  }
+}
+
+/* ==========================================================================
+   PC MANUAL BLOCK (パソコン（PC）をご利用の方)
+   ========================================================================== */
+
+/* インライン用ダウンロードリンク（「こちら」） */
+.app-link-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 700; /* ご指示通り上限700 */
+  color: #2d6d43; /* 平松グリーン */
+  text-decoration: underline;
+  transition: color 0.2s ease;
+
+  .icon-external {
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'%3E%3Cpath fill='none' stroke='%232d6d43' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' d='M3 1h6v6M9 1L3.5 6.5'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: transform 0.2s ease;
+  }
+
+  &:hover {
+    color: #35a89b;
+
+    .icon-external {
+      transform: translate(2px, -2px);
+    }
+  }
+}
+
+/* カード内 複数ステップの区切り線 */
+.manual-step-row.-second-step {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid #e2e8e4; /* 破線区切り */
+
+  @include mobile-fablet {
+    margin-top: 18px;
+    padding-top: 18px;
+  }
+}
+
+.manual-step-box.no-border-no-bg .manual-step-row.-second-step {
+  border-top:1px solid #FFFFFF;
+}
+
+/* 赤文字の強調注記 */
+.manual-instruction-list {
+  li .txt .sub.-danger {
+    color: #d93838; /* 赤色テキスト */
+    font-weight: 700;
+  }
+}

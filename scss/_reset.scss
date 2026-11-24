@@ -1,0 +1,53 @@
+/* 1. ボックスモデルの定義：paddingやborderを幅に含める */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. デフォルトの余白をリセット */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* 3. 本文のセットアップ：スクロールを滑らかにし、ベースの行間を整える */
+html {
+  color-scheme: light dark; /* ダークモード対応 */
+}
+
+body {
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased; /* フォントを綺麗に見せる（mac/iOS用） */
+  text-rendering: optimizeSpeed;
+}
+
+/* 4. 画像やメディア要素の扱い：親要素からはみ出さないようにする */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* 5. フォーム要素のフォント継承：inputやbuttonが独自のフォントにならないように */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 6. テキストエリアのサイズ調整を縦方向のみに制限 */
+textarea {
+  resize: vertical;
+}
+
+/* 7. リストの記号を消す（必要に応じて） */
+ul, ol {
+  list-style: none;
+}
+
+/* 8. アニメーションを好まないユーザーへの配慮（アクセシビリティ） */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

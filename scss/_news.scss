@@ -1,0 +1,617 @@
+/* ==========================================================================
+   NEWS ARCHIVE PAGE (新着情報一覧)
+   ========================================================================== */
+
+.section-news-archive {
+  width: 100%;
+  padding: 60px 0 100px;
+
+  @include mobile-fablet {
+    padding: 36px 0 60px;
+  }
+}
+
+.news-archive-container {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 60px;
+  align-items: start;
+
+  @include mobile-desktop {
+    grid-template-columns: 180px 1fr;
+    gap: 40px;
+  }
+
+  @include mobile-fablet {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+/* -----------------------------------------
+   1. CATEGORY SIDE NAV (左側：カテゴリーナビ)
+   ----------------------------------------- */
+.news-category-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.news-category-nav__label {
+  font-family: var(--font-en);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #2d6d43; /* 平松グリーン */
+  letter-spacing: 0.05em;
+}
+
+.news-category-nav__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  @include mobile-fablet {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+}
+
+.news-category-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px 20px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 700; /* ご指示通り上限700 */
+  color: #555555;
+  text-decoration: none;
+  transition: all 0.25s ease;
+
+  &:hover {
+    background-color: #ededed;
+    color: #2d6d43;
+  }
+
+  /* 選択中（すべて等）のカプセル型グレー背景 */
+  &.-active {
+    background-color: #ededed;
+    color: #000000;
+  }
+
+  @include mobile-fablet {
+    font-size: 0.825rem;
+    padding: 6px 14px;
+  }
+}
+
+/* -----------------------------------------
+   2. ARTICLE LIST (右側：新着一覧アイテム)
+   ----------------------------------------- */
+.news-archive-main {
+  width: 100%;
+}
+
+.news-archive-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.news-archive-item {
+  border-bottom: 1px solid #e8ece9;
+
+  &:first-child {
+    border-top: none;
+  }
+}
+
+.news-archive-item__link {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 20px 0;
+  text-decoration: none;
+  transition: opacity 0.25s ease;
+
+  &:hover {
+    opacity: 0.75;
+
+    .news-archive-item__title {
+      color: #2d6d43; /* ホバー時にテキストがグリーンへ */
+    }
+  }
+
+  @include mobile-fablet {
+    padding: 16px 0;
+    gap: 6px;
+  }
+}
+
+.news-archive-item__meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  .date {
+    font-family: var(--font-en);
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #888888;
+    letter-spacing: 0.02em;
+  }
+
+  .badge-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  @include mobile-fablet {
+    gap: 12px;
+
+    .date {
+      font-size: 0.775rem;
+    }
+  }
+}
+
+/* カテゴリーバッジ定義 */
+.news-badge {
+  font-size: 0.725rem;
+  font-weight: 700;
+  color: #ffffff;
+  padding: 3px 12px;
+  border-radius: 12px;
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+  display: inline-block;
+
+  /* 入試情報：ターコイズグリーン */
+  &.-admission {
+    background-color: #35a89b;
+  }
+
+  /* お知らせ：ネイビーブルー */
+  &.-notice {
+    background-color: #2b3e6b;
+  }
+
+  /* イベント：アンバーイエロー */
+  &.-event {
+    background-color: #f0a800;
+  }
+
+  /* ブログ：ブラウン */
+  &.-blog {
+    background-color: #8c5828;
+  }
+
+  /* 学科バッジ（臨床検査学科等）：パステルライムグリーン */
+  &.-department {
+    background-color: #c0dc68;
+    color: #000000; /* テキスト黒 */
+  }
+
+  @include mobile-fablet {
+    font-size: 0.675rem;
+    padding: 2px 10px;
+  }
+}
+
+.news-archive-item__title {
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.6;
+  color: #000000;
+  margin: 0;
+  letter-spacing: 0.01em;
+  transition: color 0.25s ease;
+
+  @include mobile-fablet {
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+}
+
+/* -----------------------------------------
+   3. PAGINATION (丸枠矢印付きページネーション)
+   ----------------------------------------- */
+.news-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 48px;
+
+  @include mobile-fablet {
+    gap: 16px;
+    margin-top: 36px;
+  }
+}
+
+.news-pagination__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  @include mobile-fablet {
+    gap: 12px;
+  }
+}
+
+.news-pagination__num {
+  font-family: var(--font-en);
+  font-size: 1rem;
+  font-weight: 500;
+  color: #666666;
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: #2d6d43;
+  }
+
+  /* カレント（1ページ目） */
+  &.-current {
+    font-weight: 700;
+    color: #2d6d43; /* 平松グリーン */
+  }
+}
+
+/* 左右の丸枠矢印ボタン */
+.news-pagination__arrow {
+  width: 36px;
+  height: 36px;
+  border: 1px solid #dcdcdc;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.25s ease, background-color 0.25s ease, transform 0.25s cubic-bezier(0.25, 1, 0.5, 1);
+  background-repeat: no-repeat;
+  background-position: center;
+
+  /* 先ほど修正した精度高い軸線付きロング矢印SVG (→) */
+  &.-prev {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='10' viewBox='0 0 12 10'%3E%3Cpath fill='none' stroke='%23666666' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' d='M12 5H2M6 1L2 5l4 4'/%3E%3C/svg%3E");
+  }
+
+  &.-next {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='10' viewBox='0 0 12 10'%3E%3Cpath fill='none' stroke='%23666666' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' d='M0 5h10M6 1l4 4-4 4'/%3E%3C/svg%3E");
+  }
+
+  &:hover:not(.-disabled) {
+    border-color: #2d6d43;
+    background-color: #f7f9f7;
+
+    &.-prev { transform: translateX(-3px); }
+    &.-next { transform: translateX(3px); }
+  }
+
+  /* 非活性（1ページ目の「前へ」等） */
+  &.-disabled {
+    opacity: 0.35;
+    cursor: default;
+    pointer-events: none;
+  }
+
+  @include mobile-fablet {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+/* ==========================================================================
+   NEWS DETAIL PAGE (お知らせ詳細)
+   ========================================================================== */
+
+.section-news-detail {
+  width: 100%;
+  padding: 60px 0 100px;
+
+  @include mobile-fablet {
+    padding: 36px 0 60px;
+  }
+}
+
+.news-detail-container {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 60px;
+  align-items: start;
+
+  @include mobile-desktop {
+    grid-template-columns: 180px 1fr;
+    gap: 40px;
+  }
+
+  @include mobile-fablet {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+.news-detail-main {
+  width: 100%;
+}
+
+/* -----------------------------------------
+   1. HEADER (タイトル & メタ情報)
+   ----------------------------------------- */
+.news-detail-header {
+  border-bottom: 1px solid #e8ece9;
+  padding-bottom: 24px;
+  margin-bottom: 32px;
+
+  @include mobile-fablet {
+    padding-bottom: 20px;
+    margin-bottom: 24px;
+  }
+}
+
+.news-detail-header__meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 12px;
+
+  .date {
+    font-family: var(--font-en);
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #888888;
+    letter-spacing: 0.02em;
+  }
+
+  .badge-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  @include mobile-fablet {
+    gap: 12px;
+    margin-bottom: 8px;
+
+    .date {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+.news-detail-header__title {
+  font-size: 1.75rem;
+  font-weight: 700; /* ご指示通り上限700 */
+  line-height: 1.45;
+  color: #000000;
+  margin: 0;
+  letter-spacing: 0.02em;
+
+  @include mobile-fablet {
+    font-size: 1.35rem;
+    line-height: 1.4;
+  }
+}
+
+/* -----------------------------------------
+   2. CONTENT BODY (記事本文 ＆ WPエディタ対応)
+   ----------------------------------------- */
+.news-detail-content {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.85;
+  color: #333333;
+
+  p {
+    margin: 0 0 28px 0;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  /* メイン画像・アイキャッチ */
+  .news-detail-media {
+    margin: 32px 0 40px 0;
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: #d9d9d9; /* 画像未読み込み時のグレーダミー */
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+
+    @include mobile-fablet {
+      margin: 24px 0 32px 0;
+      border-radius: 12px;
+    }
+  }
+
+  /* 本文内リンク */
+  a {
+    color: #2d6d43; /* 平松グリーン */
+    text-decoration: underline;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: #35a89b;
+    }
+  }
+
+  /* -----------------------------------------
+     見出し階層スタイル (デザイン画像トレース)
+     ----------------------------------------- */
+  h2, .content-h2 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #2d6d43; /* 緑色大見出し */
+    margin: 48px 0 20px 0;
+    line-height: 1.4;
+
+    @include mobile-fablet {
+      font-size: 1.15rem;
+      margin: 36px 0 16px 0;
+    }
+  }
+
+  h3, .content-h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #000000; /* 黒色中見出し */
+    margin: 28px 0 16px 0;
+
+    @include mobile-fablet {
+      font-size: 1.05rem;
+    }
+  }
+
+  h4, .content-h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #2d6d43; /* 緑色小見出し */
+    margin: 24px 0 12px 0;
+
+    @include mobile-fablet {
+      font-size: 0.975rem;
+    }
+  }
+
+  h5, .content-h5 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #000000;
+    margin: 20px 0 10px 0;
+  }
+
+  h6, .content-h6 {
+    font-size: 0.925rem;
+    font-weight: 700;
+    color: #2d6d43;
+    margin: 16px 0 8px 0;
+  }
+
+  /* -----------------------------------------
+     箇条書きリスト (緑丸ドット付き)
+     ----------------------------------------- */
+  ul, .content-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 32px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    li {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      font-size: 0.95rem;
+      line-height: 1.7;
+
+      /* 緑色の中丸ドット */
+      &::before {
+        content: "●";
+        color: #2d6d43;
+        font-size: 0.65rem;
+        flex-shrink: 0;
+        transform: translateY(-1px);
+      }
+    }
+
+    @include mobile-fablet {
+      gap: 8px;
+      margin-bottom: 24px;
+
+      li {
+        font-size: 0.875rem;
+      }
+    }
+  }
+
+  @include mobile-fablet {
+    font-size: 0.925rem;
+    line-height: 1.75;
+  }
+}
+
+/* -----------------------------------------
+   3. FOOTER (一覧へ戻るボタン)
+   ----------------------------------------- */
+.news-detail-footer {
+  border-top: 1px solid #e8ece9;
+  margin-top: 60px;
+  padding-top: 48px;
+  display: flex;
+  justify-content: center;
+
+  @include mobile-fablet {
+    margin-top: 40px;
+    padding-top: 36px;
+  }
+}
+
+.news-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+
+  /* 左向きの丸枠矢印 */
+  .news-back-btn__arrow {
+    width: 44px;
+    height: 44px;
+    border: 1px solid #dcdcdc;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* 精度の高い左向き軸線付きロング矢印SVG */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='10' viewBox='0 0 12 10'%3E%3Cpath fill='none' stroke='%23333333' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' d='M12 5H2M6 1L2 5l4 4'/%3E%3C/svg%3E");
+    transition: border-color 0.25s ease, background-color 0.25s ease, transform 0.25s cubic-bezier(0.25, 1, 0.5, 1);
+    pointer-events: none; /* チラつき防止 */
+  }
+
+  .news-back-btn__text {
+    font-size: 1rem;
+    font-weight: 700; /* ご指示通り上限700 */
+    color: #000000;
+    letter-spacing: 0.02em;
+    pointer-events: none; /* チラつき防止 */
+  }
+
+  /* ホバー時：矢印が左へ滑らかにスライド */
+  &:hover {
+    .news-back-btn__arrow {
+      border-color: #2d6d43;
+      background-color: #f7f9f7;
+      transform: translateX(-4px);
+    }
+  }
+
+  @include mobile-fablet {
+    gap: 10px;
+
+    .news-back-btn__arrow {
+      width: 36px;
+      height: 36px;
+    }
+
+    .news-back-btn__text {
+      font-size: 0.925rem;
+    }
+  }
+}

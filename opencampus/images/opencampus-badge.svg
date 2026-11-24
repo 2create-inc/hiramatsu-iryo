@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="249.5" height="49.5" viewBox="0 0 249.5 49.5">
+  <g id="opencampus-badge" transform="translate(21 1)">
+    <g id="グループ_243" data-name="グループ 243">
+      <path id="パス_271" data-name="パス 271" d="M39,0H247a19,19,0,0,1,0,38H39A19,19,0,0,1,39,0Z" transform="translate(-37.5 2.5)" fill="#4ab8de"/>
+      <path id="パス_270" data-name="パス 270" d="M247,.5H39a18.5,18.5,0,0,0,0,37h92.5A11.5,11.5,0,0,1,143,49a11.5,11.5,0,0,1,11.5-11.5H247a18.5,18.5,0,0,0,0-37Z" transform="translate(-40.5 -0.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="2"/>
+    </g>
+    <text id="高校1_2年生におすすめ_" data-name="高校1〜2年生におすすめ！" transform="translate(102.5 25.5)" font-size="16" font-family="ZenKakuGothicNew-Bold, Zen Kaku Gothic New" font-weight="700"><tspan x="-94.864" y="0">高校1〜2年生におすすめ！</tspan></text>
+  </g>
+</svg>

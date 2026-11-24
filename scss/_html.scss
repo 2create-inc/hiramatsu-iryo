@@ -1,0 +1,49 @@
+:root {  
+  /* font */
+  --font-en: "Lato", sans-serif;
+
+/* color */
+   --color-green: #c9db5f;
+  --color-bg-outer: #f0f0f0;
+  --color-text: #333;
+
+/* Fluid Typography: 16px */
+  --fz-base: 1rem;
+
+  // 14px	0.875rem
+  // 16px	1rem
+  // 18px	1.125rem
+  // 20px	1.25rem
+  // 24px	1.5rem
+
+  --inner-width: 1240px;
+}
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  color: #000;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  line-height: 1.75;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  position: relative;
+}
+
+
+
+
+/* リンクの基本 */
+a {
+  text-decoration: none;
+  color: var(--text-main);
+}
+
+

@@ -1,0 +1,718 @@
+
+.top-section-header{
+  margin-bottom: 40px;
+}
+
+.top-section-header__sub{
+  font-size: 16px;
+  display: inline-flex;
+  font-weight: 500;
+  gap: 10px;
+  align-items: center;
+  span{
+    width: 16px;
+  }
+}
+
+.top-section-header__title{
+  font-size: 70px;
+  font-weight: 600;
+  font-family: var(--font-en);
+  line-height: 1.25;
+  span{
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: var(--font-main);
+    position: relative;
+    left: 3rem;
+    @include mobile-fablet{
+      display: block;
+      left: 0;
+    }
+  }
+}
+
+/* ==========================================================================
+   TOP MAIN VISUAL (無限ループヒーローモジュール)
+   ========================================================================== */
+.top-mv-copy{
+  width: 42.361vw;
+  height: 31.667vw;
+  max-width: 610px;
+  max-height: 456px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  @include mobile-fablet{
+    width: 295px;
+    height: auto;
+  }
+}
+
+
+.section-top-mv {
+  width: 100%;
+  overflow: hidden; /* 横スクロールバーの発生を防止 */
+  background-color: #f7f8f8;
+  position: relative;
+  @include mobile-fablet{
+    margin-top: 81px;
+  }
+}
+
+.top-mv-container {
+  width: 100%;
+  position: relative;
+}
+
+/* -----------------------------------------
+   1. PC DISPLAY (PC時：横1行 720px × 900px)
+   ----------------------------------------- */
+.top-mv-pc-slider {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+
+  .top-mv-track {
+    display: flex;
+    width: max-content;
+    will-change: transform;
+    backface-visibility: hidden;
+
+    /* 右から左へ無限スライド (40秒で1巡) */
+    &.-left {
+      animation: mvInfiniteLoopLeft 90s linear infinite;
+    }
+  }
+
+  /* 💡 ご指示：PC時画像比率 W720px / H900px */
+  .top-mv-item {
+    width: 720px;
+    height: 900px;
+    margin: 0;
+    flex-shrink: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+  }
+
+  /* 画面幅が小さめのノートPC用アジャスト */
+  @include mobile-desktop {
+    .top-mv-item {
+      width: 560px;
+      height: 700px;
+    }
+  }
+
+  /* スマホ表示時は非表示 */
+  @include mobile-fablet {
+    display: none;
+  }
+}
+
+/* -----------------------------------------
+   2. SP DISPLAY (スマホ時：縦2段 375px × 230px)
+   ----------------------------------------- */
+.top-mv-sp-slider {
+  display: none; /* 初期PC表示時は非表示 */
+  width: 100%;
+  flex-direction: column;
+
+  .top-mv-sp-row {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .top-mv-track {
+    display: flex;
+    width: max-content;
+    will-change: transform;
+    backface-visibility: hidden;
+
+    /* 1段目（奇数）：右から左へスクロール */
+    &.-left {
+      animation: mvInfiniteLoopLeft 80s linear infinite;
+    }
+
+    /* 2段目（偶数）：左から右へ逆方向スクロール */
+    &.-right {
+      animation: mvInfiniteLoopRight 80s linear infinite;
+    }
+  }
+
+  /* 💡 ご指示：スマホ時画像比率 W375px / H230px */
+  .top-mv-item {
+    width: 375px;
+    height: 230px;
+    margin: 0;
+    flex-shrink: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+  }
+
+  /* スマホ画面時に有効化 */
+  @include mobile-fablet {
+    display: flex;
+  }
+}
+
+/* -----------------------------------------
+   3. INFINITE LOOP KEYFRAMES (アニメーション定義)
+   ----------------------------------------- */
+
+/* 右から左へ流れるアニメーション (←) */
+@keyframes mvInfiniteLoopLeft {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0); /* ちょうど半分（1セット分）移動した瞬間に0%へ復帰 */
+  }
+}
+
+/* 左から右へ流れる逆方向アニメーション (→) */
+@keyframes mvInfiniteLoopRight {
+  0% {
+    transform: translate3d(-50%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* ホバー時にアニメーションを一時停止する演出（お好みで追加） */
+.top-mv-track {
+  &:hover {
+    animation-play-state: paused;
+  }
+}
+
+
+/* ==========================================================================
+   TOP NEWS SECTION (トップページ 全体のお知らせ)
+   ========================================================================== */
+
+.section-top-news {
+  width: 100%;
+  padding: 80px 0 100px;
+  background-color: #F7F7F7;
+
+  @include mobile-fablet {
+    padding: 48px 0 60px;
+  }
+}
+
+.top-news-container {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 60px;
+  align-items: start;
+
+  @include mobile-desktop {
+    grid-template-columns: 240px 1fr;
+    gap: 40px;
+  }
+
+  @include mobile-fablet {
+    grid-template-columns: 1fr; /* スマホ時は上下縦積み */
+    gap: 36px;
+  }
+}
+
+/* -----------------------------------------
+   1. LEFT SIDE (ヘッダー ＋ 縦並びタブ ＋ ボタン)
+   ----------------------------------------- */
+.top-news__side {
+  display: flex;
+  flex-direction: column;
+
+  /* ヘッダー */
+  .top-news-header {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 32px;
+
+    /* 緑の葉っぱアイコン ＋ 日本語見出し */
+    .top-news-header__jp {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.95rem;
+      font-weight: 700; /* ご指示通り上限 700 */
+      color: #2d6d43; /* 平松グリーン */
+      letter-spacing: 0.02em;
+
+      .leaf-icon {
+        width: 14px;
+        height: 14px;
+        display: inline-block;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%232d6d43' d='M17 8C8 10 59 16.17 3.83 12 2c0 0 4 2 11 2 8 0 11-8 11-8s-2 1-7 2z'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+      }
+    }
+
+    /* 英語大見出し (NEWS) */
+    .top-news-header__en {
+      font-family: var(--font-en);
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #000000;
+      margin: 0;
+      line-height: 1.1;
+      letter-spacing: 0.02em;
+    }
+
+    @include mobile-fablet {
+      margin-bottom: 20px;
+
+      .top-news-header__jp { font-size: 0.875rem; }
+      .top-news-header__en { font-size: 2.2rem; }
+    }
+  }
+
+  /* 縦並びタブフィルター */
+  .top-news-tab-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 48px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+
+    li {
+      margin: 0;
+      width: 100%;
+    }
+
+    .tab-btn {
+      border: none;
+      background: transparent;
+      padding: 8px 20px;
+      border-radius: 24px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #888888;
+      cursor: pointer;
+      transition: color 0.25s ease, background-color 0.25s ease;
+      text-align: left;
+
+      &:hover {
+        color: #333333;
+        background-color: #f0f2f0;
+      }
+
+      /* アクティブ時：白のカプセル型枠 ＋ 黒文字 */
+      &.-active {
+        background-color: #ffffff;
+        color: #000000;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+      }
+    }
+
+    @include mobile-fablet {
+      flex-direction: row; /* スマホ時は横並びにしてスクロール可に */
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+      gap: 6px;
+
+      .tab-btn {
+        padding: 6px 14px;
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  /* 一覧をみるボタン (52px 正円アイコン仕様) */
+  .top-news-more-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    text-decoration: none;
+    width: fit-content;
+
+    .txt {
+      font-size: 0.95rem;
+      font-weight: 700; /* 上限 700 */
+      color: #000000;
+      letter-spacing: 0.02em;
+      pointer-events: none;
+    }
+
+    .arrow {
+      width: 52px;
+      height: 52px;
+      border: 1px solid #dcdcdc;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      background-color: #ffffff;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='14' viewBox='0 0 18 14'%3E%3Cpath fill='none' stroke='%23333333' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' d='M0 7h15M10 2l5 5-5 5'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.25s ease, background-color 0.25s ease;
+      pointer-events: none;
+    }
+
+    &:hover {
+      .arrow {
+        border-color: #2d6d43;
+        background-color: #f7f9f7;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='14' viewBox='0 0 18 14'%3E%3Cpath fill='none' stroke='%232d6d43' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' d='M0 7h15M10 2l5 5-5 5'/%3E%3C/svg%3E");
+        transform: translateX(5px);
+      }
+    }
+
+    @include mobile-fablet {
+      gap: 12px;
+
+      .txt { font-size: 0.875rem; }
+      .arrow {
+        width: 40px;
+        height: 40px;
+        background-size: 14px 11px;
+      }
+    }
+  }
+}
+
+/* -----------------------------------------
+   2. RIGHT SIDE (記事リスト ＆ バッジ)
+   ----------------------------------------- */
+.top-news__main {
+  width: 100%;
+  min-width: 0;
+}
+
+.top-news-article-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+
+  .top-news-article-item {
+    border-bottom: 1px solid #e8ece9;
+
+    &:first-child {
+      border-top: 1px solid #e8ece9;
+    }
+  }
+
+  .article-link {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 20px 0;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+
+    .meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+
+      .date {
+        font-family: var(--font-en);
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: #999999;
+        letter-spacing: 0.02em;
+      }
+    }
+
+    .title {
+      font-size: 0.95rem;
+      font-weight: 700; /* 上限 700 */
+      color: #000000;
+      line-height: 1.6;
+      margin: 0;
+      letter-spacing: 0.01em;
+      transition: color 0.25s ease;
+    }
+
+    /* ホバー時：タイトルが平松グリーンへチェンジ */
+    &:hover {
+      .title {
+        color: #2d6d43;
+      }
+    }
+  }
+
+  @include mobile-fablet {
+    .article-link {
+      padding: 16px 0;
+      gap: 6px;
+
+      .meta .date { font-size: 0.8rem; }
+      .title { font-size: 0.875rem; line-height: 1.55; }
+    }
+  }
+}
+
+/* 各種カテゴリバッジ (共通仕様) */
+.badge {
+  font-size: 0.725rem;
+  font-weight: 700;
+  color: #ffffff;
+  padding: 3px 12px;
+  border-radius: 12px;
+  display: inline-block;
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+
+  &.-entrance { background-color: #2ea894; } /* 入試情報：エメラルドグリーン */
+  &.-info     { background-color: #38426b; } /* お知らせ：ネイビー */
+  &.-blog     { background-color: #8c5311; } /* ブログ：ブラウン */
+  &.-event    { background-color: #e2ab00; } /* イベント：イエロー */
+  &.-dept     { background-color: #b3cc36; } /* 学科：ライムグリーン */
+
+  @include mobile-fablet {
+    font-size: 0.675rem;
+    padding: 2px 10px;
+  }
+}
+
+/* ==========================================================================
+   TOPICS SECTION (トップページ トピックス セクション)
+   ========================================================================== */
+
+.section-top-topics {
+  width: 100%;
+  padding: 80px 0 100px;
+  background-color: #F7F7F7;
+  position: relative;
+
+  @include mobile-fablet {
+    padding: 48px 0 60px;
+  }
+}
+
+.top-topics-container {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  margin-top: 36px;
+
+  @include mobile-fablet {
+    gap: 32px;
+    margin-top: 24px;
+  }
+}
+
+/* -----------------------------------------
+   1. TOP NAV CARDS (上段 4列ナビゲーション)
+   ----------------------------------------- */
+.top-topics-nav-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+
+  @include mobile-desktop {
+    gap: 16px;
+  }
+
+  @include mobile-fablet {
+    grid-template-columns: repeat(2, 1fr); /* スマホ時は 2列×2行 */
+    gap: 20px 16px;
+  }
+}
+
+.top-topics-nav-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-decoration: none;
+  color: inherit;
+
+  /* アイキャッチ画像枠（角丸 16px） */
+  .top-topics-nav-card__img {
+    width: 100%;
+    margin: 0;
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: #f7f8f8;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+
+    img {
+      width: 100%;
+      height: 180px; /* PC時画像高さ */
+      display: block;
+      object-fit: cover;
+      transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+  }
+
+  /* テキスト ＆ 丸囲み矢印エリア */
+  .top-topics-nav-card__info {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 8px;
+    padding-right: 4px;
+
+    .txt-group {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+
+      /* 日本語タイトル */
+      .ja {
+        font-size: 1rem;
+        font-weight: 700; /* ご指示上限 700 規約 */
+        color: #000000;
+        line-height: 1.35;
+        letter-spacing: 0.02em;
+        transition: color 0.25s ease;
+      }
+
+      /* 英語表記 */
+      .en {
+        font-family: var(--font-en);
+        font-size: 0.775rem;
+        font-weight: 500;
+        color: #999999;
+        letter-spacing: 0.02em;
+      }
+    }
+
+    /* 正円矢印アイコン (共通デザイン規格 32px) */
+    .arrow {
+      width: 32px;
+      height: 32px;
+      border: 1px solid #e0e0e0;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      background-color: #ffffff;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='8' viewBox='0 0 10 8'%3E%3Cpath fill='none' stroke='%23333333' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round' d='M0 4h8M5 1l3 3-3 3'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.25s ease, background-color 0.25s ease;
+      pointer-events: none; /* チラつき防止 */
+    }
+  }
+
+  /* 💡 ホバー時：画像ズーム ＋ 矢印が右へスライド ＋ 日本語が緑へ */
+  &:hover {
+    .top-topics-nav-card__img img {
+      transform: scale(1.05);
+    }
+
+    .top-topics-nav-card__info {
+      .ja {
+        color: #2d6d43; /* 平松グリーン */
+      }
+
+      .arrow {
+        border-color: #2d6d43;
+        background-color: #f7f9f7;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='8' viewBox='0 0 10 8'%3E%3Cpath fill='none' stroke='%232d6d43' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round' d='M0 4h8M5 1l3 3-3 3'/%3E%3C/svg%3E");
+        transform: translateX(3px);
+      }
+    }
+  }
+
+  @include mobile-desktop {
+    .top-topics-nav-card__img img {
+      height: 150px;
+    }
+
+    .top-topics-nav-card__info {
+      .txt-group .ja { font-size: 0.925rem; }
+      .arrow { width: 28px; height: 28px; background-size: 8px 6px; }
+    }
+  }
+
+  @include mobile-fablet {
+    gap: 8px;
+
+    .top-topics-nav-card__img {
+      border-radius: 12px;
+
+      img {
+        height: 120px;
+      }
+    }
+
+    .top-topics-nav-card__info {
+      .txt-group {
+        .ja { font-size: 0.85rem; }
+        .en { font-size: 0.7rem; }
+      }
+
+      .arrow {
+        width: 26px;
+        height: 26px;
+        background-size: 8px 6px;
+      }
+    }
+  }
+}
+
+/* -----------------------------------------
+   2. BOTTOM BANNERS (下段 2列大型バナー)
+   ----------------------------------------- */
+.top-topics-banner-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+
+  @include mobile-desktop {
+    gap: 20px;
+  }
+
+  @include mobile-fablet {
+    grid-template-columns: 1fr; /* スマホ時は 1列縦積み */
+    gap: 16px;
+  }
+}
+
+.top-topics-banner-item {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.35s ease;
+
+  .banner-img {
+    width: 100%;
+    margin: 0;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+  }
+
+  /* ホバー時：全体がほんのり沈み込み＆ふんわり持ち上がり */
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+  }
+
+  @include mobile-fablet {
+    border-radius: 14px;
+  }
+}
