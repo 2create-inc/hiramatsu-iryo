@@ -382,6 +382,92 @@
 }
 
 
+/* 教員カード：写真左・プロフィール右 ＋ 説明文を下に全幅（__head / __desc を使う場合） */
+.school-faculty-card__head {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+  margin-bottom: 24px;
+
+  .school-faculty-card__photo {
+    width: 180px;
+    flex-shrink: 0;
+    margin: 0;
+    background-color: transparent;
+
+    img {
+      aspect-ratio: 1 / 1;
+    }
+  }
+
+  .school-faculty-card__body {
+    flex: 1;
+    min-width: 0;
+    padding-top: 16px;
+
+    .subject-dl {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      margin: 0;
+
+      .badge {
+        border: none;
+        background-color: #f2f5f2;
+      }
+    }
+  }
+
+  @include mobile-fablet {
+    gap: 16px;
+    margin-bottom: 16px;
+
+    .school-faculty-card__photo {
+      width: 112px;
+    }
+
+    .school-faculty-card__body {
+      padding-top: 0;
+    }
+  }
+}
+
+.subject-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #333333;
+    line-height: 1.6;
+
+    &::before {
+      content: "・";
+    }
+  }
+}
+
+.school-faculty-card__desc {
+  .desc {
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.95;
+    color: #444444;
+    margin: 0;
+    text-align: justify;
+  }
+
+  @include mobile-fablet {
+    .desc {
+      font-size: 0.825rem;
+      line-height: 1.75;
+    }
+  }
+}
+
+
 /* ==========================================================================
    SCHOOL ACCESS SECTION (アクセス セクション)
    ========================================================================== */
@@ -1110,6 +1196,109 @@
     .card-main-ttl {
       font-size: 1.05rem;
       margin-bottom: 20px;
+    }
+  }
+}
+
+/* ==========================================================================
+   SCHOOL DEPARTMENT LINKS (学科リンク)
+   ========================================================================== */
+.section-school-dept-links {
+  width: 100%;
+  padding: 80px 0;
+  background-color: #f7f7f7;
+
+  @include mobile-fablet {
+    padding: 48px 0;
+  }
+}
+
+.school-dept-links-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 56px;
+
+  @include mobile-desktop {
+    gap: 32px;
+  }
+
+  @include mobile-fablet {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+
+.school-dept-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+
+  .school-dept-link__img {
+    margin: 0;
+    border-radius: 16px;
+    overflow: hidden;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 380 / 250;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+  }
+
+  .school-dept-link__label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 16px;
+
+    .txt {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #000000;
+      letter-spacing: 0.04em;
+    }
+
+    .arrow {
+      width: 40px;
+      height: 40px;
+      flex-shrink: 0;
+      border: 1px solid #dcdcdc;
+      border-radius: 50%;
+      background-color: #ffffff;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='10' viewBox='0 0 14 10'%3E%3Cpath fill='none' stroke='%23333333' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round' d='M0 5h12M8 1l4 4-4 4'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: border-color 0.25s ease, background-color 0.25s ease;
+    }
+  }
+
+  &:hover {
+    .school-dept-link__img img {
+      transform: scale(1.04);
+    }
+
+    .arrow {
+      border-color: #2d6d43;
+      background-color: #f7f9f7;
+    }
+  }
+
+  @include mobile-fablet {
+    .school-dept-link__label {
+      margin-top: 12px;
+
+      .txt {
+        font-size: 1rem;
+      }
+
+      .arrow {
+        width: 34px;
+        height: 34px;
+      }
     }
   }
 }

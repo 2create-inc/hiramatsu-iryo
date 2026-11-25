@@ -35,14 +35,14 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
 
         <!-- 学科情報グループ -->
         <div class="department-mv-hero__main-txt">
-          <div class="department-icon">
-            <img src="/images/department/ico_lab.svg" alt="" width="48" height="48" loading="lazy">
+          <div class="department-icon -opt">
+            <img src="/images/department/ico_opt.svg" alt="" width="48" height="48" loading="lazy">
           </div>
 
           <h1 class="department-title">視能訓練学科</h1>
           <p class="department-meta">
             <span>3年制</span>
-            <span">定員30名</span>
+            <span>定員30名</span>
           </p>
 
           <div class="department-catch">
@@ -71,13 +71,13 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
 
   </section>
 
-  <!-- 2. 下部：臨床検査技師とは？ エリア (section__inner 使用) -->
+  <!-- 2. 下部：視能訓練士とは？ エリア (section__inner 使用) -->
   <section class="section-department-about">
     <div class="section__inner">
 
       <div class="hiramatsu-support-header -center">
         <span class="hiramatsu-support-header__en">About the Course</span>
-        <h2 class="hiramatsu-support-header__title">視能訓練学科とは？</h2>
+        <h2 class="hiramatsu-support-header__title">視能訓練士とは？</h2>
       </div>
 
       <div class="department-about-body">
@@ -426,7 +426,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
           <div class="schedule-card">
             <div class="month-badge">12<span>月</span></div>
             <ul class="event-list">
-              <li>冬季休み</li>
+              <li>冬休み</li>
             </ul>
           </div>
 
@@ -509,7 +509,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <!-- 右側：角丸ポートレート写真 -->
       <div class="reasons-card__photo">
         <figure class="student-photo">
-          <img src="/images/sogoiryo/rinken/student_photo.jpg" alt="視能訓練学科 岡野 紫音さん" width="440" height="520" loading="lazy">
+          <img src="/images/sogoiryo/ort/student_photo.jpg" alt="視能訓練学科 岡野 紫音さん" width="440" height="520" loading="lazy">
         </figure>
       </div>
 
@@ -580,7 +580,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
   <!-- 💡 1. ウィンドウ幅いっぱいに広がる校舎全景ビジュアル (フルブリード) -->
   <div class="department-building-visual">
     <figure class="building-photo">
-      <img src="/images/sogoiryo/rinken/building_full.jpg" alt="大分平松総合医療専門学校 校舎外観" loading="lazy">
+      <img src="/images/sogoiryo/building_full.jpg" alt="大分平松総合医療専門学校 校舎外観" loading="lazy">
     </figure>
   </div>
 

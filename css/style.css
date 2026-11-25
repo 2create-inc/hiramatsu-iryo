@@ -6894,10 +6894,10 @@ body {
   }
 }
 .department-mv-hero__content .department-icon {
-  width: 56px;
-  height: 56px;
+  width: 80px;
+  height: 80px;
   background-color: #f7f9f7;
-  border-radius: 12px;
+  border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -6907,6 +6907,30 @@ body {
   width: 48px;
   height: 48px;
   object-fit: contain;
+}
+.department-mv-hero__content .department-icon.-lab {
+  background-color: #f7fae8;
+}
+.department-mv-hero__content .department-icon.-eng {
+  background-color: #fbe3e3;
+}
+.department-mv-hero__content .department-icon.-opt {
+  background-color: #dce5f2;
+}
+.department-mv-hero__content .department-icon.-pt {
+  background-color: #fdefde;
+}
+.department-mv-hero__content .department-icon.-ot {
+  background-color: #e0ece3;
+}
+.department-mv-hero__content .department-icon.-st {
+  background-color: #fdebf1;
+}
+.department-mv-hero__content .department-icon.-jt {
+  background-color: #eae4f3;
+}
+.department-mv-hero__content .department-icon.-dh {
+  background-color: #e6f5fb;
 }
 .department-mv-hero__content .department-title {
   font-size: 2.2rem;
@@ -7439,6 +7463,41 @@ body {
     gap: 8px;
   }
   .qualification-list li {
+    font-size: 0.825rem;
+  }
+}
+
+/* 獲得できる資格：小見出しで分ける場合（言語聴覚士科など） */
+.qualification-group {
+  margin-top: 40px;
+}
+.qualification-group + .qualification-group {
+  margin-top: 48px;
+}
+.qualification-group .qualification-list {
+  margin-top: 20px;
+}
+@media screen and (max-width: 767px) {
+  .qualification-group {
+    margin-top: 28px;
+  }
+  .qualification-group + .qualification-group {
+    margin-top: 32px;
+  }
+  .qualification-group .qualification-list {
+    margin-top: 14px;
+  }
+}
+
+.qualification-group__ttl {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #333333;
+  line-height: 1.5;
+  margin: 0;
+}
+@media screen and (max-width: 767px) {
+  .qualification-group__ttl {
     font-size: 0.825rem;
   }
 }
@@ -12344,6 +12403,80 @@ body {
   }
 }
 
+/* 教員カード：写真左・プロフィール右 ＋ 説明文を下に全幅（__head / __desc を使う場合） */
+.school-faculty-card__head {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+  margin-bottom: 24px;
+}
+.school-faculty-card__head .school-faculty-card__photo {
+  width: 180px;
+  flex-shrink: 0;
+  margin: 0;
+  background-color: transparent;
+}
+.school-faculty-card__head .school-faculty-card__photo img {
+  aspect-ratio: 1/1;
+}
+.school-faculty-card__head .school-faculty-card__body {
+  flex: 1;
+  min-width: 0;
+  padding-top: 16px;
+}
+.school-faculty-card__head .school-faculty-card__body .subject-dl {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 0;
+}
+.school-faculty-card__head .school-faculty-card__body .subject-dl .badge {
+  border: none;
+  background-color: #f2f5f2;
+}
+@media screen and (max-width: 767px) {
+  .school-faculty-card__head {
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  .school-faculty-card__head .school-faculty-card__photo {
+    width: 112px;
+  }
+  .school-faculty-card__head .school-faculty-card__body {
+    padding-top: 0;
+  }
+}
+
+.subject-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.subject-list li {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #333333;
+  line-height: 1.6;
+}
+.subject-list li::before {
+  content: "・";
+}
+
+.school-faculty-card__desc .desc {
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.95;
+  color: #444444;
+  margin: 0;
+  text-align: justify;
+}
+@media screen and (max-width: 767px) {
+  .school-faculty-card__desc .desc {
+    font-size: 0.825rem;
+    line-height: 1.75;
+  }
+}
+
 /* ==========================================================================
    SCHOOL ACCESS SECTION (アクセス セクション)
    ========================================================================== */
@@ -13059,6 +13192,100 @@ body {
   .school-disclosure-card .card-main-ttl {
     font-size: 1.05rem;
     margin-bottom: 20px;
+  }
+}
+
+/* ==========================================================================
+   SCHOOL DEPARTMENT LINKS (学科リンク)
+   ========================================================================== */
+.section-school-dept-links {
+  width: 100%;
+  padding: 80px 0;
+  background-color: #f7f7f7;
+}
+@media screen and (max-width: 767px) {
+  .section-school-dept-links {
+    padding: 48px 0;
+  }
+}
+
+.school-dept-links-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 56px;
+}
+@media screen and (max-width: 1399px) {
+  .school-dept-links-grid {
+    gap: 32px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .school-dept-links-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+
+.school-dept-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+.school-dept-link .school-dept-link__img {
+  margin: 0;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.school-dept-link .school-dept-link__img img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 380/250;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.school-dept-link .school-dept-link__label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 16px;
+}
+.school-dept-link .school-dept-link__label .txt {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #000000;
+  letter-spacing: 0.04em;
+}
+.school-dept-link .school-dept-link__label .arrow {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border: 1px solid #dcdcdc;
+  border-radius: 50%;
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='10' viewBox='0 0 14 10'%3E%3Cpath fill='none' stroke='%23333333' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round' d='M0 5h12M8 1l4 4-4 4'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: border-color 0.25s ease, background-color 0.25s ease;
+}
+.school-dept-link:hover .school-dept-link__img img {
+  transform: scale(1.04);
+}
+.school-dept-link:hover .arrow {
+  border-color: #2d6d43;
+  background-color: #f7f9f7;
+}
+@media screen and (max-width: 767px) {
+  .school-dept-link .school-dept-link__label {
+    margin-top: 12px;
+  }
+  .school-dept-link .school-dept-link__label .txt {
+    font-size: 1rem;
+  }
+  .school-dept-link .school-dept-link__label .arrow {
+    width: 34px;
+    height: 34px;
   }
 }
 

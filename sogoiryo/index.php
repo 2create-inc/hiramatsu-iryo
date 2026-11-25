@@ -14,7 +14,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <li>大分平松総合医療専門学校</li>
     </ul>
   </div>
-  <div class="page-mv"><img src="/images/sogoiryo/mv.jpg"></div>
+  <div class="page-mv"><img src="/images/sogoiryo/idx/mv.jpg" alt="大分平松総合医療専門学校 校舎外観"></div>
 </section>
 
 
@@ -40,13 +40,13 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
 
         <div class="school-principal__body">
           <p>
-            医療に対するニーズの変化や多様化、医療技術の高度化など、医療を取り巻く環境は大きく変化しています。大分平松総合医療専門学校には、臨床検査学科、臨床工学科、視能訓練学科の 3 学科が設置され、本学園の教育の精神である「誠実・丁寧・知力」のもと「広い視野を持ち、いかなる状況でも柔軟に対応できる医療人」の育成を目指しています。
+            医療に対するニーズの変化や多様化、医療技術の高度化など、医療を取り巻く環境は大きく変化しています。大分平松総合医療専門学校には、臨床検査学科、臨床工学科、視能訓練学科の3学科が設置され、本学園の教育の精神である「誠実・丁寧・知力」のもと「広い視野を持ち、いかなる状況でも柔軟に対応できる医療人」の育成を目指しています。
           </p>
           <p>
-            本校では、個々の専門職種としての知識や技術を習得することはもちろんですが、現在、医療の根幹をなす「チーム医療」の一員として他の職種の考え方やアプローチ方法、治療方法などを理解することも大切にしています。ＩＰＥ教育（多職種連携教育）を積極的に取り入れ、それぞれの医療資格を目指す学生同士が互いに学び合うことで「チーム医療」の基礎となる力を 3 年間の学生生活の中で習得することを目指しています。
+            本校では、個々の専門職種としての知識や技術を習得することはもちろんですが、現在、医療の根幹をなす「チーム医療」の一員として他の職種の考え方やアプローチ方法、治療方法などを理解することも大切にしています。ＩＰＥ教育（多職種連携教育）を積極的に取り入れ、それぞれの医療資格を目指す学生同士が互いに学び合うことで「チーム医療」の基礎となる力を3年間の学生生活の中で習得することを目指しています。
           </p>
           <p>
-            医療人を目指す 3 年間には困難も待ち受けています。本校ではクラス担任制を採用しており、学生ひとりひとりにきめ細やかな対応をおこなうと同時に、勉強面を含めた個別指導にも力を入れています。知識や技術のみならず、柔軟な対応力、豊かな人間性を身につけた医療人として活躍できるように教育、サポートいたします。
+            医療人を目指す3年間には困難も待ち受けています。本校ではクラス担任制を採用しており、学生ひとりひとりにきめ細やかな対応をおこなうと同時に、勉強面を含めた個別指導にも力を入れています。知識や技術のみならず、柔軟な対応力、豊かな人間性を身につけた医療人として活躍できるように教育、サポートいたします。
           </p>
         </div>
       </div>
@@ -54,7 +54,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <!-- 右側：写真 ＆ プロフィール -->
       <div class="school-principal__profile">
         <figure class="school-principal-photo">
-          <img src="/images/sogoiryo/hiramatsu/principal_photo.jpg" alt="校長 樋口 安典" width="480" height="600" loading="lazy">
+          <img src="/images/sogoiryo/idx/principal_photo.jpg" alt="校長 樋口 安典" width="480" height="600" loading="lazy">
         </figure>
         <div class="school-principal-info">
           <p class="school-principal-info__title">
@@ -81,7 +81,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <!-- 左側：写真 ＆ プロフィール -->
       <div class="school-message__profile">
         <figure class="school-message-photo">
-          <img src="/images/sogoiryo/hiramatsu/teacher_photo_01.jpg" alt="教育部長 尾越 典子" width="480" height="600" loading="lazy">
+          <img src="/images/sogoiryo/idx/message_photo.jpg" alt="教育部長 尾越 典子" width="480" height="600" loading="lazy">
         </figure>
         <div class="school-message-info">
           <p class="school-message-info__title">
@@ -142,25 +142,34 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
 
     <!-- 教員紹介リスト -->
     <div class="school-faculty-block">
-
       <!-- 1. 臨床検査学科 -->
       <div class="school-faculty-group">
         <div class="underline-header">
-          <h2 class="headline2_underline-style">臨床検査学科 教員</h2>
+          <h2 class="headline2_underline-style">臨床検査学科　教員</h2>
         </div>
 
         <div class="school-faculty-grid">
           <article class="school-faculty-card">
-            <figure class="school-faculty-card__photo">
-              <img src="/images/sogoiryo/hiramatsu/faculty_01.jpg" alt="学科長 三戸 志保 先生" width="400" height="300" loading="lazy">
-            </figure>
-            <div class="school-faculty-card__body">
-              <p class="role">学科長</p>
-              <h3 class="name">三戸 志保 <span class="honorific">先生</span></h3>
-              <dl class="subject-dl">
-                <dt class="badge">担当科目</dt>
-                <dd class="txt">生理機能検査学演習・基礎医療科学Ⅲ 他</dd>
-              </dl>
+            <div class="school-faculty-card__head">
+              <figure class="school-faculty-card__photo">
+                <img src="/images/sogoiryo/idx/teacher_photo_01.jpg" alt="学科長 三戸 志保 先生" width="500" height="500" loading="lazy">
+              </figure>
+              <div class="school-faculty-card__body">
+                <p class="role">学科長</p>
+                <h3 class="name">三戸 志保 <span class="honorific">先生</span></h3>
+                <dl class="subject-dl">
+                  <dt class="badge">担当科目</dt>
+                  <dd class="txt">
+                    <ul class="subject-list">
+                      <li>基礎臨床検査学</li>
+                      <li>血液検査学</li>
+                      <li>医動物検査学 他</li>
+                    </ul>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+            <div class="school-faculty-card__desc">
               <p class="desc">
                 現代医療において、臨床検査技師は「診断の根拠」を導き出す重要な役割を担っています。医師が適切な治療方針を決定するためには、正確かつ迅速な検査データが欠かせません。本学科では、高度化する医療技術に対応できる専門知識と、実践的な技術を習得するカリキュラムを用意しています。国家試験合格という目標はもちろん、チーム医療の一員として多職種と連携し、患者様に寄り添える豊かな人間性を育むことを重視しています。検査のスペシャリストへの道を、私たちと共に歩みましょう。
               </p>
@@ -168,16 +177,26 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
           </article>
 
           <article class="school-faculty-card">
-            <figure class="school-faculty-card__photo">
-              <img src="/images/sogoiryo/hiramatsu/faculty_02.jpg" alt="教務主任 北永 裕一 先生" width="400" height="300" loading="lazy">
-            </figure>
-            <div class="school-faculty-card__body">
-              <p class="role">教務主任</p>
-              <h3 class="name">北永 裕一 <span class="honorific">先生</span></h3>
-              <dl class="subject-dl">
-                <dt class="badge">担当科目</dt>
-                <dd class="txt">基礎臨床検査学・保健医療福祉学Ⅰ 他</dd>
-              </dl>
+            <div class="school-faculty-card__head">
+              <figure class="school-faculty-card__photo">
+                <img src="/images/sogoiryo/idx/teacher_photo_02.jpg" alt="教務主任 北永 裕一 先生" width="500" height="500" loading="lazy">
+              </figure>
+              <div class="school-faculty-card__body">
+                <p class="role">教務主任</p>
+                <h3 class="name">北永 裕一 <span class="honorific">先生</span></h3>
+                <dl class="subject-dl">
+                  <dt class="badge">担当科目</dt>
+                  <dd class="txt">
+                    <ul class="subject-list">
+                      <li>基礎臨床検査学</li>
+                      <li>血液検査学</li>
+                      <li>医動物検査学 他</li>
+                    </ul>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+            <div class="school-faculty-card__desc">
               <p class="desc">
                 臨床検査技師とは、目には見えない身体の状態を、数値や波形、画像、細胞形態など科学的な分析のもと『見える化』する専門職です。ここ数年で臨床検査の業界は急速な変革期を迎えていますが、いつの時代も、検体や標本は患者さんそのものであるということを意識できなければいけません。またデータ提供だけでなく、医師に頼られ、時として意見を求められ応えられるだけの総合的な能力は検査技師の存在価値を高め、未来への発展を促すものであると信じています。Education（教育）は人の才能を引き出すという意味、私たちはいろいろな専門知識を教えると同時に人間性や思考力、問題を解決できる力をつけていくことを重視しています。
               </p>
@@ -189,21 +208,30 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <!-- 2. 臨床工学科 -->
       <div class="school-faculty-group">
         <div class="underline-header">
-          <h2 class="headline2_underline-style">臨床工学科 教員</h2>
+          <h2 class="headline2_underline-style">臨床工学科　教員</h2>
         </div>
 
         <div class="school-faculty-grid">
           <article class="school-faculty-card">
-            <figure class="school-faculty-card__photo">
-              <img src="/images/sogoiryo/hiramatsu/faculty_03.jpg" alt="学科長 田端 唯次 先生" width="400" height="300" loading="lazy">
-            </figure>
-            <div class="school-faculty-card__body">
-              <p class="role">学科長</p>
-              <h3 class="name">田端 唯次 <span class="honorific">先生</span></h3>
-              <dl class="subject-dl">
-                <dt class="badge">担当科目</dt>
-                <dd class="txt">生体機能代行装置学・医用治療機器学・電気工学 他</dd>
-              </dl>
+            <div class="school-faculty-card__head">
+              <figure class="school-faculty-card__photo">
+                <img src="/images/sogoiryo/idx/teacher_photo_03.jpg" alt="学科長 田端 唯次 先生" width="500" height="500" loading="lazy">
+              </figure>
+              <div class="school-faculty-card__body">
+                <p class="role">学科長</p>
+                <h3 class="name">田端 唯次 <span class="honorific">先生</span></h3>
+                <dl class="subject-dl">
+                  <dt class="badge">担当科目</dt>
+                  <dd class="txt">
+                    <ul class="subject-list">
+                      <li>生体機能代行装置学実習</li>
+                      <li>医用治療機器学Ⅰ 他</li>
+                    </ul>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+            <div class="school-faculty-card__desc">
               <p class="desc">
                 高度化・複雑化が進む現代医療において、医療機器のスペシャリストである「臨床工学技士」の重要性はますます高まっています。近年はAIやIoTを活用した最先端機器の導入や、チーム医療におけるタスク・シフト推進など医療DXが進展しており、現場を支えるキーパーソンとして活躍の場が広がっています。
               </p>
@@ -217,16 +245,25 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
           </article>
 
           <article class="school-faculty-card">
-            <figure class="school-faculty-card__photo">
-              <img src="/images/sogoiryo/hiramatsu/faculty_04.jpg" alt="教務主任 金丸 綾子 先生" width="400" height="300" loading="lazy">
-            </figure>
-            <div class="school-faculty-card__body">
-              <p class="role">教務主任</p>
-              <h3 class="name">金丸 綾子 <span class="honorific">先生</span></h3>
-              <dl class="subject-dl">
-                <dt class="badge">担当科目</dt>
-                <dd class="txt">医療安全管理学・生体機能代行装置学・解剖学 他</dd>
-              </dl>
+            <div class="school-faculty-card__head">
+              <figure class="school-faculty-card__photo">
+                <img src="/images/sogoiryo/idx/teacher_photo_04.jpg" alt="教務主任 金丸 綾子 先生" width="500" height="500" loading="lazy">
+              </figure>
+              <div class="school-faculty-card__body">
+                <p class="role">教務主任</p>
+                <h3 class="name">金丸 綾子 <span class="honorific">先生</span></h3>
+                <dl class="subject-dl">
+                  <dt class="badge">担当科目</dt>
+                  <dd class="txt">
+                    <ul class="subject-list">
+                      <li>生体機能代行装置学</li>
+                      <li>医療安全管理学Ⅰ 他</li>
+                    </ul>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+            <div class="school-faculty-card__desc">
               <p class="desc">
                 現在の医療は多くの機器で成り立っています。臨床工学技士は、どれもが安全・安心して使えるよう、医療機器の専門的知識と臨床現場での技術を生かし、医療を提供しています。医師や看護師と、手術室や人工呼吸器、透析装置など治療する場で各々が働いており、機器の状態や患者さんの変化に早期対応し、小さな変化を感じることで、チーム全体で安全を守っています。災害時にはDMAT のメンバーの一員となり、限られた環境で医療を継続できるよう業務を行います。本学科では、現場で多職種と関わっているため、実習を通して積極的なコミュニケーションと情報共有、小さな変化に気付く広い視野をもてるようサポートしていき、一つ一つ学びが繋がり、実感できるよう一緒に取り組んでいきたいと思っております。
               </p>
@@ -238,21 +275,30 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <!-- 3. 視能訓練学科 -->
       <div class="school-faculty-group">
         <div class="underline-header">
-          <h2 class="headline2_underline-style">視能訓練学科 教員</h2>
+          <h2 class="headline2_underline-style">視能訓練学科　教員</h2>
         </div>
 
         <div class="school-faculty-grid">
           <article class="school-faculty-card">
-            <figure class="school-faculty-card__photo">
-              <img src="/images/sogoiryo/hiramatsu/faculty_05.jpg" alt="学科長 田野上 恭子 先生" width="400" height="300" loading="lazy">
-            </figure>
-            <div class="school-faculty-card__body">
-              <p class="role">学科長</p>
-              <h3 class="name">田野上 恭子 <span class="honorific">先生</span></h3>
-              <dl class="subject-dl">
-                <dt class="badge">担当科目</dt>
-                <dd class="txt">屈折矯正Ⅰ・視能矯正学Ⅱ・生理光学演習Ⅲ 他</dd>
-              </dl>
+            <div class="school-faculty-card__head">
+              <figure class="school-faculty-card__photo">
+                <img src="/images/sogoiryo/idx/teacher_photo_05.jpg" alt="学科長 田野上 恭子 先生" width="500" height="500" loading="lazy">
+              </figure>
+              <div class="school-faculty-card__body">
+                <p class="role">学科長</p>
+                <h3 class="name">田野上 恭子 <span class="honorific">先生</span></h3>
+                <dl class="subject-dl">
+                  <dt class="badge">担当科目</dt>
+                  <dd class="txt">
+                    <ul class="subject-list">
+                      <li>生理光学演習</li>
+                      <li>視能矯正学実習 他</li>
+                    </ul>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+            <div class="school-faculty-card__desc">
               <p class="desc">
                 人は情報の80％以上を視覚から得ていると言われるほど、眼は大切な感覚器官です。しかし、「見えにくさ」という感覚は目に見える形では表せません。それを視能訓練士が正確な検査データという形に置き換え、医師の診断や治療に役立てています。患者さんと医師との橋渡し――これが視能訓練士の一番の役割であり、やりがいを感じる瞬間です。今後は、国が進める「タスク・シフト／シェア」により、視能訓練士の業務範囲はさらに広がっていくと思われます。そうした変化にも対応できるよう、臨床の場面を想定した学びを大切にしながら、自ら考える力や柔軟に対応する力を養える授業を心がけています。
               </p>
@@ -260,16 +306,25 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
           </article>
 
           <article class="school-faculty-card">
-            <figure class="school-faculty-card__photo">
-              <img src="/images/sogoiryo/hiramatsu/faculty_06.jpg" alt="教務主任 正 鮎美 先生" width="400" height="300" loading="lazy">
-            </figure>
-            <div class="school-faculty-card__body">
-              <p class="role">教務主任</p>
-              <h3 class="name">正 鮎美 <span class="honorific">先生</span></h3>
-              <dl class="subject-dl">
-                <dt class="badge">担当科目</dt>
-                <dd class="txt">斜視視能訓練学・医療コミュニケーション学 他</dd>
-              </dl>
+            <div class="school-faculty-card__head">
+              <figure class="school-faculty-card__photo">
+                <img src="/images/sogoiryo/idx/teacher_photo_06.jpg" alt="教務主任 正 鮎美 先生" width="500" height="500" loading="lazy">
+              </figure>
+              <div class="school-faculty-card__body">
+                <p class="role">教務主任</p>
+                <h3 class="name">正 鮎美 <span class="honorific">先生</span></h3>
+                <dl class="subject-dl">
+                  <dt class="badge">担当科目</dt>
+                  <dd class="txt">
+                    <ul class="subject-list">
+                      <li>斜視視能訓練学</li>
+                      <li>医療コミュニケーション学 他</li>
+                    </ul>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+            <div class="school-faculty-card__desc">
               <p class="desc">
                 視能訓練士は、視機能の検査や訓練を通じて、患者さんの「見える」を支える専門職です。その先には、一人ひとりの暮らしや、その人が大切にしている日常があります。だからこそ、専門的な知識や技術に加え、患者さんの思いに耳を傾け、不安や喜びを分かち合う姿勢が大切です。本校では、日々の授業や実習、仲間との学びを通して、確かな専門性とともに、相手の立場に立って考える力や、信頼関係を築くコミュニケーション力を育んでいきます。患者さんに寄り添い、見え方の質と、その先にある豊かな生活を支えられる視能訓練士へ。学生一人ひとりの成長を、教職員一同、丁寧に支えてまいります。
               </p>
@@ -277,7 +332,6 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
           </article>
         </div>
       </div>
-
     </div>
 
   </div>
@@ -331,7 +385,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <div class="school-intro-grid">
 
         <!-- 1. 大分平松総合医療専門学校 -->
-        <a href="/medical/" class="school-intro-card">
+        <a href="/sogoiryo/" class="school-intro-card">
           <figure class="school-intro-card__img">
             <img src="/images/common/school_photo_01.jpg" alt="大分平松総合医療専門学校 外観" width="300" height="500" loading="lazy">
           </figure>
@@ -353,7 +407,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
         </a>
 
         <!-- 3. 大分医学技術専門学校 -->
-        <a href="/igaku/" class="school-intro-card">
+        <a href="/igisen/" class="school-intro-card">
           <figure class="school-intro-card__img">
             <img src="/images/common/school_photo_03.jpg" alt="大分医学技術専門学校 外観" width="300" height="500" loading="lazy">
           </figure>
@@ -364,7 +418,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
         </a>
 
         <!-- 4. 大分歯科専門学校 -->
-        <a href="/dental/" class="school-intro-card">
+        <a href="/shika/" class="school-intro-card">
           <figure class="school-intro-card__img">
             <img src="/images/common/school_photo_04.jpg" alt="大分歯科専門学校 外観" width="300" height="500" loading="lazy">
           </figure>
@@ -794,6 +848,50 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
   </div>
 </section>
 
+
+<!-- ==========================================================================
+     SECTION: DEPARTMENT LINKS (学科リンク)
+     ========================================================================== -->
+<section class="section-school-dept-links">
+  <div class="section__inner">
+
+    <div class="school-dept-links-grid">
+      <!-- 臨床検査学科 -->
+      <a href="/sogoiryo/rinken/" class="school-dept-link">
+        <figure class="school-dept-link__img">
+          <img src="/images/sogoiryo/rinken/mv.jpg" alt="臨床検査学科の実習風景" width="380" height="250" loading="lazy">
+        </figure>
+        <div class="school-dept-link__label">
+          <span class="txt">臨床検査学科</span>
+          <span class="arrow" aria-hidden="true"></span>
+        </div>
+      </a>
+
+      <!-- 臨床工学科 -->
+      <a href="/sogoiryo/ce/" class="school-dept-link">
+        <figure class="school-dept-link__img">
+          <img src="/images/sogoiryo/ce/mv.jpg" alt="臨床工学科の実習風景" width="380" height="250" loading="lazy">
+        </figure>
+        <div class="school-dept-link__label">
+          <span class="txt">臨床工学科</span>
+          <span class="arrow" aria-hidden="true"></span>
+        </div>
+      </a>
+
+      <!-- 視能訓練学科 -->
+      <a href="/sogoiryo/ort/" class="school-dept-link">
+        <figure class="school-dept-link__img">
+          <img src="/images/sogoiryo/ort/mv.jpg" alt="視能訓練学科の実習風景" width="380" height="250" loading="lazy">
+        </figure>
+        <div class="school-dept-link__label">
+          <span class="txt">視能訓練学科</span>
+          <span class="arrow" aria-hidden="true"></span>
+        </div>
+      </a>
+    </div><!-- /school-dept-links-grid -->
+
+  </div>
+</section>
 
 
 <?php include($_SERVER['DOCUMENT_ROOT'] . '/assets/section-conversion.php'); ?>

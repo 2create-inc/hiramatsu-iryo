@@ -14,7 +14,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <li>大分リハビリテーション専門学校</li>
     </ul>
   </div>
-  <div class="page-mv"><img src="/images/sogoiryo/mv.jpg"></div>
+  <div class="page-mv"><img src="/images/reha/idx/mv.jpg" alt="大分リハビリテーション専門学校 校舎外観"></div>
 </section>
 
 
@@ -34,7 +34,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <!-- 左側：キャッチコピー ＆ 本文 -->
       <div class="school-principal__content">
         <h3 class="school-principal__catch">
-          誰かのために…<br>
+          誰かのために・・・<br>
           「あなたの力が夢と希望の光に！」
         </h3>
 
@@ -57,7 +57,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <!-- 右側：写真 ＆ プロフィール -->
       <div class="school-principal__profile">
         <figure class="school-principal-photo">
-          <img src="/images/sogoiryo/hiramatsu/principal_photo.jpg" alt="校長 藤岡 晋三" width="480" height="600" loading="lazy">
+          <img src="/images/reha/idx/principal_photo.jpg" alt="校長 藤岡 晋三" width="480" height="600" loading="lazy">
         </figure>
         <div class="school-principal-info">
           <p class="school-principal-info__title">
@@ -83,14 +83,13 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <!-- 左側：写真 ＆ プロフィール -->
       <div class="school-message__profile">
         <figure class="school-message-photo">
-          <img src="/images/sogoiryo/hiramatsu/teacher_photo_01.jpg" alt="教育部長 尾越 典子" width="480" height="600" loading="lazy">
+          <img src="/images/reha/idx/message_photo.jpg" alt="教育部長 日隈 武治" width="480" height="600" loading="lazy">
         </figure>
         <div class="school-message-info">
           <p class="school-message-info__title">
             <span class="label">教育部長</span>
             <span class="name">日隈 武治</span>
           </p>
-          <p class="school-principal-info__sub">教育部長兼作業療法士科学科長</p>
         </div>
       </div>
 
@@ -106,7 +105,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
             こころとからだ、そしてコミュニケーションが回復し、自分らしさを取り戻せたら・・・ そんな素敵なことはありませんよね。「リハビリテーション」とは再びその人らしさを取り戻すお仕事です。
           </p>
           <p>
-            “難しそう”“自分ができるかな～？”そんな不安を抱く方もいます。 ここは（本校）、貴方のチャレンジに伴走しながらリハビリテーションの専門職（セラピスト）になれるようにお手伝いします。
+            “難しそう”“自分ができるかな～？” そんな不安を抱く方もいます。 ここは（本校）、貴方のチャレンジに伴走しながらリハビリテーションの専門職（セラピスト）になれるようにお手伝いします。
           </p>
           <p>
             「やれるだろうか？」から「やれる気がする！」そんな貴方の成長と「セラピストになる」という目標を一緒に達成しましょう。
@@ -141,25 +140,34 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
 
     <!-- 教員紹介リスト -->
     <div class="school-faculty-block">
-
-      <!-- 1. 臨床検査学科 -->
+      <!-- 1. 理学療法士科 -->
       <div class="school-faculty-group">
         <div class="underline-header">
-          <h2 class="headline2_underline-style">理学療法士科 教員</h2>
+          <h2 class="headline2_underline-style">理学療法士科　教員</h2>
         </div>
 
         <div class="school-faculty-grid">
           <article class="school-faculty-card">
-            <figure class="school-faculty-card__photo">
-              <img src="/images/sogoiryo/hiramatsu/faculty_01.jpg" alt="学科長 三戸 志保 先生" width="400" height="300" loading="lazy">
-            </figure>
-            <div class="school-faculty-card__body">
-              <p class="role">学科長</p>
-              <h3 class="name">武田 知樹 <span class="honorific">先生</span></h3>
-              <dl class="subject-dl">
-                <dt class="badge">担当科目</dt>
-                <dd class="txt">医療統計学・神経理学療法学・理学療法概論 他</dd>
-              </dl>
+            <div class="school-faculty-card__head">
+              <figure class="school-faculty-card__photo">
+                <img src="/images/reha/idx/teacher_photo_01.jpg" alt="学科長 武田 知樹 先生" width="500" height="500" loading="lazy">
+              </figure>
+              <div class="school-faculty-card__body">
+                <p class="role">学科長</p>
+                <h3 class="name">武田 知樹 <span class="honorific">先生</span></h3>
+                <dl class="subject-dl">
+                  <dt class="badge">担当科目</dt>
+                  <dd class="txt">
+                    <ul class="subject-list">
+                      <li>医療統計学</li>
+                      <li>神経理学療法学</li>
+                      <li>理学療法概論 他</li>
+                    </ul>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+            <div class="school-faculty-card__desc">
               <p class="desc">
                 時代の変遷によって、リハビリテーションに従事する理学療法士の役割も大きく変わっています。以前は病気や怪我などにより低下した運動機能やADL（日常生活動作）の回復が主な目的でした。 しかし、現在では対象者のライフスタイルに合わせた理学療法サービスの提供を通して、対象者の「自分らしい生活を続ける」ことを実現できるような、かかわり方が求められています。 本校での3年間の修学を通して、対象者のQuality of Life（生命の質、生活の質、人生の質）を高められるような本物の知識や技術を持った理学療法士を目指してほしいと思います。
               </p>
@@ -167,16 +175,26 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
           </article>
 
           <article class="school-faculty-card">
-            <figure class="school-faculty-card__photo">
-              <img src="/images/sogoiryo/hiramatsu/faculty_02.jpg" alt="教務主任 大嶋 崇 先生" width="400" height="300" loading="lazy">
-            </figure>
-            <div class="school-faculty-card__body">
-              <p class="role">教務主任</p>
-              <h3 class="name">大嶋 崇 <span class="honorific">先生</span></h3>
-              <dl class="subject-dl">
-                <dt class="badge">担当科目</dt>
-                <dd class="txt">生理学Ⅰ・Ⅱ・呼吸理学療法学・高次脳機能障害学 他</dd>
-              </dl>
+            <div class="school-faculty-card__head">
+              <figure class="school-faculty-card__photo">
+                <img src="/images/reha/idx/teacher_photo_02.jpg" alt="教務主任 大嶋 崇 先生" width="500" height="500" loading="lazy">
+              </figure>
+              <div class="school-faculty-card__body">
+                <p class="role">教務主任</p>
+                <h3 class="name">大嶋 崇 <span class="honorific">先生</span></h3>
+                <dl class="subject-dl">
+                  <dt class="badge">担当科目</dt>
+                  <dd class="txt">
+                    <ul class="subject-list">
+                      <li>生理学Ⅰ・Ⅱ</li>
+                      <li>呼吸理学療法学</li>
+                      <li>高次脳機能障害学 他</li>
+                    </ul>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+            <div class="school-faculty-card__desc">
               <p class="desc">
                 理学療法士は、高齢による身体機能の低下や、病気・けがなどによって生じた身体の不自由に対して、理学療法を通してその人らしい生活を支えていく仕事です。一人ひとりに寄り添い、コミュニケーションを大切にしながら身体の状態を把握し、運動機能の回復や日常生活をサポートしていきます。
               </p>
@@ -187,16 +205,26 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
           </article>
 
           <article class="school-faculty-card">
-            <figure class="school-faculty-card__photo">
-              <img src="/images/sogoiryo/hiramatsu/faculty_02.jpg" alt="学生主任 佐藤 圭子 先生" width="400" height="300" loading="lazy">
-            </figure>
-            <div class="school-faculty-card__body">
-              <p class="role">学生主任</p>
-              <h3 class="name">佐藤 圭子 <span class="honorific">先生</span></h3>
-              <dl class="subject-dl">
-                <dt class="badge">担当科目</dt>
-                <dd class="txt">人間関係論・地域リハビリテーション演習・骨関節理学療法学 他</dd>
-              </dl>
+            <div class="school-faculty-card__head">
+              <figure class="school-faculty-card__photo">
+                <img src="/images/reha/idx/teacher_photo_03.jpg" alt="学生主任 佐藤 圭子 先生" width="500" height="500" loading="lazy">
+              </figure>
+              <div class="school-faculty-card__body">
+                <p class="role">学生主任</p>
+                <h3 class="name">佐藤 圭子 <span class="honorific">先生</span></h3>
+                <dl class="subject-dl">
+                  <dt class="badge">担当科目</dt>
+                  <dd class="txt">
+                    <ul class="subject-list">
+                      <li>人間関係論</li>
+                      <li>地域リハビリテーション演習</li>
+                      <li>骨関節理学療法学 他</li>
+                    </ul>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+            <div class="school-faculty-card__desc">
               <p class="desc">
                 理学療法士は、知識と技術で患者さんの身体機能の回復を後押しします。歩けなかった方が一歩を踏み出し、笑顔になる。その瞬間に立ち会えることは、この仕事ならではの喜びです。しかし、元の生活を取り戻すには、さまざまな職種との協力が欠かせません。
               </p>
@@ -211,47 +239,34 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
         </div>
       </div>
 
-      <!-- 2. 作業療法士学科 -->
+      <!-- 2. 作業療法士科 -->
       <div class="school-faculty-group">
         <div class="underline-header">
-          <h2 class="headline2_underline-style">作業療法士 教員</h2>
+          <h2 class="headline2_underline-style">作業療法士科　教員</h2>
         </div>
 
         <div class="school-faculty-grid">
           <article class="school-faculty-card">
-            <figure class="school-faculty-card__photo">
-              <img src="/images/sogoiryo/hiramatsu/faculty_03.jpg" alt="学科長 田端 唯次 先生" width="400" height="300" loading="lazy">
-            </figure>
-            <div class="school-faculty-card__body">
-              <p class="role">学科長</p>
-              <h3 class="name">日隈 武治 <span class="honorific">先生</span></h3>
-              <dl class="subject-dl">
-                <dt class="badge">担当科目</dt>
-                <dd class="txt">解剖学Ⅲ（運動器）・基礎運動学・地域作業療法学介護保険 など</dd>
-              </dl>
-              <p class="desc">
-                作業療法士は、作業活動を通じて、その人らしさを取り戻す！
-              </p>
-              <p class="desc">
-                「自分らしさを取り戻したい」 そんな素敵なことをお手伝いするのが作業療法士です。心と身体、活動・参加と時間が織りなす生活史、そして環境とのつながり。人の生活活動は複雑な要素がバランスを取りながら組重なっています。障がいを持つことで、その構成が崩れます。本校の作業療法士科では、生活活動の成り立ちや構造、再構築の方法などを学び、もう一度その人らしさを取り戻せるようにできるための基礎を学びます。
-              </p>
-              <p class="desc">
-                ここで、あなたと一緒に「作業療法士になる」目標を達成しましょう。
-              </p>
+            <div class="school-faculty-card__head">
+              <figure class="school-faculty-card__photo">
+                <img src="/images/reha/idx/teacher_photo_04.jpg" alt="教務主任 矢野 高正 先生" width="500" height="500" loading="lazy">
+              </figure>
+              <div class="school-faculty-card__body">
+                <p class="role">教務主任</p>
+                <h3 class="name">矢野 高正 <span class="honorific">先生</span></h3>
+                <dl class="subject-dl">
+                  <dt class="badge">担当科目</dt>
+                  <dd class="txt">
+                    <ul class="subject-list">
+                      <li>解剖学Ⅳ</li>
+                      <li>神経系疾患治療学</li>
+                      <li>運動器疾患治療学</li>
+                    </ul>
+                  </dd>
+                </dl>
+              </div>
             </div>
-          </article>
-
-          <article class="school-faculty-card">
-            <figure class="school-faculty-card__photo">
-              <img src="/images/sogoiryo/hiramatsu/faculty_04.jpg" alt="教務主任 矢野 高正 先生" width="400" height="300" loading="lazy">
-            </figure>
-            <div class="school-faculty-card__body">
-              <p class="role">教務主任</p>
-              <h3 class="name">矢野 高正 <span class="honorific">先生</span></h3>
-              <dl class="subject-dl">
-                <dt class="badge">担当科目</dt>
-                <dd class="txt">解剖学Ⅰ・解剖学Ⅱ・運動機能構造学・神経系疾患治療学・作業療法概論 など</dd>
-              </dl>
+            <div class="school-faculty-card__desc">
               <p class="desc">
                 作業療法は、人の生活を心身の両面から支える専門職です。 対象となるのは子どもから高齢者まで、すべての人。生活背景も、住む環境も、抱える困難も一人ひとり異なります。だからこそ、作業療法士の仕事は難しさと同時に、大きなやりがいに満ちています。
               </p>
@@ -269,21 +284,33 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <!-- 3. 言語聴覚士科 -->
       <div class="school-faculty-group">
         <div class="underline-header">
-          <h2 class="headline2_underline-style">言語聴覚士科 教員</h2>
+          <h2 class="headline2_underline-style">言語聴覚士科　教員</h2>
         </div>
 
         <div class="school-faculty-grid">
           <article class="school-faculty-card">
-            <figure class="school-faculty-card__photo">
-              <img src="/images/sogoiryo/hiramatsu/faculty_05.jpg" alt="学科長 平岡 賢 先生" width="400" height="300" loading="lazy">
-            </figure>
-            <div class="school-faculty-card__body">
-              <p class="role">学科長</p>
-              <h3 class="name">平岡 賢 <span class="honorific">先生</span></h3>
-              <dl class="subject-dl">
-                <dt class="badge">担当科目</dt>
-                <dd class="txt">人間関係論・言語聴覚障害総論・嚥下障害・吃音・地域包括ケアシステム 他</dd>
-              </dl>
+            <div class="school-faculty-card__head">
+              <figure class="school-faculty-card__photo">
+                <img src="/images/reha/idx/teacher_photo_05.jpg" alt="学科長 平岡 賢 先生" width="500" height="500" loading="lazy">
+              </figure>
+              <div class="school-faculty-card__body">
+                <p class="role">学科長</p>
+                <h3 class="name">平岡 賢 <span class="honorific">先生</span></h3>
+                <dl class="subject-dl">
+                  <dt class="badge">担当科目</dt>
+                  <dd class="txt">
+                    <ul class="subject-list">
+                      <li>言語聴覚障害概論</li>
+                      <li>嚥下障害</li>
+                      <li>吃音</li>
+                      <li>言語聴覚障害特論</li>
+                      <li>卒業研究 他</li>
+                    </ul>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+            <div class="school-faculty-card__desc">
               <p class="desc">
                 言語聴覚障がいは、幅広い領域からなる分野です。対象となる方の年齢や症状は多岐にわたり、一人ひとりに応じた支援が求められます。この事を踏まえ、本校では通常のカリキュラムに加え、自ら学ぶ『ゼミ学習』を設けて学習する体制を敷いています。主体的に学ぶ姿勢は、卒業後も専門職として成長し続けるための基盤になると考えています。また、『真の協力とは何か』を考え、仲間と共に活動し達成する喜びを共有できる機会も設けています。それ以外にも、接遇講座や保育原理など独自の科目を取り入れながら、幅広い知識と豊かな人間性を備えた、実践力のある言語聴覚士を育成しています。
               </p>
@@ -291,16 +318,28 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
           </article>
 
           <article class="school-faculty-card">
-            <figure class="school-faculty-card__photo">
-              <img src="/images/sogoiryo/hiramatsu/faculty_06.jpg" alt="教務主任 藤本 知宏 先生" width="400" height="300" loading="lazy">
-            </figure>
-            <div class="school-faculty-card__body">
-              <p class="role">教務主任</p>
-              <h3 class="name">藤本 知宏 <span class="honorific">先生</span></h3>
-              <dl class="subject-dl">
-                <dt class="badge">担当科目</dt>
-                <dd class="txt">倫理学・言語聴覚障害総論・音声障害・疾患別評価学演習 他</dd>
-              </dl>
+            <div class="school-faculty-card__head">
+              <figure class="school-faculty-card__photo">
+                <img src="/images/reha/idx/teacher_photo_06.jpg" alt="教務主任 藤本 知宏 先生" width="500" height="500" loading="lazy">
+              </figure>
+              <div class="school-faculty-card__body">
+                <p class="role">教務主任</p>
+                <h3 class="name">藤本 知宏 <span class="honorific">先生</span></h3>
+                <dl class="subject-dl">
+                  <dt class="badge">担当科目</dt>
+                  <dd class="txt">
+                    <ul class="subject-list">
+                      <li>言語聴覚障害診断学Ⅰ</li>
+                      <li>言語聴覚障害診断学Ⅱ</li>
+                      <li>音声障害Ⅰ</li>
+                      <li>音声障害Ⅱ</li>
+                      <li>卒業研究 他</li>
+                    </ul>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+            <div class="school-faculty-card__desc">
               <p class="desc">
                 言語聴覚士は障がいを持たれている方に対して、言語・聴覚・嚥下療法などを行っています。対象となる方の生活に寄り添い、その人らしい暮らしを支える専門職です。現在、言語聴覚士の役割は医療分野にとどまらず介護・福祉、保健、教育分野にも及び、求人数は年々増加しています。社会からの需要と期待の高まりを感じています。本校３年間の教育の中で、知識・技術はもちろんのこと人間力を養い、人との つながりを大切にした幅広く専門的な支援ができる言語聴覚士をめざしています。学生一人ひとりの個性を大切にしながら、卒業後も現場で長く活躍し続けられる力を育てます。
               </p>
@@ -308,16 +347,29 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
           </article>
 
           <article class="school-faculty-card">
-            <figure class="school-faculty-card__photo">
-              <img src="/images/sogoiryo/hiramatsu/faculty_06.jpg" alt="学生主任 佐藤 朋子 先生" width="400" height="300" loading="lazy">
-            </figure>
-            <div class="school-faculty-card__body">
-              <p class="role">学生主任</p>
-              <h3 class="name">佐藤 朋子 <span class="honorific">先生</span></h3>
-              <dl class="subject-dl">
-                <dt class="badge">担当科目</dt>
-                <dd class="txt">倫理学・運動障害性構音障害・成人聴覚障害・言語聴覚療法管理学 他</dd>
-              </dl>
+            <div class="school-faculty-card__head">
+              <figure class="school-faculty-card__photo">
+                <img src="/images/reha/idx/teacher_photo_07.jpg" alt="学生主任 佐藤 朋子 先生" width="500" height="500" loading="lazy">
+              </figure>
+              <div class="school-faculty-card__body">
+                <p class="role">学生主任</p>
+                <h3 class="name">佐藤 朋子 <span class="honorific">先生</span></h3>
+                <dl class="subject-dl">
+                  <dt class="badge">担当科目</dt>
+                  <dd class="txt">
+                    <ul class="subject-list">
+                      <li>運動障害性構音障害Ⅰ</li>
+                      <li>運動障害性構音障害Ⅱ</li>
+                      <li>成人聴覚障害Ⅰ</li>
+                      <li>成人聴覚障害Ⅱ</li>
+                      <li>症例演習</li>
+                      <li>卒業研究 等</li>
+                    </ul>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+            <div class="school-faculty-card__desc">
               <p class="desc">
                 私たちはことばによって考えや気持ちを伝え、コミュニケーションを取っています。ことばは人と人をつなぎ、社会生活を営むうえで欠かせないものです。言語聴覚士はそのコミュニケーションに障害が生じた方へのリハビリテーションを行います。コミュニケーション障害は、言語そのものの障害の他に、聴覚や発音、認知などの機能低下の他、発達上の問題などで起こります。これらの方へコミュニケーションを通じて、その人らしい日常生活を提供できる言語聴覚士を目指しています。そのために、対象となる方の思いに耳を傾け、一人ひとりに合った支援を考えられる確かな力を養います。
               </p>
@@ -325,7 +377,6 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
           </article>
         </div>
       </div>
-
     </div>
 
   </div>
@@ -351,14 +402,14 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <!-- Googleマップ埋め込みエリア（大きな角丸枠） -->
       <div class="school-access-map">
         <!-- Google Map iframe埋め込み例（レスポンシブ対応） -->
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3336.922450510215!2d131.6053152!3d33.242335!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35469fa4400c68f3%3A0x4b7a6bc140eb8772!2z5aSn5YiG5bmz5p2-57eP5ZCI5Yy755mC5bCC6ZaA5a2m5qCh!5e0!3m2!1sja!2sjp!4v1792049841645!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3337.2889279024845!2d131.6030999!3d33.2327599!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35469f70d10d19bd%3A0x86bb8cf226b8964e!2z44CSODcwLTAwMzMg5aSnIeeUu-eCsumDveaCg-mDveWNg-S7o-eAuu-8keS4gTEtMjc!5e0!3m2!1sja!2sjp!4v1710000000000!5m2!1sja!2sjp" width="600" height="450" title="大分リハビリテーション専門学校 アクセスマップ" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
       </div>
 
       <!-- 住所・連絡先テキストブロック -->
       <div class="school-access-info">
         <h3 class="school-access-info__name">大分リハビリテーション専門学校</h3>
         <p class="school-access-info__detail">
-          <span class="address">〒870-8658 大分県大分市千代町1丁目11番</span>
+          <span class="address">〒870-0033 大分県大分市千代町1丁目1-27</span>
           <span class="contact">TEL 097-535-0201 / FAX 097-573-3366</span>
         </p>
       </div>
@@ -378,13 +429,13 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
 
       <div class="school-intro-grid">
 
-        <!-- 1. 大分リハビリテーション専門学校 -->
-        <a href="/medical/" class="school-intro-card">
+        <!-- 1. 大分平松総合医療専門学校 -->
+        <a href="/sogoiryo/" class="school-intro-card">
           <figure class="school-intro-card__img">
-            <img src="/images/common/school_photo_01.jpg" alt="大分リハビリテーション専門学校 外観" width="300" height="500" loading="lazy">
+            <img src="/images/common/school_photo_01.jpg" alt="大分平松総合医療専門学校 外観" width="300" height="500" loading="lazy">
           </figure>
           <div class="school-intro-card__label">
-            <span class="txt">大分リハビリテーション専門学校</span>
+            <span class="txt">大分平松総合医療専門学校</span>
             <span class="arrow" aria-hidden="true"></span>
           </div>
         </a>
@@ -401,7 +452,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
         </a>
 
         <!-- 3. 大分医学技術専門学校 -->
-        <a href="/igaku/" class="school-intro-card">
+        <a href="/igisen/" class="school-intro-card">
           <figure class="school-intro-card__img">
             <img src="/images/common/school_photo_03.jpg" alt="大分医学技術専門学校 外観" width="300" height="500" loading="lazy">
           </figure>
@@ -412,7 +463,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
         </a>
 
         <!-- 4. 大分歯科専門学校 -->
-        <a href="/dental/" class="school-intro-card">
+        <a href="/shika/" class="school-intro-card">
           <figure class="school-intro-card__img">
             <img src="/images/common/school_photo_04.jpg" alt="大分歯科専門学校 外観" width="300" height="500" loading="lazy">
           </figure>
@@ -509,7 +560,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
               <div class="meta">
                 <time datetime="2026-00-00" class="date">2026.00.00</time>
                 <span class="badge -blog">ブログ</span>
-                <span class="badge -dept">臨床検査学科</span>
+                <span class="badge -dept">理学療法士科</span>
               </div>
               <p class="title">タイトルはいりますタイトルはいりますタイトルはいりますタイトルはいりますタイトルはいります。</p>
             </a>
@@ -559,9 +610,9 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
         <!-- 学科別タブフィルター -->
         <ul class="newsblog-tab-list">
           <li><button type="button" class="tab-btn -active">すべて</button></li>
-          <li><button type="button" class="tab-btn">臨床検査学科</button></li>
-          <li><button type="button" class="tab-btn">臨床工学科</button></li>
-          <li><button type="button" class="tab-btn">視能訓練学科</button></li>
+          <li><button type="button" class="tab-btn">理学療法士科</button></li>
+          <li><button type="button" class="tab-btn">作業療法士科</button></li>
+          <li><button type="button" class="tab-btn">言語聴覚士科</button></li>
         </ul>
 
         <!-- 記事リスト -->
@@ -601,7 +652,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
               <div class="meta">
                 <time datetime="2026-00-00" class="date">2026.00.00</time>
                 <span class="badge -blog">ブログ</span>
-                <span class="badge -dept">臨床検査学科</span>
+                <span class="badge -dept">理学療法士科</span>
               </div>
               <p class="title">タイトルはいりますタイトルはいりますタイトルはいりますタイトルはいりますタイトルはいります。</p>
             </a>
@@ -685,16 +736,16 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
         <div class="school-disclosure-group">
           <h3 class="group-ttl">教育課程</h3>
           <p class="link-inline-list">
-            <a href="/pdf/curriculum_mt.pdf" target="_blank" rel="noopener noreferrer" class="pdf-link">
-              <span class="icon-pdf" aria-hidden="true"></span>臨床検査学科
+            <a href="/pdf/curriculum_pt.pdf" target="_blank" rel="noopener noreferrer" class="pdf-link">
+              <span class="icon-pdf" aria-hidden="true"></span>理学療法士科
             </a>
             <span class="sep">/</span>
-            <a href="/pdf/curriculum_ce.pdf" target="_blank" rel="noopener noreferrer" class="pdf-link">
-              <span class="icon-pdf" aria-hidden="true"></span>臨床工学科
+            <a href="/pdf/curriculum_ot.pdf" target="_blank" rel="noopener noreferrer" class="pdf-link">
+              <span class="icon-pdf" aria-hidden="true"></span>作業療法士科
             </a>
             <span class="sep">/</span>
-            <a href="/pdf/curriculum_ort.pdf" target="_blank" rel="noopener noreferrer" class="pdf-link">
-              <span class="icon-pdf" aria-hidden="true"></span>視能訓練学科
+            <a href="/pdf/curriculum_st.pdf" target="_blank" rel="noopener noreferrer" class="pdf-link">
+              <span class="icon-pdf" aria-hidden="true"></span>言語聴覚士科
             </a>
           </p>
         </div>
@@ -706,16 +757,16 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
         <div class="school-disclosure-group">
           <h3 class="group-ttl">実務教員による授業の配置</h3>
           <p class="link-inline-list">
-            <a href="/pdf/teacher_mt.pdf" target="_blank" rel="noopener noreferrer" class="pdf-link">
-              <span class="icon-pdf" aria-hidden="true"></span>臨床検査学科
+            <a href="/pdf/teacher_pt.pdf" target="_blank" rel="noopener noreferrer" class="pdf-link">
+              <span class="icon-pdf" aria-hidden="true"></span>理学療法士科
             </a>
             <span class="sep">/</span>
-            <a href="/pdf/teacher_ce.pdf" target="_blank" rel="noopener noreferrer" class="pdf-link">
-              <span class="icon-pdf" aria-hidden="true"></span>臨床工学科
+            <a href="/pdf/teacher_ot.pdf" target="_blank" rel="noopener noreferrer" class="pdf-link">
+              <span class="icon-pdf" aria-hidden="true"></span>作業療法士科
             </a>
             <span class="sep">/</span>
-            <a href="/pdf/teacher_ort.pdf" target="_blank" rel="noopener noreferrer" class="pdf-link">
-              <span class="icon-pdf" aria-hidden="true"></span>視能訓練学科
+            <a href="/pdf/teacher_st.pdf" target="_blank" rel="noopener noreferrer" class="pdf-link">
+              <span class="icon-pdf" aria-hidden="true"></span>言語聴覚士科
             </a>
           </p>
         </div>
@@ -725,20 +776,20 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
           <h3 class="group-ttl">シラバス</h3>
           <ul class="syllabus-list">
             <li>
-              <span class="label">・ 臨床検査学科</span>
-              <a href="/pdf/syllabus_mt.pdf" target="_blank" rel="noopener noreferrer" class="pdf-link">
+              <span class="label">・ 理学療法士科</span>
+              <a href="/pdf/syllabus_pt.pdf" target="_blank" rel="noopener noreferrer" class="pdf-link">
                 <span class="icon-pdf" aria-hidden="true"></span>1・2・3年共通
               </a>
             </li>
             <li>
-              <span class="label">・ 臨床工学科</span>
-              <a href="/pdf/syllabus_ce.pdf" target="_blank" rel="noopener noreferrer" class="pdf-link">
+              <span class="label">・ 作業療法士科</span>
+              <a href="/pdf/syllabus_ot.pdf" target="_blank" rel="noopener noreferrer" class="pdf-link">
                 <span class="icon-pdf" aria-hidden="true"></span>1・2・3年共通
               </a>
             </li>
             <li>
-              <span class="label">・ 視能訓練学科</span>
-              <a href="/pdf/syllabus_ort.pdf" target="_blank" rel="noopener noreferrer" class="pdf-link">
+              <span class="label">・ 言語聴覚士科</span>
+              <a href="/pdf/syllabus_st.pdf" target="_blank" rel="noopener noreferrer" class="pdf-link">
                 <span class="icon-pdf" aria-hidden="true"></span>1・2・3年共通
               </a>
             </li>
@@ -768,16 +819,16 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
         <div class="school-disclosure-group">
           <h4 class="group-ttl">学校基本情報</h4>
           <p class="link-inline-list">
-            <a href="/pdf/info_mt.pdf" target="_blank" rel="noopener noreferrer" class="pdf-link">
-              <span class="icon-pdf" aria-hidden="true"></span>臨床検査学科
+            <a href="/pdf/info_pt.pdf" target="_blank" rel="noopener noreferrer" class="pdf-link">
+              <span class="icon-pdf" aria-hidden="true"></span>理学療法士科
             </a>
             <span class="sep">/</span>
-            <a href="/pdf/info_ce.pdf" target="_blank" rel="noopener noreferrer" class="pdf-link">
-              <span class="icon-pdf" aria-hidden="true"></span>臨床工学科
+            <a href="/pdf/info_ot.pdf" target="_blank" rel="noopener noreferrer" class="pdf-link">
+              <span class="icon-pdf" aria-hidden="true"></span>作業療法士科
             </a>
             <span class="sep">/</span>
-            <a href="/pdf/info_ort.pdf" target="_blank" rel="noopener noreferrer" class="pdf-link">
-              <span class="icon-pdf" aria-hidden="true"></span>視能訓練学科
+            <a href="/pdf/info_st.pdf" target="_blank" rel="noopener noreferrer" class="pdf-link">
+              <span class="icon-pdf" aria-hidden="true"></span>言語聴覚士科
             </a>
           </p>
         </div>
@@ -786,16 +837,16 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
         <div class="school-disclosure-group">
           <h4 class="group-ttl">学校評価</h4>
           <p class="link-inline-list">
-            <a href="/pdf/eval_mt.pdf" target="_blank" rel="noopener noreferrer" class="pdf-link">
-              <span class="icon-pdf" aria-hidden="true"></span>臨床検査学科
+            <a href="/pdf/eval_pt.pdf" target="_blank" rel="noopener noreferrer" class="pdf-link">
+              <span class="icon-pdf" aria-hidden="true"></span>理学療法士科
             </a>
             <span class="sep">/</span>
-            <a href="/pdf/eval_ce.pdf" target="_blank" rel="noopener noreferrer" class="pdf-link">
-              <span class="icon-pdf" aria-hidden="true"></span>臨床工学科
+            <a href="/pdf/eval_ot.pdf" target="_blank" rel="noopener noreferrer" class="pdf-link">
+              <span class="icon-pdf" aria-hidden="true"></span>作業療法士科
             </a>
             <span class="sep">/</span>
-            <a href="/pdf/eval_ort.pdf" target="_blank" rel="noopener noreferrer" class="pdf-link">
-              <span class="icon-pdf" aria-hidden="true"></span>視能訓練学科
+            <a href="/pdf/eval_st.pdf" target="_blank" rel="noopener noreferrer" class="pdf-link">
+              <span class="icon-pdf" aria-hidden="true"></span>言語聴覚士科
             </a>
           </p>
         </div>
@@ -804,16 +855,16 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
         <div class="school-disclosure-group">
           <h4 class="group-ttl">学校評価</h4>
           <p class="link-inline-list">
-            <a href="/pdf/eval2_mt.pdf" target="_blank" rel="noopener noreferrer" class="pdf-link">
-              <span class="icon-pdf" aria-hidden="true"></span>臨床検査学科
+            <a href="/pdf/eval2_pt.pdf" target="_blank" rel="noopener noreferrer" class="pdf-link">
+              <span class="icon-pdf" aria-hidden="true"></span>理学療法士科
             </a>
             <span class="sep">/</span>
-            <a href="/pdf/eval2_ce.pdf" target="_blank" rel="noopener noreferrer" class="pdf-link">
-              <span class="icon-pdf" aria-hidden="true"></span>臨床工学科
+            <a href="/pdf/eval2_ot.pdf" target="_blank" rel="noopener noreferrer" class="pdf-link">
+              <span class="icon-pdf" aria-hidden="true"></span>作業療法士科
             </a>
             <span class="sep">/</span>
-            <a href="/pdf/eval2_ort.pdf" target="_blank" rel="noopener noreferrer" class="pdf-link">
-              <span class="icon-pdf" aria-hidden="true"></span>視能訓練学科
+            <a href="/pdf/eval2_st.pdf" target="_blank" rel="noopener noreferrer" class="pdf-link">
+              <span class="icon-pdf" aria-hidden="true"></span>言語聴覚士科
             </a>
           </p>
         </div>
@@ -838,6 +889,51 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       </div>
 
     </div><!-- /school-disclosure-card -->
+
+  </div>
+</section>
+
+
+<!-- ==========================================================================
+     SECTION: DEPARTMENT LINKS (学科リンク)
+     ========================================================================== -->
+<section class="section-school-dept-links">
+  <div class="section__inner">
+
+    <div class="school-dept-links-grid">
+      <!-- 理学療法士科 -->
+      <a href="/reha/pt/" class="school-dept-link">
+        <figure class="school-dept-link__img">
+          <img src="/images/reha/pt/mv.jpg" alt="理学療法士科の実習風景" width="380" height="250" loading="lazy">
+        </figure>
+        <div class="school-dept-link__label">
+          <span class="txt">理学療法士科</span>
+          <span class="arrow" aria-hidden="true"></span>
+        </div>
+      </a>
+
+      <!-- 作業療法士科 -->
+      <a href="/reha/ot/" class="school-dept-link">
+        <figure class="school-dept-link__img">
+          <img src="/images/reha/ot/mv.jpg" alt="作業療法士科の実習風景" width="380" height="250" loading="lazy">
+        </figure>
+        <div class="school-dept-link__label">
+          <span class="txt">作業療法士科</span>
+          <span class="arrow" aria-hidden="true"></span>
+        </div>
+      </a>
+
+      <!-- 言語聴覚士科 -->
+      <a href="/reha/st/" class="school-dept-link">
+        <figure class="school-dept-link__img">
+          <img src="/images/reha/st/mv.jpg" alt="言語聴覚士科の実習風景" width="380" height="250" loading="lazy">
+        </figure>
+        <div class="school-dept-link__label">
+          <span class="txt">言語聴覚士科</span>
+          <span class="arrow" aria-hidden="true"></span>
+        </div>
+      </a>
+    </div><!-- /school-dept-links-grid -->
 
   </div>
 </section>

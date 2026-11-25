@@ -35,7 +35,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
 
         <!-- 学科情報グループ -->
         <div class="department-mv-hero__main-txt">
-          <div class="department-icon">
+          <div class="department-icon -lab">
             <img src="/images/department/ico_lab.svg" alt="" width="48" height="48" loading="lazy">
           </div>
 
@@ -593,7 +593,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
   <!-- 💡 1. ウィンドウ幅いっぱいに広がる校舎全景ビジュアル (フルブリード) -->
   <div class="department-building-visual">
     <figure class="building-photo">
-      <img src="/images/sogoiryo/rinken/building_full.jpg" alt="大分平松総合医療専門学校 校舎外観" loading="lazy">
+      <img src="/images/sogoiryo/building_full.jpg" alt="大分平松総合医療専門学校 校舎外観" loading="lazy">
     </figure>
   </div>
 

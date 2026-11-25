@@ -111,8 +111,8 @@
                     </h3>
                     <ul class="nav-sub-list">
                       <li><a href="/reha/pt/">・理学療法士科<span class="nav-link__arrow"></span></a></li>
-                      <li><a href="/reha/course02/about">・作業療法士科<span class="nav-link__arrow"></span></a></li>
-                      <li><a href="/reha/course03/about">・言語聴覚士科<span class="nav-link__arrow"></span></a></li>
+                      <li><a href="/reha/ot/">・作業療法士科<span class="nav-link__arrow"></span></a></li>
+                      <li><a href="/reha/st/">・言語聴覚士科<span class="nav-link__arrow"></span></a></li>
                     </ul>
                   </div>
                   <!-- 大分医学技術専門学校 -->
@@ -121,7 +121,7 @@
                       <a href="/igisen/">大分医学技術専門学校<span class="nav-link__arrow"></span></a>
                     </h3>
                     <ul class="nav-sub-list">
-                      <li><a href="/igisen/course01/">・柔道整復師科<span class="nav-link__arrow"></span></a></li>
+                      <li><a href="/igisen/jt/">・柔道整復師科<span class="nav-link__arrow"></span></a></li>
                     </ul>
                   </div>
                   <!-- 大分歯科専門学校 -->
@@ -130,7 +130,7 @@
                       <a href="/shika/">大分歯科専門学校<span class="nav-link__arrow"></span></a>
                     </h3>
                     <ul class="nav-sub-list">
-                      <li><a href="/shika/course01/">・歯科衛生士科<span class="nav-link__arrow"></span></a></li>
+                      <li><a href="/shika/dh/">・歯科衛生士科<span class="nav-link__arrow"></span></a></li>
                     </ul>
                   </div>
                 </div>
@@ -206,12 +206,12 @@
             <span class="acc-icon"></span>
           </div>
           <ul class="sp-sub-menu">
-            <li><a href="/school/">学校紹介</a></li>
+            <li><a href="/school/">学校紹介トップ</a></li>
             <li><a href="/school/campuslife/">キャンパスライフ</a></li>
-            <li><a href="/school/history/">沿革</a></li>
-            <li><a href="/school/facilities/">学校情報</a></li>
+            <li><a href="/school/facilities/">学内施設</a></li>
             <li><a href="/school/faq/">よくある質問</a></li>
-            <li><a href="/school/pamphlet/">電子パンフレット</a></li>
+            <li><a href="/school/pamphlet/">デジタルパンフレット</a></li>
+            <li><a href="/news/">全体のお知らせ</a></li>
           </ul>
         </li>
 
@@ -221,32 +221,39 @@
             <span class="acc-icon"></span>
           </div>
           <div class="sp-sub-menu">
+            <ul>
+              <li><a href="/department/">学科紹介トップ</a></li>
+            </ul>
+            <!-- 大分平松総合医療専門学校 -->
             <div class="sp-dept-group">
-              <p class="sp-dept-ttl">大分平松総合医療専門学校</p>
+              <p class="sp-dept-ttl"><a href="/sogoiryo/">大分平松総合医療専門学校</a></p>
               <ul>
-                <li><a href="/sogoiryo/rinken">臨床検査学科</a></li>
-                <li><a href="/sogoiryo/ce">臨床工学科</a></li>
-                <li><a href="/sogoiryo/ort">視能訓練学科</a></li>
+                <li><a href="/sogoiryo/rinken/">臨床検査学科</a></li>
+                <li><a href="/sogoiryo/ce/">臨床工学科</a></li>
+                <li><a href="/sogoiryo/ort/">視能訓練学科</a></li>
               </ul>
             </div>
+            <!-- 大分リハビリテーション専門学校 -->
             <div class="sp-dept-group">
-              <p class="sp-dept-ttl">大分リハビリテーション専門学校</p>
+              <p class="sp-dept-ttl"><a href="/reha/">大分リハビリテーション専門学校</a></p>
               <ul>
-                <li><a href="/igisen/course01/about">柔道整復師科</a></li>
-                <li><a href="/reha/course01/about">理学療法士科</a></li>
-                <li><a href="/reha/course02/about">作業療法士科</a></li>
+                <li><a href="/reha/pt/">理学療法士科</a></li>
+                <li><a href="/reha/ot/">作業療法士科</a></li>
+                <li><a href="/reha/st/">言語聴覚士科</a></li>
               </ul>
             </div>
+            <!-- 大分医学技術専門学校 -->
             <div class="sp-dept-group">
-              <p class="sp-dept-ttl">大分医学技術専門学校</p>
+              <p class="sp-dept-ttl"><a href="/igisen/">大分医学技術専門学校</a></p>
               <ul>
-                <li><a href="/reha/course03/about">言語聴覚士科</a></li>
+                <li><a href="/igisen/jt/">柔道整復師科</a></li>
               </ul>
             </div>
+            <!-- 大分歯科専門学校 -->
             <div class="sp-dept-group">
-              <p class="sp-dept-ttl">大分歯科専門学校</p>
+              <p class="sp-dept-ttl"><a href="/shika/">大分歯科専門学校</a></p>
               <ul>
-                <li><a href="/shika/course/shikaeisei/">歯科衛生士科</a></li>
+                <li><a href="/shika/dh/">歯科衛生士科</a></li>
               </ul>
             </div>
           </div>
@@ -258,10 +265,11 @@
             <span class="acc-icon"></span>
           </div>
           <ul class="sp-sub-menu">
-            <li><a href="https://www.hiramatsu.ac.jp/iryo/career/license/">資格取得実績</a></li>
-            <li><a href="https://www.hiramatsu.ac.jp/iryo/career/employment/">就職実績</a></li>
-            <li><a href="https://www.hiramatsu.ac.jp/iryo/career/study-support/">学習サポート情報</a></li>
-            <li><a href="https://www.hiramatsu.ac.jp/iryo/career/career-support/">進路サポート情報</a></li>
+            <li><a href="/career/">資格・就職トップ</a></li>
+            <li><a href="/career/license/">資格取得実績</a></li>
+            <li><a href="/career/employment/">就職実績</a></li>
+            <li><a href="/career/study-support/">学習サポート</a></li>
+            <li><a href="/career/career-support/">進路サポート</a></li>
           </ul>
         </li>
 
@@ -271,10 +279,13 @@
             <span class="acc-icon"></span>
           </div>
           <ul class="sp-sub-menu">
-            <li><a href="https://www.hiramatsu.ac.jp/iryo/admission/guideline/">募集要項</a></li>
-            <li><a href="https://www.hiramatsu.ac.jp/iryo/admission/tuition/">学費のご案内</a></li>
-            <li><a href="https://www.hiramatsu.ac.jp/iryo/admission/tuition-support/">学費サポート</a></li>
-            <li><a href="https://www.hiramatsu.ac.jp/iryo/admission/download/">出願書類ダウンロード</a></li>
+            <li><a href="/admission/">入学案内トップ</a></li>
+            <li><a href="/admission/">募集要項［PDF］</a></li>
+            <li><a href="/admission/documents/">出願書類ダウンロード</a></li>
+            <li><a href="/admission/tuition/">学費のご案内</a></li>
+            <li><a href="/admission/tuition-support/">学費サポート</a></li>
+            <li><a href="/admission/life-support/">生活サポート</a></li>
+            <li><a href="/school/pamphlet/">デジタルパンフレット</a></li>
           </ul>
         </li>
       </ul>

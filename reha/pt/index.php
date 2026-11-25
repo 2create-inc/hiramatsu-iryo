@@ -35,14 +35,14 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
 
         <!-- 学科情報グループ -->
         <div class="department-mv-hero__main-txt">
-          <div class="department-icon">
-            <img src="/images/department/ico_lab.svg" alt="" width="48" height="48" loading="lazy">
+          <div class="department-icon -pt">
+            <img src="/images/department/ico_pt.svg" alt="" width="48" height="48" loading="lazy">
           </div>
 
           <h1 class="department-title">理学療法士科</h1>
           <p class="department-meta">
             <span>3年制</span>
-            <span">定員30名</span>
+            <span>定員30名</span>
           </p>
 
           <div class="department-catch">
@@ -52,7 +52,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
 
           <!-- 下部グレー領域まで伸ばす縦書き英文 ＆ 矢印軸線 -->
           <div class="department-en-line" aria-hidden="true">
-            <span class="txt">Medical Science</span>
+            <span class="txt">Physical Therapist</span>
             <span class="arrow-line"></span>
           </div>
         </div>
@@ -63,7 +63,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <!-- 💡 右側：高さの基準となるメイン写真 (幅: 920/1440 ≒ 63.888%) -->
       <div class="department-mv-hero__image">
         <figure class="hero-photo">
-          <img src="/images/riha/pt/mv.jpg" alt="理学療法士科の実習風景" loading="eager">
+          <img src="/images/reha/pt/mv.jpg" alt="理学療法士科の実習風景" loading="eager">
         </figure>
       </div>
 
@@ -163,7 +163,8 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
             <div class="txt-wrap">
               <h3 class="ttl">県内唯一！<br>公認パラスポーツ指導員を目指せる</h3>
               <p class="desc">
-                大分県で唯一、障がい者にスポーツの喜びや楽しさを伝える指導員の資格の取得ができます。
+                大分県で唯一、障がい者にスポーツの喜びや楽しさを伝える<br>
+                指導員の資格の取得ができます。
               </p>
             </div>
           </li>
@@ -239,11 +240,11 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
             <div class="curriculum-group">
               <h4 class="group-ttl">主なカリキュラム</h4>
               <p class="section-sub-ttl">医学および理学療法の基礎を学ぶ</p>
-              <p class="subjects">解剖学 / 運動学 / 生理学 / 病理学 / 理学療法概論 / 理学療法評価学 / 物理療法学 など</p>
+              <p class="subjects">解剖学／運動学／生理学／病理学／理学療法概論／理学療法評価学／物理療法学 など</p>
             </div>
             <div class="curriculum-group">
               <p class="section-sub-ttl">医療従事者としての心構えを身につける</p>
-              <p class="subjects">臨床見学実習（1週間） / 訪問通所リハ実習（1週間）</p>
+              <p class="subjects">臨床見学実習（1週間）／訪問通所リハ実習（1週間）</p>
             </div>
           </div>
         </div>
@@ -258,12 +259,11 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
             <div class="curriculum-group">
               <h4 class="group-ttl">主なカリキュラム</h4>
               <p class="section-sub-ttl">専門的な理学療法の理論を学ぶ</p>
-              <p class="subjects">骨関節理学療法学 / 神経理学療法学 / スポーツ理学療法学 / 疾患別評価学演習多職種間連携教育（IPE） など</p>
+              <p class="subjects">骨関節理学療法学／神経理学療法学／スポーツ理学療法学／疾患別評価学演習／多職種間連携教育（IPE） など</p>
             </div>
             <div class="curriculum-group">
-              <h4 class="group-ttl">主なカリキュラム</h4>
               <p class="section-sub-ttl">基礎的な臨床技能を身につける</p>
-              <p class="subjects">評価実習Ⅰ（2週間） / 評価実習Ⅱ（2週間）</p>
+              <p class="subjects">評価実習Ⅰ（2週間）／評価実習Ⅱ（2週間）</p>
             </div>
           </div>
         </div>
@@ -278,11 +278,11 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
             <div class="curriculum-group">
               <h4 class="group-ttl">主なカリキュラム</h4>
               <p class="section-sub-ttl">発展的な理学療法の理論を学ぶ</p>
-              <p class="subjects">理学療法管理学 / 予防理学療法学</p>
+              <p class="subjects">理学療法管理学／予防理学療法学</p>
             </div>
             <div class="curriculum-group">
               <p class="section-sub-ttl">専門的な臨床技能を身につける</p>
-              <p class="subjects">総合臨床実習Ⅰ（8週間） / Ⅱ（8週間）</p>
+              <p class="subjects">総合臨床実習Ⅰ（8週間）／Ⅱ（8週間）</p>
             </div>
             <div class="curriculum-group">
               <p class="section-sub-ttl">データ収集から分析、プレゼンテーションまで問題解決力を培う</p>
@@ -410,6 +410,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
             <ul class="event-list">
               <li>臨床見学実習（1年）</li>
               <li>評価実習Ⅰ（2年）</li>
+              <li>研修旅行（2年）</li>
               <li>後期講義開始（1年・2年）</li>
               <li>総合臨床実習終了（3年）</li>
             </ul>
@@ -526,7 +527,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <!-- 右側：角丸ポートレート写真 -->
       <div class="reasons-card__photo">
         <figure class="student-photo">
-          <img src="/images/riha/pt/student_photo.jpg" alt="理学療法士科 阿部 佑心さん" width="440" height="520" loading="lazy">
+          <img src="/images/reha/pt/student_photo.jpg" alt="理学療法士科 阿部 佑心さん" width="440" height="520" loading="lazy">
         </figure>
       </div>
 
@@ -597,7 +598,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
   <!-- 💡 1. ウィンドウ幅いっぱいに広がる校舎全景ビジュアル (フルブリード) -->
   <div class="department-building-visual">
     <figure class="building-photo">
-      <img src="/images/riha/pt/building_full.jpg" alt="大分平松総合医療専門学校 校舎外観" loading="lazy">
+      <img src="/images/sogoiryo/building_full.jpg" alt="大分平松総合医療専門学校 校舎外観" loading="lazy">
     </figure>
   </div>
 

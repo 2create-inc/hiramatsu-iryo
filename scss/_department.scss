@@ -384,10 +384,10 @@
   }
 
   .department-icon {
-    width: 56px;
-    height: 56px;
+    width: 80px;
+    height: 80px;
     background-color: #f7f9f7;
-    border-radius: 12px;
+    border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -398,6 +398,16 @@
       height: 48px;
       object-fit: contain;
     }
+
+    // 学科ごとの背景色
+    &.-lab { background-color: #f7fae8; } // 臨床検査学科
+    &.-eng { background-color: #fbe3e3; } // 臨床工学科
+    &.-opt { background-color: #dce5f2; } // 視能訓練学科
+    &.-pt { background-color: #fdefde; } // 理学療法士科
+    &.-ot { background-color: #e0ece3; } // 作業療法士科
+    &.-st { background-color: #fdebf1; } // 言語聴覚士科
+    &.-jt { background-color: #eae4f3; } // 柔道整復師科
+    &.-dh { background-color: #e6f5fb; } // 歯科衛生士科
   }
 
   .department-title {
@@ -931,6 +941,43 @@
     li {
       font-size: 0.825rem;
     }
+  }
+}
+
+/* 獲得できる資格：小見出しで分ける場合（言語聴覚士科など） */
+.qualification-group {
+  margin-top: 40px;
+
+  & + & {
+    margin-top: 48px;
+  }
+
+  .qualification-list {
+    margin-top: 20px;
+  }
+
+  @include mobile-fablet {
+    margin-top: 28px;
+
+    & + & {
+      margin-top: 32px;
+    }
+
+    .qualification-list {
+      margin-top: 14px;
+    }
+  }
+}
+
+.qualification-group__ttl {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #333333;
+  line-height: 1.5;
+  margin: 0;
+
+  @include mobile-fablet {
+    font-size: 0.825rem;
   }
 }
 

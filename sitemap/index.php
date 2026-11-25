@@ -175,10 +175,10 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <h3 class="sitemap-group-title">学校法人平松学園 グループ校</h3>
       <ul class="sitemap-child-grid">
         <li><a href="https://www.hiramatsu.ac.jp/" target="_blank" rel="noopener noreferrer" class="sitemap-link -child">平松学園 HOME</a></li>
-        <li><a href="#" target="_blank" rel="noopener noreferrer" class="sitemap-link -child">幼稚園（千代町・城南・明野第一）</a></li>
-        <li><a href="#" target="_blank" rel="noopener noreferrer" class="sitemap-link -child">向陽中学校</a></li>
-        <li><a href="#" target="_blank" rel="noopener noreferrer" class="sitemap-link -child">大分東明高等学校</a></li>
-        <li><a href="#" target="_blank" rel="noopener noreferrer" class="sitemap-link -child">大分短期大学園芸科</a></li>
+        <li><a href="https://www.hiramatsu.ac.jp/kindergarten" target="_blank" rel="noopener noreferrer" class="sitemap-link -child">幼稚園（千代町・城南・明野第一）</a></li>
+        <li><a href="https://www.hiramatsu.ac.jp/koyo" target="_blank" rel="noopener noreferrer" class="sitemap-link -child">向陽中学校</a></li>
+        <li><a href="https://www.hiramatsu.ac.jp/tomei" target="_blank" rel="noopener noreferrer" class="sitemap-link -child">大分東明高等学校</a></li>
+        <li><a href="https://www.oitatandai.ac.jp/" target="_blank" rel="noopener noreferrer" class="sitemap-link -child">大分短期大学園芸科</a></li>
       </ul>
     </div>
 

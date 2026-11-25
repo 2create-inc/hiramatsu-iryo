@@ -1,5 +1,5 @@
 <?php
-$page_title = "臨床検査学科大分平松総合医療専門学校";
+$page_title = "臨床工学科大分平松総合医療専門学校";
 $page_desc  = "大分平松総合医療専門学校 臨床工学科ページです。";
 
 include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
@@ -29,20 +29,20 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
           <ol class="pankuzu-list">
             <li><a href="/">HOME</a></li>
             <li><a href="/department/">学科紹介</a></li>
-            <li aria-current="page">臨床検査学科</li>
+            <li aria-current="page">臨床工学科</li>
           </ol>
         </nav>
 
         <!-- 学科情報グループ -->
         <div class="department-mv-hero__main-txt">
-          <div class="department-icon">
-            <img src="/images/department/ico_lab.svg" alt="" width="48" height="48" loading="lazy">
+          <div class="department-icon -eng">
+            <img src="/images/department/ico_eng.svg" alt="" width="48" height="48" loading="lazy">
           </div>
 
-          <h1 class="department-title">臨床検査学科</h1>
+          <h1 class="department-title">臨床工学科</h1>
           <p class="department-meta">
             <span>3年制</span>
-            <span">定員35名</span>
+            <span>定員35名</span>
           </p>
 
           <div class="department-catch">
@@ -180,21 +180,21 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
             <!-- スライド 1 -->
             <div class="swiper-slide">
               <figure class="feature-photo-card">
-                <img src="/images/sogoiryo/rinken/feature_01.jpg" alt="豊富な実習風景 1" width="540" height="680" loading="lazy">
+                <img src="/images/sogoiryo/ce/feature_01.jpg" alt="豊富な実習風景 1" width="540" height="680" loading="lazy">
               </figure>
             </div>
 
             <!-- スライド 2 -->
             <div class="swiper-slide">
               <figure class="feature-photo-card">
-                <img src="/images/sogoiryo/rinken/feature_02.jpg" alt="豊富な実習風景 2" width="540" height="680" loading="lazy">
+                <img src="/images/sogoiryo/ce/feature_02.jpg" alt="豊富な実習風景 2" width="540" height="680" loading="lazy">
               </figure>
             </div>
 
             <!-- スライド 3 -->
             <div class="swiper-slide">
               <figure class="feature-photo-card">
-                <img src="/images/sogoiryo/rinken/feature_03.jpg" alt="豊富な実習風景 3" width="540" height="680" loading="lazy">
+                <img src="/images/sogoiryo/ce/feature_03.jpg" alt="豊富な実習風景 3" width="540" height="680" loading="lazy">
               </figure>
             </div>
 
@@ -261,10 +261,6 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
               <p class="section-sub-ttl">臨床工学の専門を学ぶ</p>
               <p class="subjects">医用機器学概論／生体計測装置学／医用治療機器学・実習／生体機能代行装置学・実習 など</p>
             </div>
-            <div class="curriculum-group">
-              <p class="section-sub-ttl">人体へのアプローチについて</p>
-              <p class="subjects">医用工学／物性工学／医用材料工学 など</p>
-            </div>
           </div>
         </div>
 
@@ -306,9 +302,10 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <ul class="qualification-list">
         <li>臨床工学技士国家試験受験資格</li>
         <li>専門士（医療専門課程）</li>
+        <li>技術英語能力検定試験（文部科学省後援）</li>
         <li>工事担任者試験（総務省認定）</li>
         <li>第2種ME技術実力検定試験（日本生体医工学会認定）</li>
-        <li>MOS（マイクロソフトスペシャリスト）</li>
+        <li>マイクロソフトオフィススペシャリスト</li>
       </ul>
     </div>
 
@@ -523,7 +520,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
         <!-- 学生プロフィール情報 -->
         <div class="reasons-card__profile">
           <p class="student-info">
-            <span class="dept">臨床工学学科（2年生）</span>
+            <span class="dept">臨床工学科（2年生）</span>
             <span class="name">佐藤 絵里<span class="honorific">さん</span></span>
             <span class="school">大分東明高等学校</span>
           </p>
@@ -533,7 +530,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <!-- 右側：角丸ポートレート写真 -->
       <div class="reasons-card__photo">
         <figure class="student-photo">
-          <img src="/images/sogoiryo/ce/student_photo.jpg" alt="臨床工学学科 佐藤 絵里さん" width="440" height="520" loading="lazy">
+          <img src="/images/sogoiryo/ce/student_photo.jpg" alt="臨床工学科 佐藤 絵里さん" width="440" height="520" loading="lazy">
         </figure>
       </div>
 
@@ -604,7 +601,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
   <!-- 💡 1. ウィンドウ幅いっぱいに広がる校舎全景ビジュアル (フルブリード) -->
   <div class="department-building-visual">
     <figure class="building-photo">
-      <img src="/images/sogoiryo/ce/building_full.jpg" alt="大分平松総合医療専門学校 校舎外観" loading="lazy">
+      <img src="/images/sogoiryo/building_full.jpg" alt="大分平松総合医療専門学校 校舎外観" loading="lazy">
     </figure>
   </div>
 
@@ -629,13 +626,13 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
           allowfullscreen=""
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
-          title="臨床工学学科 アクセスマップ">
+          title="臨床工学科 アクセスマップ">
         </iframe>
       </div>
 
       <!-- 学科別 住所・連絡先テキストブロック -->
       <div class="school-access-info">
-        <h3 class="school-access-info__name">臨床工学学科</h3>
+        <h3 class="school-access-info__name">臨床工学科</h3>
         <p class="school-access-info__detail">
           <span class="address">〒870-0033 大分県大分市千代町1丁目1-27</span>
           <span class="contact">TEL 097-535-0201 / FAX 097-573-3366</span>
