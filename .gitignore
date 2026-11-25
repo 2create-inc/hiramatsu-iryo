@@ -1,2 +1,5 @@
 .DS_Store
 node_modules/
+
+# デザインの完成形（サーバーに上げない）
+page-mock.jpg
