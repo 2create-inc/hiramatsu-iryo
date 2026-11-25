@@ -62,12 +62,12 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
 
 ## ビルド
 
-- SCSSは、ソースマップ付きの非圧縮CSSにコンパイルする（現状の `css/style.css(.map)` と同じ形。エディタの Live Sass Compiler で作ったものと思われる）。
-- このMacには `sass` コマンドが入っていない。Claudeがコンパイルするときは `npx sass` を使う:
-  ```bash
-  npx sass scss/style.scss css/style.css
-  ```
-  オープンキャンパスLP: `npx sass opencampus/scss/style.scss opencampus/css/style.css`
+- SCSSは、ソースマップ付きの非圧縮CSSにコンパイルする（`css/style.css(.map)` の形。もとは VS Code の Live Sass Compiler で作っていた）。
+- `package.json` に Dart Sass（バージョン固定）と npm スクリプトがある。初回や `node_modules/` がないときは `npm install`。
+  - `npm run build` … 本体（`scss/` → `css/`）とオープンキャンパスLP（`opencampus/scss/` → `opencampus/css/`）を1回コンパイル。Claudeは `scss/` を変更したら必ずこれを実行する。
+  - `npm run watch` … 保存のたびに自動でコンパイル（手で細かく修正するとき用。Ctrl+Cで終了）。
+- `opencampus/css/style.min.css` はどこからも読み込まれていない旧ファイル。ビルドの対象外。
+- `@import` の非推奨警告は `--silence-deprecation=import` で抑えている（`@use` への移行は未実施）。
 - `scss/` を変更したら、コンパイル後の `css/style.css` と `.map` も一緒にコミットする（サーバーにはCSSをそのままアップロードするため）。
 
 ## Git

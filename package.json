@@ -1,0 +1,12 @@
+{
+  "name": "hiramatsu-iryo",
+  "private": true,
+  "description": "平松学園 医療系専門学校サイト SCSSビルド",
+  "scripts": {
+    "build": "sass --no-error-css --silence-deprecation=import scss/style.scss:css/style.css opencampus/scss/style.scss:opencampus/css/style.css",
+    "watch": "sass --watch --silence-deprecation=import scss/style.scss:css/style.css opencampus/scss/style.scss:opencampus/css/style.css"
+  },
+  "devDependencies": {
+    "sass": "1.108.2"
+  }
+}
