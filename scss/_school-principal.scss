@@ -437,11 +437,21 @@
   margin: 0;
   padding: 0;
 
+  // 576px以上は2列（狭いスマホは1列）
+  @include fablet {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 16px;
+  }
+
   li {
     font-size: 0.75rem;
     font-weight: 700;
     color: #333333;
     line-height: 1.6;
+    // 折り返したときに「・」の後ろで揃える
+    padding-left: 1em;
+    text-indent: -1em;
 
     &::before {
       content: "・";

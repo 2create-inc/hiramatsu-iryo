@@ -8,13 +8,13 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
 
 <section class="section-page-mv" id="js-mv">
   <div class="page-header">
-    <h1><span class="en">Oita College of Dental</span>大分歯科専門学校</h1>
+    <h1><span class="en">Oita College of Medical</span>大分歯科専門学校</h1>
     <ul class="pankuzu-list">
       <li><a href="/">HOME</a></li>
       <li>大分歯科専門学校</li>
     </ul>
   </div>
-  <div class="page-mv"><img src="/images/sogoiryo/mv.jpg"></div>
+  <div class="page-mv"><img src="/images/shika/idx/mv.jpg" alt="大分歯科専門学校 校舎外観"></div>
 </section>
 
 
@@ -33,17 +33,12 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
     <div class="school-principal-container">
       <!-- 左側：キャッチコピー ＆ 本文 -->
       <div class="school-principal__content">
-        <h3 class="school-principal__catch">
-          笑顔のある<br>
-          幸せな人生の支援
-        </h3>
+        <h3 class="school-principal__catch">笑顔のある幸せな人生の支援</h3>
 
         <div class="school-principal__body">
           <p>
-            従来の歯科医療は「歯科治療」が中心でしたが、現在は「健康保持のために口腔機能（お口の働き）が重要な役割をする」ことがクローズアップされ、幼児から高齢者までの全世代の「口腔ケア」が注目されています。
-          </p>
-          <p>
-            今、口腔ケアへの関心が高まる中、歯科医師・歯科衛生士の業務も多様になり、重要視されています。 本校では、変化する医療環境や地域ニーズに対応し、自ら課題を見出し挑戦できるとともに、予防歯科、口腔健康管理の分野において、新たな視点で行動できる人材の育成に取り組んでいます。また、専門的知識・技術の修得に加え、患者様一人ひとりに寄り添い、困難な状況にも粘り強く向き合う力、そして多職種と連携しながら人を支える思いやりの心を育みます。さらに、地域社会における口腔の健康の担い手として、高い倫理観と責任感を持ち、信頼される歯科衛生士の養成を目指します。
+            従来の歯科医療は「歯科治療」が中心でしたが、現在は「健康保持のために口腔機能（お口の働き）が重要な役割をする」ことがクローズアップされ、幼児から高齢者までの全世代の「口腔ケア」が注目されています。<br>
+            今、口腔ケアへの関心が高まる中、歯科医師・歯科衛生士の業務も多様になり、重要視されています。本校では、変化する医療環境や地域ニーズに対応し、自ら課題を見出し挑戦できるとともに、予防歯科、口腔健康管理の分野において、新たな視点で行動できる人材の育成に取り組んでいます。また、専門的知識・技術の修得に加え、患者様一人ひとりに寄り添い、困難な状況にも粘り強く向き合う力、そして多職種と連携しながら人を支える思いやりの心を育みます。さらに、地域社会における口腔の健康の担い手として、高い倫理観と責任感を持ち、信頼される歯科衛生士の養成を目指します。
           </p>
           <p>
             歯科衛生士の業務は、歯科診療の補助、歯科保健指導、歯科予防処置などがありますが、最終的には、口腔ケアをとおして皆様の健康を維持し、いつまでも笑顔のある幸せな人生を送っていただくためのご支援をさせていただくことであります。
@@ -57,14 +52,13 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <!-- 右側：写真 ＆ プロフィール -->
       <div class="school-principal__profile">
         <figure class="school-principal-photo">
-          <img src="/images/sogoiryo/hiramatsu/principal_photo.jpg" alt="校長 豊住 昭和" width="480" height="600" loading="lazy">
+          <img src="/images/shika/idx/principal_photo.jpg" alt="校長 豊住 昭和" width="480" height="600" loading="lazy">
         </figure>
         <div class="school-principal-info">
           <p class="school-principal-info__title">
             <span class="label">校長</span>
             <span class="name">豊住 昭和</span>
           </p>
-          <p class="school-principal-info__sub">衛生統計学</p>
         </div>
       </div>
     </div>
@@ -72,8 +66,9 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
   </div>
 </section>
 
+
 <!-- ==========================================================================
-     SECTION 3: 概要 ＆ 学科別教員紹介
+     SECTION 2: 概要 ＆ 学科別教員紹介
      ========================================================================== -->
 <section class="section-school-outline">
   <div class="section__inner">
@@ -84,60 +79,80 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <h2 class="hiramatsu-support-header__title">概要</h2>
     </div>
 
-    <!-- 概要大型バナー -->
-    <div class="school-outline-banner">
-      <p class="school-outline-banner__txt">
-        学科別ではなく<br>
-        大分歯科専門学校的概要がここに入ります。
-      </p>
+    <!-- 概要本文（ダミーテキスト：本文が届いたら差し替え） -->
+    <div class="school-message__body">
+      <p>【ダミーテキスト】ここに大分歯科専門学校の概要が入ります。ここに大分歯科専門学校の概要が入ります。ここに大分歯科専門学校の概要が入ります。</p>
+      <p>【ダミーテキスト】ここに大分歯科専門学校の概要が入ります。ここに大分歯科専門学校の概要が入ります。ここに大分歯科専門学校の概要が入ります。ここに大分歯科専門学校の概要が入ります。ここに大分歯科専門学校の概要が入ります。</p>
     </div>
 
     <!-- 教員紹介リスト -->
     <div class="school-faculty-block">
-
-      <!-- 1. 歯科衛生士学科 -->
+      <!-- 歯科衛生士科 -->
       <div class="school-faculty-group">
         <div class="underline-header">
-          <h2 class="headline2_underline-style">歯科衛生士科 教員</h2>
+          <h2 class="headline2_underline-style">歯科衛生士科　教員</h2>
         </div>
 
         <div class="school-faculty-grid">
           <article class="school-faculty-card">
-            <figure class="school-faculty-card__photo">
-              <img src="/images/sogoiryo/hiramatsu/faculty_01.jpg" alt="学科長 衞藤 里美 先生" width="400" height="300" loading="lazy">
-            </figure>
-            <div class="school-faculty-card__body">
-              <p class="role">学科長</p>
-              <h3 class="name">衞藤 里美 <span class="honorific">先生</span></h3>
-              <dl class="subject-dl">
-                <dt class="badge">担当科目</dt>
-                <dd class="txt">歯科保健指導２・歯科保健指導３・チーム医療論・歯科衛生過程</dd>
-              </dl>
+            <div class="school-faculty-card__head">
+              <figure class="school-faculty-card__photo">
+                <img src="/images/shika/idx/teacher_photo_01.jpg" alt="学科長 衞藤 里美 先生" width="500" height="500" loading="lazy">
+              </figure>
+              <div class="school-faculty-card__body">
+                <p class="role">学科長</p>
+                <h3 class="name">衞藤 里美 <span class="honorific">先生</span></h3>
+                <dl class="subject-dl">
+                  <dt class="badge">担当科目</dt>
+                  <dd class="txt">
+                    <ul class="subject-list">
+                      <li>歯科保健指導2</li>
+                      <li>歯科保健指導3</li>
+                      <li>チーム医療論</li>
+                      <li>歯科衛生過程</li>
+                    </ul>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+            <div class="school-faculty-card__desc">
               <p class="desc">
-                ５６年の歴史を持つ本校の卒業生は、診療所・総合病院・高齢者施設・学校・企業等、幅広い現場で活躍をしています。歯・口腔の健康は全身の健康に影響する為、歯科衛生士の需要は今後さらに増し、職域も拡大していくと考えられます。この需要に対応できるよう今年度より災害時の歯科支援・スポーツ歯科・審美歯科等を学ぶ新カリカリキュラムをスタートしました。臨地実習では、大分市歯科医師会や教育委員会との連携により実現した地域に根差した大規模な歯磨き指導や、多様な実習施設で実践力はもちろん、人間力を磨くことが本校の強みです。小さな子供さんから高齢の方々、健常な方、有病者の方、たくさんの方々に接することで成長していきましょう。
+                メッセージがここに入ります。メッセージがここに入ります。メッセージがここに入ります。メッセージがここに入ります。メッセージがここに入ります。メッセージがここに入ります。メッセージがここに入ります。メッセージがここに入ります。メッセージがここに入ります。メッセージがここに入ります。メッセージがここに入ります。メッセージがここに入ります。メッセージがここに入ります。
               </p>
             </div>
           </article>
 
           <article class="school-faculty-card">
-            <figure class="school-faculty-card__photo">
-              <img src="/images/sogoiryo/hiramatsu/faculty_02.jpg" alt="教務主任 野嶋 富美子 先生" width="400" height="300" loading="lazy">
-            </figure>
-            <div class="school-faculty-card__body">
-              <p class="role">教務主任</p>
-              <h3 class="name">野嶋 富美子 <span class="honorific">先生</span></h3>
-              <dl class="subject-dl">
-                <dt class="badge">担当科目</dt>
-                <dd class="txt">歯周病予防処置1・歯周病予防処置2・歯周病予防処置3・う蝕予防処置・歯科予防処置実習・歯科衛生士概論</dd>
-              </dl>
+            <div class="school-faculty-card__head">
+              <figure class="school-faculty-card__photo">
+                <img src="/images/shika/idx/teacher_photo_02.jpg" alt="教務主任 野嶋 富美子 先生" width="500" height="500" loading="lazy">
+              </figure>
+              <div class="school-faculty-card__body">
+                <p class="role">教務主任</p>
+                <h3 class="name">野嶋 富美子 <span class="honorific">先生</span></h3>
+                <dl class="subject-dl">
+                  <dt class="badge">担当科目</dt>
+                  <dd class="txt">
+                    <ul class="subject-list">
+                      <li>歯周病予防処置1</li>
+                      <li>歯周病予防処置2</li>
+                      <li>歯周病予防処置3</li>
+                      <li>う蝕予防処置</li>
+                      <li>歯科予防処置実習</li>
+                      <li>歯科衛生士概論</li>
+                    </ul>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+            <div class="school-faculty-card__desc">
               <p class="desc">
-                本校は歯科衛生士の国家資格取得だけでなく、在学中にさまざまな資格取得を目指します。歯科医療事務や秘書検定2級、赤十字救急法救急員などの資格取得を通して、専門知識に加え、社会人として必要なマナーや救急対応の知識・技術も身につけることができます。また、平松学園は医療系8学科を有する総合学園であり、他学科の学生と合同実習を行う機会があります。異なる分野の学生と協力することで、チーム医療の大切さを学び、多職種への理解を深めることができます。幅広い知識と実践力を身につけ、将来、医療現場で活躍できる歯科衛生士を目指せることが大きな魅力です。
+                メッセージがここに入ります。メッセージがここに入ります。メッセージがここに入ります。メッセージがここに入ります。メッセージがここに入ります。メッセージがここに入ります。メッセージがここに入ります。メッセージがここに入ります。メッセージがここに入ります。メッセージがここに入ります。メッセージがここに入ります。メッセージがここに入ります。メッセージがここに入ります。
               </p>
             </div>
           </article>
         </div>
       </div>
-
     </div>
 
   </div>
@@ -163,14 +178,14 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <!-- Googleマップ埋め込みエリア（大きな角丸枠） -->
       <div class="school-access-map">
         <!-- Google Map iframe埋め込み例（レスポンシブ対応） -->
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3336.922450510215!2d131.6053152!3d33.242335!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35469fa4400c68f3%3A0x4b7a6bc140eb8772!2z5aSn5YiG5bmz5p2-57eP5ZCI5Yy755mC5bCC6ZaA5a2m5qCh!5e0!3m2!1sja!2sjp!4v1792049841645!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3337.2889279024845!2d131.6030999!3d33.2327599!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35469f70d10d19bd%3A0x86bb8cf226b8964e!2z44CSODcwLTAwMzMg5aSnIeeUu-eCsumDveaCg-mDveWNg-S7o-eAuu-8keS4gTEtMjc!5e0!3m2!1sja!2sjp!4v1710000000000!5m2!1sja!2sjp" width="600" height="450" title="大分歯科専門学校 アクセスマップ" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
       </div>
 
       <!-- 住所・連絡先テキストブロック -->
       <div class="school-access-info">
         <h3 class="school-access-info__name">大分歯科専門学校</h3>
         <p class="school-access-info__detail">
-          <span class="address">〒870-8658 大分県大分市千代町1丁目11番</span>
+          <span class="address">〒870-0033 大分県大分市千代町1丁目1-27</span>
           <span class="contact">TEL 097-535-0201 / FAX 097-573-3366</span>
         </p>
       </div>
@@ -190,13 +205,13 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
 
       <div class="school-intro-grid">
 
-        <!-- 1. 大分歯科専門学校 -->
-        <a href="/dental/" class="school-intro-card">
+        <!-- 1. 大分平松総合医療専門学校 -->
+        <a href="/sogoiryo/" class="school-intro-card">
           <figure class="school-intro-card__img">
-            <img src="/images/common/school_photo_01.jpg" alt="大分歯科専門学校 外観" width="300" height="500" loading="lazy">
+            <img src="/images/common/school_photo_01.jpg" alt="大分平松総合医療専門学校 外観" width="300" height="500" loading="lazy">
           </figure>
           <div class="school-intro-card__label">
-            <span class="txt">大分歯科専門学校</span>
+            <span class="txt">大分平松総合医療専門学校</span>
             <span class="arrow" aria-hidden="true"></span>
           </div>
         </a>
@@ -213,7 +228,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
         </a>
 
         <!-- 3. 大分医学技術専門学校 -->
-        <a href="/igaku/" class="school-intro-card">
+        <a href="/igisen/" class="school-intro-card">
           <figure class="school-intro-card__img">
             <img src="/images/common/school_photo_03.jpg" alt="大分医学技術専門学校 外観" width="300" height="500" loading="lazy">
           </figure>
@@ -224,7 +239,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
         </a>
 
         <!-- 4. 大分歯科専門学校 -->
-        <a href="/dental/" class="school-intro-card">
+        <a href="/shika/" class="school-intro-card">
           <figure class="school-intro-card__img">
             <img src="/images/common/school_photo_04.jpg" alt="大分歯科専門学校 外観" width="300" height="500" loading="lazy">
           </figure>
@@ -321,7 +336,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
               <div class="meta">
                 <time datetime="2026-00-00" class="date">2026.00.00</time>
                 <span class="badge -blog">ブログ</span>
-                <span class="badge -dept">臨床検査学科</span>
+                <span class="badge -dept">歯科衛生士科</span>
               </div>
               <p class="title">タイトルはいりますタイトルはいりますタイトルはいりますタイトルはいりますタイトルはいります。</p>
             </a>
@@ -371,9 +386,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
         <!-- 学科別タブフィルター -->
         <ul class="newsblog-tab-list">
           <li><button type="button" class="tab-btn -active">すべて</button></li>
-          <li><button type="button" class="tab-btn">臨床検査学科</button></li>
-          <li><button type="button" class="tab-btn">臨床工学科</button></li>
-          <li><button type="button" class="tab-btn">視能訓練学科</button></li>
+          <li><button type="button" class="tab-btn">歯科衛生士科</button></li>
         </ul>
 
         <!-- 記事リスト -->
@@ -413,7 +426,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
               <div class="meta">
                 <time datetime="2026-00-00" class="date">2026.00.00</time>
                 <span class="badge -blog">ブログ</span>
-                <span class="badge -dept">臨床検査学科</span>
+                <span class="badge -dept">歯科衛生士科</span>
               </div>
               <p class="title">タイトルはいりますタイトルはいりますタイトルはいりますタイトルはいりますタイトルはいります。</p>
             </a>
@@ -497,16 +510,8 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
         <div class="school-disclosure-group">
           <h3 class="group-ttl">教育課程</h3>
           <p class="link-inline-list">
-            <a href="/pdf/curriculum_mt.pdf" target="_blank" rel="noopener noreferrer" class="pdf-link">
-              <span class="icon-pdf" aria-hidden="true"></span>臨床検査学科
-            </a>
-            <span class="sep">/</span>
-            <a href="/pdf/curriculum_ce.pdf" target="_blank" rel="noopener noreferrer" class="pdf-link">
-              <span class="icon-pdf" aria-hidden="true"></span>臨床工学科
-            </a>
-            <span class="sep">/</span>
-            <a href="/pdf/curriculum_ort.pdf" target="_blank" rel="noopener noreferrer" class="pdf-link">
-              <span class="icon-pdf" aria-hidden="true"></span>視能訓練学科
+            <a href="/pdf/curriculum_dh.pdf" target="_blank" rel="noopener noreferrer" class="pdf-link">
+              <span class="icon-pdf" aria-hidden="true"></span>歯科衛生士科
             </a>
           </p>
         </div>
@@ -518,16 +523,8 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
         <div class="school-disclosure-group">
           <h3 class="group-ttl">実務教員による授業の配置</h3>
           <p class="link-inline-list">
-            <a href="/pdf/teacher_mt.pdf" target="_blank" rel="noopener noreferrer" class="pdf-link">
-              <span class="icon-pdf" aria-hidden="true"></span>臨床検査学科
-            </a>
-            <span class="sep">/</span>
-            <a href="/pdf/teacher_ce.pdf" target="_blank" rel="noopener noreferrer" class="pdf-link">
-              <span class="icon-pdf" aria-hidden="true"></span>臨床工学科
-            </a>
-            <span class="sep">/</span>
-            <a href="/pdf/teacher_ort.pdf" target="_blank" rel="noopener noreferrer" class="pdf-link">
-              <span class="icon-pdf" aria-hidden="true"></span>視能訓練学科
+            <a href="/pdf/teacher_dh.pdf" target="_blank" rel="noopener noreferrer" class="pdf-link">
+              <span class="icon-pdf" aria-hidden="true"></span>歯科衛生士科
             </a>
           </p>
         </div>
@@ -537,20 +534,8 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
           <h3 class="group-ttl">シラバス</h3>
           <ul class="syllabus-list">
             <li>
-              <span class="label">・ 臨床検査学科</span>
-              <a href="/pdf/syllabus_mt.pdf" target="_blank" rel="noopener noreferrer" class="pdf-link">
-                <span class="icon-pdf" aria-hidden="true"></span>1・2・3年共通
-              </a>
-            </li>
-            <li>
-              <span class="label">・ 臨床工学科</span>
-              <a href="/pdf/syllabus_ce.pdf" target="_blank" rel="noopener noreferrer" class="pdf-link">
-                <span class="icon-pdf" aria-hidden="true"></span>1・2・3年共通
-              </a>
-            </li>
-            <li>
-              <span class="label">・ 視能訓練学科</span>
-              <a href="/pdf/syllabus_ort.pdf" target="_blank" rel="noopener noreferrer" class="pdf-link">
+              <span class="label">・ 歯科衛生士科</span>
+              <a href="/pdf/syllabus_dh.pdf" target="_blank" rel="noopener noreferrer" class="pdf-link">
                 <span class="icon-pdf" aria-hidden="true"></span>1・2・3年共通
               </a>
             </li>
@@ -580,16 +565,8 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
         <div class="school-disclosure-group">
           <h4 class="group-ttl">学校基本情報</h4>
           <p class="link-inline-list">
-            <a href="/pdf/info_mt.pdf" target="_blank" rel="noopener noreferrer" class="pdf-link">
-              <span class="icon-pdf" aria-hidden="true"></span>臨床検査学科
-            </a>
-            <span class="sep">/</span>
-            <a href="/pdf/info_ce.pdf" target="_blank" rel="noopener noreferrer" class="pdf-link">
-              <span class="icon-pdf" aria-hidden="true"></span>臨床工学科
-            </a>
-            <span class="sep">/</span>
-            <a href="/pdf/info_ort.pdf" target="_blank" rel="noopener noreferrer" class="pdf-link">
-              <span class="icon-pdf" aria-hidden="true"></span>視能訓練学科
+            <a href="/pdf/info_dh.pdf" target="_blank" rel="noopener noreferrer" class="pdf-link">
+              <span class="icon-pdf" aria-hidden="true"></span>歯科衛生士科
             </a>
           </p>
         </div>
@@ -598,16 +575,8 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
         <div class="school-disclosure-group">
           <h4 class="group-ttl">学校評価</h4>
           <p class="link-inline-list">
-            <a href="/pdf/eval_mt.pdf" target="_blank" rel="noopener noreferrer" class="pdf-link">
-              <span class="icon-pdf" aria-hidden="true"></span>臨床検査学科
-            </a>
-            <span class="sep">/</span>
-            <a href="/pdf/eval_ce.pdf" target="_blank" rel="noopener noreferrer" class="pdf-link">
-              <span class="icon-pdf" aria-hidden="true"></span>臨床工学科
-            </a>
-            <span class="sep">/</span>
-            <a href="/pdf/eval_ort.pdf" target="_blank" rel="noopener noreferrer" class="pdf-link">
-              <span class="icon-pdf" aria-hidden="true"></span>視能訓練学科
+            <a href="/pdf/eval_dh.pdf" target="_blank" rel="noopener noreferrer" class="pdf-link">
+              <span class="icon-pdf" aria-hidden="true"></span>歯科衛生士科
             </a>
           </p>
         </div>
@@ -616,16 +585,8 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
         <div class="school-disclosure-group">
           <h4 class="group-ttl">学校評価</h4>
           <p class="link-inline-list">
-            <a href="/pdf/eval2_mt.pdf" target="_blank" rel="noopener noreferrer" class="pdf-link">
-              <span class="icon-pdf" aria-hidden="true"></span>臨床検査学科
-            </a>
-            <span class="sep">/</span>
-            <a href="/pdf/eval2_ce.pdf" target="_blank" rel="noopener noreferrer" class="pdf-link">
-              <span class="icon-pdf" aria-hidden="true"></span>臨床工学科
-            </a>
-            <span class="sep">/</span>
-            <a href="/pdf/eval2_ort.pdf" target="_blank" rel="noopener noreferrer" class="pdf-link">
-              <span class="icon-pdf" aria-hidden="true"></span>視能訓練学科
+            <a href="/pdf/eval2_dh.pdf" target="_blank" rel="noopener noreferrer" class="pdf-link">
+              <span class="icon-pdf" aria-hidden="true"></span>歯科衛生士科
             </a>
           </p>
         </div>
@@ -654,6 +615,28 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
   </div>
 </section>
 
+
+<!-- ==========================================================================
+     SECTION: DEPARTMENT LINKS (学科リンク)
+     ========================================================================== -->
+<section class="section-school-dept-links">
+  <div class="section__inner">
+
+    <div class="school-dept-links-grid">
+      <!-- 歯科衛生士科 -->
+      <a href="/shika/dh/" class="school-dept-link">
+        <figure class="school-dept-link__img">
+          <img src="/images/shika/dh/mv.jpg" alt="歯科衛生士科の実習風景" width="380" height="250" loading="lazy">
+        </figure>
+        <div class="school-dept-link__label">
+          <span class="txt">歯科衛生士科</span>
+          <span class="arrow" aria-hidden="true"></span>
+        </div>
+      </a>
+    </div><!-- /school-dept-links-grid -->
+
+  </div>
+</section>
 
 
 <?php include($_SERVER['DOCUMENT_ROOT'] . '/assets/section-conversion.php'); ?>

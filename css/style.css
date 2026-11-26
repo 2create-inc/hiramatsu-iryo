@@ -12452,11 +12452,20 @@ body {
   margin: 0;
   padding: 0;
 }
+@media screen and (min-width: 576px) {
+  .subject-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 16px;
+  }
+}
 .subject-list li {
   font-size: 0.75rem;
   font-weight: 700;
   color: #333333;
   line-height: 1.6;
+  padding-left: 1em;
+  text-indent: -1em;
 }
 .subject-list li::before {
   content: "・";
