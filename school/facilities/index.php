@@ -255,7 +255,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <article class="facility-detail-card">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
-            <img src="/images/facilities/detail_library.jpg" alt="1F 図書室">
+            <img src="/images/facilities/common_1f_library.jpg" alt="1F 図書室">
           </div>
           <div class="facility-detail-card__info">
             <h3 class="facility-detail-card__title">
@@ -273,7 +273,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <article class="facility-detail-card">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
-            <img src="/images/facilities/detail_consult.jpg" alt="1F 相談室">
+            <img src="/images/facilities/common_1f_consultation-room.jpg" alt="1F 相談室">
           </div>
           <div class="facility-detail-card__info">
             <h3 class="facility-detail-card__title">
@@ -287,11 +287,11 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
         </a>
       </article>
 
-      <!-- 3. 普通教室 -->
+      <!-- 3. 保健室 -->
       <article class="facility-detail-card">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
-            <img src="/images/facilities/detail_classroom.jpg" alt="1F 保健室">
+            <img src="/images/facilities/common_1f_health-room.jpg" alt="1F 保健室">
           </div>
           <div class="facility-detail-card__info">
             <h3 class="facility-detail-card__title">
@@ -305,11 +305,11 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
         </a>
       </article>
 
-      <!-- 4. 検体検査室 -->
+      <!-- 4. キャリアサポート -->
       <article class="facility-detail-card">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
-            <img src="/images/facilities/detail_lab01.jpg" alt="1F キャリアサポート">
+            <img src="/images/facilities/common_1f_career-support.jpg" alt="1F キャリアサポート">
           </div>
           <div class="facility-detail-card__info">
             <h3 class="facility-detail-card__title">
@@ -323,11 +323,11 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
         </a>
       </article>
 
-      <!-- 5. コモンスペース-->
+      <!-- 5. コモンスペース -->
       <article class="facility-detail-card">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
-            <img src="/images/facilities/detail_lab02.jpg" alt="2F コモンスペース">
+            <img src="/images/facilities/common_2f_common-space.jpg" alt="2F コモンスペース">
           </div>
           <div class="facility-detail-card__info">
             <h3 class="facility-detail-card__title">
@@ -345,7 +345,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <article class="facility-detail-card">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
-            <img src="/images/facilities/detail_lab03.jpg" alt="2F セミナーホール">
+            <img src="/images/facilities/common_2f_seminar-hall.jpg" alt="2F セミナーホール">
           </div>
           <div class="facility-detail-card__info">
             <h3 class="facility-detail-card__title">
@@ -363,7 +363,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <article class="facility-detail-card">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
-            <img src="/images/facilities/detail_msit.jpg" alt="2F 基礎医学実習室">
+            <img src="/images/facilities/common_2f_basic-medicine-lab.jpg" alt="2F 基礎医学実習室">
           </div>
           <div class="facility-detail-card__info">
             <h3 class="facility-detail-card__title">
@@ -381,7 +381,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <article class="facility-detail-card">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
-            <img src="/images/facilities/detail_common.jpg" alt="3F 検体検査室">
+            <img src="/images/facilities/common_3f_specimen-lab.jpg" alt="3F 検体検査室">
           </div>
           <div class="facility-detail-card__info">
             <h3 class="facility-detail-card__title">
@@ -399,7 +399,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <article class="facility-detail-card">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
-            <img src="/images/facilities/detail_common.jpg" alt="3F 微生物学検査室">
+            <img src="/images/facilities/common_3f_microbiology-lab.jpg" alt="3F 微生物学検査室">
           </div>
           <div class="facility-detail-card__info">
             <h3 class="facility-detail-card__title">
@@ -413,11 +413,11 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
         </a>
       </article>
 
-      <!-- 10. 微生物学検査室 -->
+      <!-- 10. 生体検査室 -->
       <article class="facility-detail-card">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
-            <img src="/images/facilities/detail_common.jpg" alt="3F 生体検査室">
+            <img src="/images/facilities/common_3f_physiology-lab.jpg" alt="3F 生体検査室">
           </div>
           <div class="facility-detail-card__info">
             <h3 class="facility-detail-card__title">
@@ -435,7 +435,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <article class="facility-detail-card">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
-            <img src="/images/facilities/detail_common.jpg" alt="3F MSIT">
+            <img src="/images/facilities/common_3f_msit.jpg" alt="3F MSIT">
           </div>
           <div class="facility-detail-card__info">
             <h3 class="facility-detail-card__title">
@@ -467,11 +467,11 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
     <!-- 設備・実習室カードグリッド (3カラム) -->
     <div class="facility-card-grid">
 
-      <!-- 1. 図書室 -->
+      <!-- 1. 普通教室 -->
       <article class="facility-detail-card">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
-            <img src="/images/facilities/detail_library.jpg" alt="2F 普通教室">
+            <img src="/images/facilities/rinken_2f_classroom.jpg" alt="2F 普通教室">
           </div>
           <div class="facility-detail-card__info">
             <h3 class="facility-detail-card__title">
@@ -508,7 +508,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <article class="facility-detail-card">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
-            <img src="/images/facilities/detail_library.jpg" alt="4F 普通教室">
+            <img src="/images/facilities/ce_4f_classroom.jpg" alt="4F 普通教室">
           </div>
           <div class="facility-detail-card__info">
             <h3 class="facility-detail-card__title">
@@ -526,7 +526,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <article class="facility-detail-card">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
-            <img src="/images/facilities/detail_library.jpg" alt="4F 基礎工学実習室">
+            <img src="/images/facilities/ce_4f_basic-engineering-lab.jpg" alt="4F 基礎工学実習室">
           </div>
           <div class="facility-detail-card__info">
             <h3 class="facility-detail-card__title">
@@ -544,7 +544,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <article class="facility-detail-card">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
-            <img src="/images/facilities/detail_library.jpg" alt="4F 臨床工学実習室">
+            <img src="/images/facilities/ce_4f_clinical-engineering-lab.jpg" alt="4F 臨床工学実習室">
           </div>
           <div class="facility-detail-card__info">
             <h3 class="facility-detail-card__title">
@@ -581,7 +581,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <article class="facility-detail-card">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
-            <img src="/images/facilities/detail_library.jpg" alt="4F 基礎実習室">
+            <img src="/images/facilities/ort_4f_basic-lab.jpg" alt="4F 基礎実習室">
           </div>
           <div class="facility-detail-card__info">
             <h3 class="facility-detail-card__title">
@@ -599,7 +599,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <article class="facility-detail-card">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
-            <img src="/images/facilities/detail_library.jpg" alt="5F 普通教室">
+            <img src="/images/facilities/ort_5f_classroom.jpg" alt="5F 普通教室">
           </div>
           <div class="facility-detail-card__info">
             <h3 class="facility-detail-card__title">
@@ -617,7 +617,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <article class="facility-detail-card">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
-            <img src="/images/facilities/detail_library.jpg" alt="5F 視能訓練実習室">
+            <img src="/images/facilities/ort_5f_orthoptic-training-lab.jpg" alt="5F 視能訓練実習室">
           </div>
           <div class="facility-detail-card__info">
             <h3 class="facility-detail-card__title">
@@ -635,7 +635,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <article class="facility-detail-card">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
-            <img src="/images/facilities/detail_library.jpg" alt="5F 視能検査実習室">
+            <img src="/images/facilities/ort_5f_eye-exam-lab.jpg" alt="5F 視能検査実習室">
           </div>
           <div class="facility-detail-card__info">
             <h3 class="facility-detail-card__title">
@@ -653,7 +653,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <article class="facility-detail-card">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
-            <img src="/images/facilities/detail_library.jpg" alt="5F 暗室">
+            <img src="/images/facilities/ort_5f_darkroom.jpg" alt="5F 暗室">
           </div>
           <div class="facility-detail-card__info">
             <h3 class="facility-detail-card__title">
@@ -949,7 +949,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <article class="facility-detail-card">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
-            <img src="/images/facilities/detail_library.jpg" alt="1F 水治療法室">
+            <img src="/images/facilities/pt_1f_hydrotherapy-room.jpg" alt="1F 水治療法室">
           </div>
           <div class="facility-detail-card__info">
             <h3 class="facility-detail-card__title">
@@ -967,7 +967,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <article class="facility-detail-card">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
-            <img src="/images/facilities/detail_library.jpg" alt="1F 図書室">
+            <img src="/images/facilities/pt_1f_library.jpg" alt="1F 図書室">
           </div>
           <div class="facility-detail-card__info">
             <h3 class="facility-detail-card__title">
@@ -985,7 +985,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <article class="facility-detail-card">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
-            <img src="/images/facilities/detail_library.jpg" alt="2F ADL室">
+            <img src="/images/facilities/pt_2f_adl-room.jpg" alt="2F ADL室">
           </div>
           <div class="facility-detail-card__info">
             <h3 class="facility-detail-card__title">
@@ -1003,7 +1003,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <article class="facility-detail-card">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
-            <img src="/images/facilities/detail_library.jpg" alt="3F 機能訓練室">
+            <img src="/images/facilities/pt_3f_training-room.jpg" alt="3F 機能訓練室">
           </div>
           <div class="facility-detail-card__info">
             <h3 class="facility-detail-card__title">
@@ -1021,7 +1021,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <article class="facility-detail-card">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
-            <img src="/images/facilities/detail_library.jpg" alt="3F 学習室">
+            <img src="/images/facilities/pt_3f_study-room.jpg" alt="3F 学習室">
           </div>
           <div class="facility-detail-card__info">
             <h3 class="facility-detail-card__title">
@@ -1039,7 +1039,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <article class="facility-detail-card">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
-            <img src="/images/facilities/detail_library.jpg" alt="4F 基礎実習室">
+            <img src="/images/facilities/pt_4f_basic-lab.jpg" alt="4F 基礎実習室">
           </div>
           <div class="facility-detail-card__info">
             <h3 class="facility-detail-card__title">
@@ -1057,7 +1057,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <article class="facility-detail-card">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
-            <img src="/images/facilities/detail_library.jpg" alt="5F 大講義室">
+            <img src="/images/facilities/pt_5f_lecture-hall.jpg" alt="5F 大講義室">
           </div>
           <div class="facility-detail-card__info">
             <h3 class="facility-detail-card__title">
@@ -1093,7 +1093,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <article class="facility-detail-card">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
-            <img src="/images/facilities/detail_library.jpg" alt="2F 実技室">
+            <img src="/images/facilities/ot_2f_practice-room.jpg" alt="2F 実技室">
           </div>
           <div class="facility-detail-card__info">
             <h3 class="facility-detail-card__title">
@@ -1111,7 +1111,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <article class="facility-detail-card">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
-            <img src="/images/facilities/detail_library.jpg" alt="4F 木工室">
+            <img src="/images/facilities/ot_4f_woodwork-room.jpg" alt="4F 木工室">
           </div>
           <div class="facility-detail-card__info">
             <h3 class="facility-detail-card__title">
@@ -1129,7 +1129,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <article class="facility-detail-card">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
-            <img src="/images/facilities/detail_library.jpg" alt="4F 陶工室">
+            <img src="/images/facilities/ot_4f_pottery-room.jpg" alt="4F 陶工室">
           </div>
           <div class="facility-detail-card__info">
             <h3 class="facility-detail-card__title">
@@ -1147,7 +1147,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <article class="facility-detail-card">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
-            <img src="/images/facilities/detail_library.jpg" alt="6F 図書室">
+            <img src="/images/facilities/ot_6f_library.jpg" alt="6F 図書室">
           </div>
           <div class="facility-detail-card__info">
             <h3 class="facility-detail-card__title">
@@ -1183,7 +1183,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <article class="facility-detail-card" id="room-st-1f">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
-            <img src="/images/facilities/detail_library.jpg" alt="1F 図書室">
+            <img src="/images/facilities/st_1f_library.jpg" alt="1F 図書室">
           </div>
           <div class="facility-detail-card__info">
             <h3 class="facility-detail-card__title">
@@ -1201,7 +1201,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <article class="facility-detail-card" id="room-st-2f-1">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
-            <img src="/images/facilities/detail_library.jpg" alt="2F 普通教室">
+            <img src="/images/facilities/st_2f_classroom.jpg" alt="2F 普通教室">
           </div>
           <div class="facility-detail-card__info">
             <h3 class="facility-detail-card__title">
@@ -1219,7 +1219,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <article class="facility-detail-card" id="room-st-2f-2">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
-            <img src="/images/facilities/detail_library.jpg" alt="2F 基礎実習室">
+            <img src="/images/facilities/st_2f_basic-lab.jpg" alt="2F 基礎実習室">
           </div>
           <div class="facility-detail-card__info">
             <h3 class="facility-detail-card__title">
@@ -1237,7 +1237,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <article class="facility-detail-card" id="room-st-3f-1">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
-            <img src="/images/facilities/detail_library.jpg" alt="3F 聴覚検査室">
+            <img src="/images/facilities/st_3f_hearing-test-room.jpg" alt="3F 聴覚検査室">
           </div>
           <div class="facility-detail-card__info">
             <h3 class="facility-detail-card__title">
@@ -1255,7 +1255,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <article class="facility-detail-card" id="room-st-3f-2">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
-            <img src="/images/facilities/detail_library.jpg" alt="3F 防音室">
+            <img src="/images/facilities/st_3f_soundproof-room.jpg" alt="3F 防音室">
           </div>
           <div class="facility-detail-card__info">
             <h3 class="facility-detail-card__title">
@@ -1273,7 +1273,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <article class="facility-detail-card" id="room-st-4f-1">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
-            <img src="/images/facilities/detail_library.jpg" alt="4F 聴覚訓練室">
+            <img src="/images/facilities/st_4f_hearing-training-room.jpg" alt="4F 聴覚訓練室">
           </div>
           <div class="facility-detail-card__info">
             <h3 class="facility-detail-card__title">
@@ -1291,7 +1291,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <article class="facility-detail-card" id="room-st-4f-2">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
-            <img src="/images/facilities/detail_library.jpg" alt="4F 聴覚観察室">
+            <img src="/images/facilities/st_4f_observation-room.jpg" alt="4F 聴覚観察室">
           </div>
           <div class="facility-detail-card__info">
             <h3 class="facility-detail-card__title">
@@ -1309,7 +1309,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <article class="facility-detail-card" id="room-st-5f">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
-            <img src="/images/facilities/detail_library.jpg" alt="5F 合同講義室">
+            <img src="/images/facilities/st_5f_joint-lecture-room.jpg" alt="5F 合同講義室">
           </div>
           <div class="facility-detail-card__info">
             <h3 class="facility-detail-card__title">
@@ -1433,7 +1433,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <article class="facility-detail-card" id="room-judo-1f">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
-            <img src="/images/facilities/detail_library.jpg" alt="1F 図書室">
+            <img src="/images/facilities/jt_1f_library.jpg" alt="1F 図書室">
           </div>
           <div class="facility-detail-card__info">
             <h3 class="facility-detail-card__title">
@@ -1451,7 +1451,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <article class="facility-detail-card" id="room-judo-2f">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
-            <img src="/images/facilities/detail_library.jpg" alt="2F 教室">
+            <img src="/images/facilities/jt_2f_classroom.jpg" alt="2F 教室">
           </div>
           <div class="facility-detail-card__info">
             <h3 class="facility-detail-card__title">
@@ -1469,7 +1469,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <article class="facility-detail-card" id="room-judo-3f-1">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
-            <img src="/images/facilities/detail_library.jpg" alt="3F 教室（大）">
+            <img src="/images/facilities/jt_3f_large-classroom.jpg" alt="3F 教室（大）">
           </div>
           <div class="facility-detail-card__info">
             <h3 class="facility-detail-card__title">
@@ -1487,7 +1487,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <article class="facility-detail-card" id="room-judo-3f-2">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
-            <img src="/images/facilities/detail_library.jpg" alt="3F 実技室">
+            <img src="/images/facilities/jt_3f_practice-room.jpg" alt="3F 実技室">
           </div>
           <div class="facility-detail-card__info">
             <h3 class="facility-detail-card__title">
@@ -1505,7 +1505,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <article class="facility-detail-card" id="room-judo-4f">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
-            <img src="/images/facilities/detail_library.jpg" alt="4F 柔道場">
+            <img src="/images/facilities/jt_4f_judo-hall.jpg" alt="4F 柔道場">
           </div>
           <div class="facility-detail-card__info">
             <h3 class="facility-detail-card__title">
@@ -1523,7 +1523,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <article class="facility-detail-card" id="room-judo-5f">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
-            <img src="/images/facilities/detail_library.jpg" alt="5F 大講堂">
+            <img src="/images/facilities/jt_5f_auditorium.jpg" alt="5F 大講堂">
           </div>
           <div class="facility-detail-card__info">
             <h3 class="facility-detail-card__title">
@@ -1610,7 +1610,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <article class="facility-detail-card" id="room-dh-2f-1">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
-            <img src="/images/facilities/detail_library.jpg" alt="2F 普通教室 Ⅲ">
+            <img src="/images/facilities/dh_2f_classroom-3.jpg" alt="2F 普通教室 Ⅲ">
           </div>
           <div class="facility-detail-card__info">
             <h3 class="facility-detail-card__title">
@@ -1628,7 +1628,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <article class="facility-detail-card" id="room-dh-2f-2">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
-            <img src="/images/facilities/detail_library.jpg" alt="2F 実験室">
+            <img src="/images/facilities/dh_2f_laboratory.jpg" alt="2F 実験室">
           </div>
           <div class="facility-detail-card__info">
             <h3 class="facility-detail-card__title">
@@ -1646,7 +1646,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <article class="facility-detail-card" id="room-dh-2f-3">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
-            <img src="/images/facilities/detail_library.jpg" alt="2F 基礎実習室">
+            <img src="/images/facilities/dh_2f_basic-lab.jpg" alt="2F 基礎実習室">
           </div>
           <div class="facility-detail-card__info">
             <h3 class="facility-detail-card__title">
