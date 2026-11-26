@@ -1,27 +1,26 @@
 <?php include($_SERVER['DOCUMENT_ROOT'] . '/header.php'); ?>
 
 <section class="section-page-mv" id="js-mv">
-<div class="page-header">
-  <h1><span class="en">Facilities</span>学内施設</h1>
-  <ul class="pankuzu-list">
-    <li><a href="/">HOME</a></li>
-    <li><a href="/school/">学校紹介</a></li>
-    <li>学内施設</li>
-  </ul>
-</div>
-<div class="page-mv"><img src="/images/facilities/mv.jpg"></div>
+  <div class="page-header">
+    <h1><span class="en">About</span>学校紹介</h1>
+    <ul class="pankuzu-list">
+      <li><a href="/">HOME</a></li>
+      <li>学校紹介</li>
+    </ul>
+  </div>
+  <div class="page-mv"><img src="/images/school/mv.jpg"></div>
 </section>
 
 
 <section class="section-about-school reveal">
   <div class="section__inner">
-    
+
     <h2 class="headline2">平松学園医療系専門学校ってどんな学校？</h2>
-    
+
     <ul class="about-card-list">
       <!-- 1. キャンパスライフ -->
       <li class="about-card-list__item">
-        <a href="#" class="about-card-link">
+        <a href="/school/campuslife/" class="about-card-link">
           <div class="about-card-link__img-wrap">
             <img src="/images/school/thumb_campus.jpg" alt="実習風景のイメージ">
           </div>
@@ -34,7 +33,7 @@
 
       <!-- 2. 学内施設 -->
       <li class="about-card-list__item">
-        <a href="#" class="about-card-link">
+        <a href="/school/facilities/" class="about-card-link">
           <div class="about-card-link__img-wrap">
             <img src="/images/school/thumb_facility.jpg" alt="図書室のイメージ">
           </div>
@@ -45,22 +44,9 @@
         </a>
       </li>
 
-      <!-- 3. 学園沿革 -->
+      <!-- 3. よくある質問 -->
       <li class="about-card-list__item">
-        <a href="#" class="about-card-link">
-          <div class="about-card-link__img-wrap">
-            <img src="/images/school/thumb_history.jpg" alt="開いた本のイメージ">
-          </div>
-          <div class="about-card-link__body">
-            <h3 class="about-card-link__title">学園沿革</h3>
-            <span class="about-card-link__arrow"></span>
-          </div>
-        </a>
-      </li>
-
-      <!-- 4. よくある質問 -->
-      <li class="about-card-list__item">
-        <a href="#" class="about-card-link">
+        <a href="/school/faq/" class="about-card-link">
           <div class="about-card-link__img-wrap">
             <img src="/images/school/thumb_faq.jpg" alt="教員と学生が話しているイメージ">
           </div>
@@ -71,14 +57,14 @@
         </a>
       </li>
 
-      <!-- 5. デジタルパンフレット -->
+      <!-- 4. デジタルパンフレット -->
       <li class="about-card-list__item">
-        <a href="#" class="about-card-link">
+        <a href="https://page.line.me/574beals" target="_blank" rel="noopener noreferrer" class="about-card-link">
           <div class="about-card-link__img-wrap">
-            <img src="/images/school/thumb_pamphlet.jpg" alt="パンフレットの表紙イメージ">
+            <img src="/images/top/banner_line.png" alt="パンフレットの表紙イメージ">
           </div>
           <div class="about-card-link__body">
-            <h3 class="about-card-link__title">デジタルパンフレット <span class="pdf-label">[PDF]</span></h3>
+            <h3 class="about-card-link__title">デジタルパンフレット</h3>
             <span class="about-card-link__arrow"></span>
           </div>
         </a>
