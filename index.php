@@ -50,15 +50,15 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <div class="top-mv-sp-row">
         <div class="top-mv-track -left">
           <!-- 1周目 -->
-          <figure class="top-mv-item"><img src="/images/top/mv_01.jpg" alt="実習風景 1" width="375" height="230" loading="eager"></figure>
-          <figure class="top-mv-item"><img src="/images/top/mv_03.jpg" alt="実習風景 3" width="375" height="230" loading="eager"></figure>
-          <figure class="top-mv-item"><img src="/images/top/mv_05.jpg" alt="実習風景 5" width="375" height="230" loading="eager"></figure>
-          <figure class="top-mv-item"><img src="/images/top/mv_07.jpg" alt="実習風景 7" width="375" height="230" loading="eager"></figure>
+          <figure class="top-mv-item"><img src="/images/top/mv_01_sp.jpg" alt="実習風景 1" width="375" height="230" loading="eager"></figure>
+          <figure class="top-mv-item"><img src="/images/top/mv_03_sp.jpg" alt="実習風景 3" width="375" height="230" loading="eager"></figure>
+          <figure class="top-mv-item"><img src="/images/top/mv_05_sp.jpg" alt="実習風景 5" width="375" height="230" loading="eager"></figure>
+          <figure class="top-mv-item"><img src="/images/top/mv_07_sp.jpg" alt="実習風景 7" width="375" height="230" loading="eager"></figure>
           <!-- 2周目 -->
-          <figure class="top-mv-item" aria-hidden="true"><img src="/images/top/mv_01.jpg" alt="" width="375" height="230" loading="eager"></figure>
-          <figure class="top-mv-item" aria-hidden="true"><img src="/images/top/mv_03.jpg" alt="" width="375" height="230" loading="eager"></figure>
-          <figure class="top-mv-item" aria-hidden="true"><img src="/images/top/mv_05.jpg" alt="" width="375" height="230" loading="eager"></figure>
-          <figure class="top-mv-item" aria-hidden="true"><img src="/images/top/mv_07.jpg" alt="" width="375" height="230" loading="eager"></figure>
+          <figure class="top-mv-item" aria-hidden="true"><img src="/images/top/mv_01_sp.jpg" alt="" width="375" height="230" loading="eager"></figure>
+          <figure class="top-mv-item" aria-hidden="true"><img src="/images/top/mv_03_sp.jpg" alt="" width="375" height="230" loading="eager"></figure>
+          <figure class="top-mv-item" aria-hidden="true"><img src="/images/top/mv_05_sp.jpg" alt="" width="375" height="230" loading="eager"></figure>
+          <figure class="top-mv-item" aria-hidden="true"><img src="/images/top/mv_07_sp.jpg" alt="" width="375" height="230" loading="eager"></figure>
         </div>
       </div>
 
@@ -66,15 +66,15 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <div class="top-mv-sp-row">
         <div class="top-mv-track -right">
           <!-- 1周目 -->
-          <figure class="top-mv-item"><img src="/images/top/mv_02.jpg" alt="実習風景 2" width="375" height="230" loading="eager"></figure>
-          <figure class="top-mv-item"><img src="/images/top/mv_04.jpg" alt="実習風景 4" width="375" height="230" loading="eager"></figure>
-          <figure class="top-mv-item"><img src="/images/top/mv_06.jpg" alt="実習風景 6" width="375" height="230" loading="eager"></figure>
-          <figure class="top-mv-item"><img src="/images/top/mv_08.jpg" alt="実習風景 8" width="375" height="230" loading="eager"></figure>
+          <figure class="top-mv-item"><img src="/images/top/mv_02_sp.jpg" alt="実習風景 2" width="375" height="230" loading="eager"></figure>
+          <figure class="top-mv-item"><img src="/images/top/mv_04_sp.jpg" alt="実習風景 4" width="375" height="230" loading="eager"></figure>
+          <figure class="top-mv-item"><img src="/images/top/mv_06_sp.jpg" alt="実習風景 6" width="375" height="230" loading="eager"></figure>
+          <figure class="top-mv-item"><img src="/images/top/mv_08_sp.jpg" alt="実習風景 8" width="375" height="230" loading="eager"></figure>
           <!-- 2周目 -->
-          <figure class="top-mv-item" aria-hidden="true"><img src="/images/top/mv_02.jpg" alt="" width="375" height="230" loading="eager"></figure>
-          <figure class="top-mv-item" aria-hidden="true"><img src="/images/top/mv_04.jpg" alt="" width="375" height="230" loading="eager"></figure>
-          <figure class="top-mv-item" aria-hidden="true"><img src="/images/top/mv_06.jpg" alt="" width="375" height="230" loading="eager"></figure>
-          <figure class="top-mv-item" aria-hidden="true"><img src="/images/top/mv_08.jpg" alt="" width="375" height="230" loading="eager"></figure>
+          <figure class="top-mv-item" aria-hidden="true"><img src="/images/top/mv_02_sp.jpg" alt="" width="375" height="230" loading="eager"></figure>
+          <figure class="top-mv-item" aria-hidden="true"><img src="/images/top/mv_04_sp.jpg" alt="" width="375" height="230" loading="eager"></figure>
+          <figure class="top-mv-item" aria-hidden="true"><img src="/images/top/mv_06_sp.jpg" alt="" width="375" height="230" loading="eager"></figure>
+          <figure class="top-mv-item" aria-hidden="true"><img src="/images/top/mv_08_sp.jpg" alt="" width="375" height="230" loading="eager"></figure>
         </div>
       </div>
 
