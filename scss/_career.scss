@@ -672,7 +672,10 @@
 }
 
 /* 2. 背景カードコンテナ */
-.schedule-card {
+// 学科ページの .schedule-card（月別カード）と名前が同じなので、セクション内に限定して上書きされないようにする
+.schedule-section .schedule-card {
+  display: block;
+  min-height: 0;
   background-color: #fff;
   border-radius: 24px;
   padding: 40px 36px 36px;
@@ -728,6 +731,29 @@
 
   @include mobile-fablet {
     font-size: 0.775rem;
+  }
+}
+
+/* 就職活動のスケジュール（career-support）：デザインに合わせて余白を調整 */
+.schedule-section.-job {
+  .schedule-section__title {
+    margin-bottom: 60px;
+
+    @include mobile-fablet {
+      margin-bottom: 24px;
+    }
+  }
+
+  .schedule-card {
+    padding: 60px 50px;
+
+    @include mobile-fablet {
+      padding: 24px 16px;
+    }
+  }
+
+  .schedule-card__img-wrap {
+    margin-bottom: 0;
   }
 }
 

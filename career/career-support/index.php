@@ -112,7 +112,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
 
 
 
-<section class="section-employment reveal schedule-section is-visible">
+<section class="section-employment reveal schedule-section -job is-visible">
   <div class="section__inner">
     <h3 class="schedule-section__title">就職活動のスケジュール<span>※各学科により多少の違いはあります</span></h3>
     <div class="schedule-card">
@@ -120,8 +120,6 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <div class="schedule-card__img-wrap">
         <img src="/images/career-support/support-schedule_table.png" alt="就職活動のスケジュール表" loading="lazy">
       </div>
-
-      <p class="schedule-card__note">※学習サポートは各学科により多少の違いはあります。</p>
     </div>
   </div>
 </section>

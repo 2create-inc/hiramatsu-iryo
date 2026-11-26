@@ -773,30 +773,57 @@
 .curriculum-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  --curriculum-gap: 56px;
+  gap: var(--curriculum-gap);
   margin-top: 36px;
 
   @include mobile-desktop {
-    gap: 16px;
+    --curriculum-gap: 40px;
   }
 
   @include mobile-fablet {
     grid-template-columns: 1fr; /* スマホ時1列縦積み */
-    gap: 24px;
+    --curriculum-gap: 24px;
     margin-top: 24px;
   }
 }
 
 .curriculum-card {
+  position: relative;
   background-color: #ffffff;
   border: 4px solid #FFF5D1;
   border-radius: 16px;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
 
+  /* 次の年次へ向かう矢印（カードの間に配置） */
+  &:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: var(--curriculum-gap);
+    height: 140px;
+    // 4px は枠線の分
+    margin-left: 4px;
+    transform: translateY(-50%);
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 140' preserveAspectRatio='none'%3E%3Cpolyline points='1,1 11,70 1,139' fill='none' stroke='%23FFD747' stroke-width='2' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E") no-repeat center / 12px 100%;
+    pointer-events: none;
+
+    @include mobile-desktop {
+      height: 110px;
+    }
+
+    // 縦積みのスマホ時は表示しない
+    @include mobile-fablet {
+      display: none;
+    }
+  }
+
   /* ヘッダー黄色枠（デザイン再現） */
   .curriculum-card__head {
+    // カードの overflow を外したので、ヘッダー側で角を丸める（16px - 枠線4px）
+    border-radius: 12px 12px 0 0;
     padding: 20px 24px;
     background-color: #FFF5D1;
     border-bottom: 1px dashed #FFF5D1;
