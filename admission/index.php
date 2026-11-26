@@ -27,7 +27,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
     <ul class="about-card-list">
       <!-- 1. 募集要項 -->
       <li class="about-card-list__item">
-        <a href="/admissions/" class="about-card-link">
+        <a href="/admission/" class="about-card-link">
           <div class="about-card-link__img-wrap">
             <img src="/images/admissions/admissions_thumb01.jpg" alt="募集要項">
           </div>
@@ -40,7 +40,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
 
       <!-- 2. 出願書類ダウンロード -->
       <li class="about-card-list__item">
-        <a href="/admissions/documents/" class="about-card-link">
+        <a href="/admission/documents/" class="about-card-link">
           <div class="about-card-link__img-wrap">
             <img src="/images/admissions/admissions_thumb02.jpg" alt="出願書類ダウンロード">
           </div>
@@ -53,7 +53,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
 
       <!-- 3. 学費のご案内-->
       <li class="about-card-list__item">
-        <a href="/admissions/tuition/" class="about-card-link">
+        <a href="/admission/tuition/" class="about-card-link">
           <div class="about-card-link__img-wrap">
             <img src="/images/admissions/admissions_thumb03.jpg" alt="学費のご案内">
           </div>
@@ -66,7 +66,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
 
       <!-- 4. 学費サポート -->
       <li class="about-card-list__item">
-        <a href="/admissions/tuition-support/" class="about-card-link">
+        <a href="/admission/tuition-support/" class="about-card-link">
           <div class="about-card-link__img-wrap">
             <img src="/images/admissions/admissions_thumb04.jpg" alt="学費サポート">
           </div>
@@ -79,7 +79,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
 
       <!-- 5. 生活サポート -->
       <li class="about-card-list__item">
-        <a href="/admissions/life-support/" class="about-card-link">
+        <a href="/admission/life-support/" class="about-card-link">
           <div class="about-card-link__img-wrap">
             <img src="/images/admissions/admissions_thumb05.jpg" alt="生活サポート">
           </div>
