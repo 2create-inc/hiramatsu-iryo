@@ -98,36 +98,54 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
 
     <!-- 質問カードグリッド -->
     <div class="voice-grid">
-      
+
       <!-- Q1 -->
       <div class="voice-card">
-        <div class="voice-card__q-num">Q1</div>
-        <p class="voice-card__question">
-          普通科以外の出身（専門学科や総合学科など）でも、専門的な授業についていけますか？
+        <p class="voice-card__q-num">Q1</p>
+        <div class="voice-card__head">
+          <p class="voice-card__question">普通科以外の出身（専門学科や総合学科など）でも、専門的な授業についていけますか？</p>
+          <figure class="voice-card__ill"><img src="/images/campuslife/ill_q1.png" alt="" width="96" height="110" loading="lazy"></figure>
+        </div>
+        <p class="voice-card__answer">
+          商業科や工業科など、実業系の高校出身の在校生・卒業生も一定数います。医学の基礎科目は入学時に全員が同時にスタートするため、出身高校の違いよりも、入学後の努力が結果につながりやすいのが特徴です。高校で資格取得に取り組んだ経験は、国家試験対策でも大きな強みになります。わからないことは先生にすぐ相談できるので安心です。
         </p>
       </div>
 
       <!-- Q2 -->
       <div class="voice-card">
-        <div class="voice-card__q-num">Q2</div>
-        <p class="voice-card__question">
-          文系・理系どちらのコース出身でも、入学後の勉強に影響はありますか？
+        <p class="voice-card__q-num">Q2</p>
+        <div class="voice-card__head">
+          <p class="voice-card__question">文系・理系どちらのコース出身でも、入学後の勉強に影響はありますか？</p>
+          <figure class="voice-card__ill"><img src="/images/campuslife/ill_q2.png" alt="" width="96" height="110" loading="lazy"></figure>
+        </div>
+        <p class="voice-card__answer">
+          文系・理系の違いが大きな差になることはほとんどありません。<br>
+          入学後は解剖学や生理学など、医学の基礎科目から全員が一緒に学び始めるためです。学科によって理科の比重は異なりますが、基本的な計算力は必要です。多くの先輩が、出身コースや得意・不得意に関係なく、定期試験や国家試験をクリアしています。
         </p>
       </div>
 
       <!-- Q3 -->
       <div class="voice-card">
-        <div class="voice-card__q-num">Q3</div>
-        <p class="voice-card__question">
-          日々の勉強と、アルバイトを両立させることは可能ですか？
+        <p class="voice-card__q-num">Q3</p>
+        <div class="voice-card__head">
+          <p class="voice-card__question">日々の勉強と、アルバイトを両立させることは可能ですか？</p>
+          <figure class="voice-card__ill"><img src="/images/campuslife/ill_q3.png" alt="" width="96" height="110" loading="lazy"></figure>
+        </div>
+        <p class="voice-card__answer">
+          アルバイトは届出をすれば可能で、学業に支障が出ない範囲で両立している学生も一定数います。ただし、学年が上がると実技科目や臨床実習が増えるため、時期に応じた調整が必要です。<br>
+          成績や出席状況をふまえて担任の先生に相談しながら、「学業が本業」であることを忘れずに取り組むことが大切です。
         </p>
       </div>
 
       <!-- Q4 -->
       <div class="voice-card">
-        <div class="voice-card__q-num">Q4</div>
-        <p class="voice-card__question">
-          先生方はどのような雰囲気ですか？（相談や質問のしやすさなど）
+        <p class="voice-card__q-num">Q4</p>
+        <div class="voice-card__head">
+          <p class="voice-card__question">先生方はどのような雰囲気ですか？<br>（相談や質問のしやすさなど）</p>
+          <figure class="voice-card__ill"><img src="/images/campuslife/ill_q4.png" alt="" width="96" height="110" loading="lazy"></figure>
+        </div>
+        <p class="voice-card__answer">
+          熱い気持ちを持った先生が多く、講義はもちろん、勉強や進路、生活のことまで熱心かつ親身に相談に乗ってくれます。定期面談のほかにも困ったときはいつでも相談でき、保護者からの相談にも対応してくれます。国家試験合格まで、一人ひとりをしっかり支えてくれる存在です。
         </p>
       </div>
 

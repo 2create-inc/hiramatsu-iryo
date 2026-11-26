@@ -415,50 +415,149 @@
    ----------------------------------------- */
 .voice-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 32px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 80px;
+  max-width: 1240px;
+  margin: 0 auto;
+
+  @media (max-width: 1100px) {
+    column-gap: 40px;
+  }
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr; /* スマホ時は1カラム */
-    gap: 20px;
+    gap: 64px;
   }
 }
 
+/* カード本体：上部右側にタブ状の白い張り出し、左上のくぼみにQ番号 */
 .voice-card {
+  --voice-tab-h: 48px;   // 張り出しの高さ
+  --voice-tab-left: 120px; // 張り出しの開始位置
+  --voice-radius: 20px;
+  position: relative;
+  margin-top: var(--voice-tab-h);
+  padding: 40px 50px 50px;
   background-color: #ffffff;
-  border-radius: 20px; /* ふっくらとした大きめの角丸 */
-  padding: 40px 32px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.01);
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  border: 2px solid transparent;
+  border-radius: 0 0 var(--voice-radius) var(--voice-radius);
+
+  // 左側（Q番号の下）の角丸
+  border-top-left-radius: var(--voice-radius);
+
+  // タブ部分
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: var(--voice-tab-left);
+    right: 0;
+    height: var(--voice-tab-h);
+    background-color: #ffffff;
+    border-radius: var(--voice-radius) var(--voice-radius) 0 0;
+  }
+
+  // タブと本体のつなぎ目（内側の角丸）
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: calc(var(--voice-tab-left) - var(--voice-radius));
+    width: var(--voice-radius);
+    height: var(--voice-radius);
+    background: radial-gradient(circle at 0 0, transparent calc(var(--voice-radius) - 0.5px), #ffffff var(--voice-radius));
+  }
 
   @media (max-width: 768px) {
-    padding: 30px 20px;
+    --voice-tab-h: 40px;
+    --voice-tab-left: 88px;
+    --voice-radius: 16px;
+    padding: 28px 20px 32px;
   }
 }
 
-/* Q1〜Q4の番号ラベル */
+/* Q1〜Q4の番号ラベル（タブ左のくぼみに配置） */
 .voice-card__q-num {
-  font-size: 1.5rem;
-  font-weight: 800;
-  color: #2d6d43; /* 深みのある知的で優しいグリーン */
-  font-family: "Helvetica Neue", Arial, sans-serif;
+  position: absolute;
+  bottom: 100%;
+  left: 40px;
+  height: var(--voice-tab-h);
+  display: flex;
+  align-items: center;
+  margin: 0;
+  font-family: var(--font-en);
+  font-size: 1.875rem;
+  font-weight: 700;
   line-height: 1;
+  color: #2d6d43;
+
+  @media (max-width: 768px) {
+    left: 20px;
+    font-size: 1.5rem;
+  }
+}
+
+/* 質問＋イラスト（下に点線） */
+.voice-card__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding-bottom: 20px;
+  background-image: radial-gradient(circle, #2d6d43 1.2px, transparent 1.5px);
+  background-position: left bottom;
+  background-size: 8px 4px;
+  background-repeat: repeat-x;
+
+  @media (max-width: 768px) {
+    gap: 12px;
+    padding-bottom: 16px;
+  }
 }
 
 /* 質問テキスト */
 .voice-card__question {
-  font-size: 1rem;
+  flex: 1;
+  max-width: 330px;
+  margin: 0;
+  font-size: 1.125rem;
   font-weight: 700;
   line-height: 1.6;
   color: #000000;
-  margin: 0;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.04em;
 
   @media (max-width: 768px) {
-    font-size: 0.95rem;
+    font-size: 1rem;
+  }
+}
+
+/* イラスト */
+.voice-card__ill {
+  flex-shrink: 0;
+  width: 96px;
+  margin: 0;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  @media (max-width: 768px) {
+    width: 72px;
+  }
+}
+
+/* 回答テキスト */
+.voice-card__answer {
+  margin: 32px 0 0;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 2;
+  color: #333333;
+  letter-spacing: 0.04em;
+
+  @media (max-width: 768px) {
+    margin-top: 20px;
   }
 }
 
