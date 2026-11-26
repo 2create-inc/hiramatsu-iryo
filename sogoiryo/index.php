@@ -638,7 +638,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
 <!-- ==========================================================================
      SECTION: INFORMATION DISCLOSURE (情報公開)
      ========================================================================== -->
-<section class="section-school-disclosure">
+<section class="section-school-disclosure" id="info-disclosure">
   <div class="section__inner">
 
     <!-- 共通セクションヘッダー (Information Disclosure / 情報公開) -->

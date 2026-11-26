@@ -4,7 +4,7 @@
 
   <div class="footer-main-card">
     <div class="footer-content">
-      
+
       <div class="footer-grid">
         <nav class="footer-nav">
           <div class="nav-group">
@@ -18,9 +18,19 @@
               <li><a href="/news/">全体のお知らせ</a></li>
             </ul>
           </div>
+          <div class="nav-group">
+            <h3 class="nav-heading">情報公開</h3>
+            <ul>
+              <li><a href="/school/history/">学園沿革</a></li>
+              <li><a href="/sogoiryo/#info-disclosure">大分平松総合医療専門学校</a></li>
+              <li><a href="/reha/#info-disclosure">大分リハビリテーション専門学校</a></li>
+              <li><a href="/igisen/#info-disclosure">大分医学技術専門学校</a></li>
+              <li><a href="/shika/#info-disclosure">大分歯科専門学校</a></li>
+            </ul>
+          </div>
         </nav>
 
-          <nav class="footer-nav">
+        <nav class="footer-nav">
           <div class="nav-group">
             <h3 class="nav-heading"><a href="/department/">学科紹介</a></h3>
             <div class="dept-list">
@@ -73,12 +83,12 @@
           <div class="nav-group">
             <h3 class="nav-heading"><a href="/admission/">入学案内</a></h3>
             <ul>
-              <li><a href="/admission/">募集要項［PDF］</a></li>
+              <li><a href="/pdf/bosyu_iryo.pdf" target="_blank" rel="noopener noreferrer">募集要項［PDF］</a></li>
               <li><a href="/admission/documents/">出願書類ダウンロード</a></li>
               <li><a href="/admission/tuition/">学費のご案内</a></li>
               <li><a href="/admission/tuition-support/">学費サポート</a></li>
               <li><a href="/admission/life-support/">生活サポート</a></li>
-              <li><a href="/school/pamphlet/">デジタルパンフレット</a></li>
+              <li><a href="https://page.line.me/574beals" target="_blank" rel="noopener noreferrer">デジタルパンフレット</a></li>
             </ul>
           </div>
           <div class="nav-group">
@@ -86,7 +96,7 @@
             <ul>
               <li><a href="/opencampus/">オープンキャンパス情報</a></li>
               <li><a href="/online-consultation/">オンライン個別相談会</a></li>
-              <li><a href="/lecture/">出張講義</a></li>
+              <li><a href="/pdf/lecture.pdf" target="_blank" rel="noopener noreferrer">出張講義［PDF］</a></li>
             </ul>
           </div>
         </nav>
@@ -111,44 +121,44 @@
   </div>
 
 
-  
+
 
   <div class="footer__bottom">
-  <div class="footer__bottom-inner">
-    
-    <div class="footer__info">
-      <h1 class="footer__logo-text"><img src="/images/common/footer__logo-img.png" alt="学校法人平松学園"></h1>
-      <address class="footer__address">
-        <span class="footer__zip">〒870-8658</span> 大分市千代町2丁目4番4号
-        <span class="footer__tel-fax">TEL : （097）535-0201 / FAX :（097）535-0966</span>
-      </address>
+    <div class="footer__bottom-inner">
+
+      <div class="footer__info">
+        <h1 class="footer__logo-text"><img src="/images/common/footer__logo-img.png" alt="学校法人平松学園"></h1>
+        <address class="footer__address">
+          <span class="footer__zip">〒870-8658</span> 大分市千代町2丁目4番4号
+          <span class="footer__tel-fax">TEL : （097）535-0201 / FAX :（097）535-0966</span>
+        </address>
+      </div>
+
+      <div class="footer__links">
+        <nav class="footer__main-nav" aria-label="フッター主要ナビゲーション">
+          <ul class="footer__main-list">
+            <li><a href="/request/">資料請求</a></li>
+            <li><a href="https://www.hiramatsu.ac.jp/access/">アクセス</a></li>
+            <li><a href="/contact/">お問い合わせ</a></li>
+            <li><a href="/news/">新着情報</a></li>
+            <li><a href="https://page.line.me/574beals" target="_blank" rel="noopener noreferrer">公式LINE</a></li>
+            <li><a href="/recruiter/">採用担当者様へ</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer__sub-nav" aria-label="フッター補助ナビゲーション">
+          <ul class="footer__sub-list">
+            <li><a href="#">学園概要（事業・財務報告等）</a></li>
+            <li><a href="/privacypolicy/">プライバシーポリシー</a></li>
+            <li><a href="/sitemap/">サイトマップ</a></li>
+          </ul>
+        </nav>
+
+        <p class="footer__copyright">©2026 学校法人 平松学園 医療系専門学校</p>
+      </div>
+
     </div>
-
-    <div class="footer__links">
-      <nav class="footer__main-nav" aria-label="フッター主要ナビゲーション">
-        <ul class="footer__main-list">
-          <li><a href="/request/">資料請求</a></li>
-          <li><a href="https://www.hiramatsu.ac.jp/access/">アクセス</a></li>
-          <li><a href="/contact/">お問い合わせ</a></li>
-          <li><a href="/news/">新着情報</a></li>
-          <li><a href="https://page.line.me/574beals" target="_blank" rel="noopener noreferrer">公式LINE</a></li>
-          <li><a href="/recruiter/">採用担当者様へ</a></li>
-        </ul>
-      </nav>
-
-      <nav class="footer__sub-nav" aria-label="フッター補助ナビゲーション">
-        <ul class="footer__sub-list">
-          <li><a href="#">学園概要（事業・財務報告等）</a></li>
-          <li><a href="/privacypolicy/">プライバシーポリシー</a></li>
-          <li><a href="/sitemap/">サイトマップ</a></li>
-        </ul>
-      </nav>
-
-      <p class="footer__copyright">©2026 学校法人 平松学園 医療系専門学校</p>
-    </div>
-
   </div>
-</div>
 
 </footer>
 
@@ -159,21 +169,21 @@
 
 
 <script>
-    try{
-      window.ChatConfig = {
-        baseURL: "https://api.izanai.ai",
-        wwwBaseURL: "https://chat.izanai.ai",
-        key:  "18268b8f9fe42736",
-        id:  "eaj0npxnpqxy",
-      }
-      var st = document.createElement("script");
-      st.type = "text/javascript";
-      st.async = true;
-      st.src = "https://chat.izanai.ai/static/public/chatcata_widget.js";
-      var header = document.getElementsByTagName("head")[0];
-      header.appendChild(st);
-    }catch (e){
+  try {
+    window.ChatConfig = {
+      baseURL: "https://api.izanai.ai",
+      wwwBaseURL: "https://chat.izanai.ai",
+      key: "18268b8f9fe42736",
+      id: "eaj0npxnpqxy",
     }
+    var st = document.createElement("script");
+    st.type = "text/javascript";
+    st.async = true;
+    st.src = "https://chat.izanai.ai/static/public/chatcata_widget.js";
+    var header = document.getElementsByTagName("head")[0];
+    header.appendChild(st);
+  } catch (e) {}
 </script>
 </body>
+
 </html>
