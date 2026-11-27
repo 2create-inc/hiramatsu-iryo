@@ -42,7 +42,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
           <h1 class="department-title">臨床検査学科</h1>
           <p class="department-meta">
             <span>3年制</span>
-            <span">定員40名</span>
+            <span>定員40名</span>
           </p>
 
           <div class="department-catch">
@@ -553,9 +553,10 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
         <div class="department-voice-card__video">
           <!-- YouTube埋め込みiframe例（16:9 レスポンシブ対応） -->
           <iframe
-            src="https://www.youtube.com/embed/YOUR_STUDENT_VIDEO_ID"
+            src="https://www.youtube.com/embed/71njXKsuxBk"
             title="在校生インタビュー YouTube"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
             allowfullscreen
             loading="lazy">
           </iframe>
@@ -568,9 +569,10 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
         <div class="department-voice-card__video">
           <!-- YouTube埋め込みiframe例（16:9 レスポンシブ対応） -->
           <iframe
-            src="https://www.youtube.com/embed/YOUR_ALUMNI_VIDEO_ID"
+            src="https://www.youtube.com/embed/xwFIcLKR2QY"
             title="卒業生インタビュー YouTube"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
             allowfullscreen
             loading="lazy">
           </iframe>

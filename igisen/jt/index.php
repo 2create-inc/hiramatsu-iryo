@@ -549,9 +549,10 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
         <div class="department-voice-card__video">
           <!-- YouTube埋め込みiframe例（16:9 レスポンシブ対応） -->
           <iframe
-            src="https://www.youtube.com/embed/YOUR_STUDENT_VIDEO_ID"
+            src="https://www.youtube.com/embed/54kveXiJXsU"
             title="在校生インタビュー YouTube"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
             allowfullscreen
             loading="lazy">
           </iframe>
@@ -564,9 +565,10 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
         <div class="department-voice-card__video">
           <!-- YouTube埋め込みiframe例（16:9 レスポンシブ対応） -->
           <iframe
-            src="https://www.youtube.com/embed/YOUR_ALUMNI_VIDEO_ID"
+            src="https://www.youtube.com/embed/9tOKyUgo27o"
             title="卒業生インタビュー YouTube"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
             allowfullscreen
             loading="lazy">
           </iframe>
