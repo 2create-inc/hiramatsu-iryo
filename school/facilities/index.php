@@ -29,7 +29,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
     <div class="facilities-grid">
 
       <!-- 1. 臨床検査学科 -->
-      <a href="#" class="facilities-card">
+      <a href="#school-hiramatsu" class="facilities-card">
         <div class="facilities-card__text">
           <h3 class="facilities-card__name">大分平松<br>総合医療専門学校</h3>
           <p class="facilities-card__school">臨床検査学科/臨床工学科/視能訓練学科</p>
@@ -38,7 +38,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       </a>
 
       <!-- 2. 臨床工学科 -->
-      <a href="#" class="facilities-card">
+      <a href="#school-reha" class="facilities-card">
         <div class="facilities-card__text">
           <h3 class="facilities-card__name">大分リハビリテーション<br>専門学校</h3>
           <p class="facilities-card__school">理学療法士科/作業療法士科/言語聴覚士科</p>
@@ -47,7 +47,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       </a>
 
       <!-- 3. 視能訓練学科 -->
-      <a href="#" class="facilities-card">
+      <a href="#school-igijutsu" class="facilities-card">
         <div class="facilities-card__text">
           <h3 class="facilities-card__name">大分医学技術専門学校</h3>
           <p class="facilities-card__school">柔道整復師科</p>
@@ -56,7 +56,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       </a>
 
       <!-- 4. 理学療法士科 -->
-      <a href="#" class="facilities-card">
+      <a href="#school-shika" class="facilities-card">
         <div class="facilities-card__text">
           <h3 class="facilities-card__name">大分歯科専門学校</h3>
           <p class="facilities-card__school">歯科衛生士科</p>
@@ -66,7 +66,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
     </div>
 
 
-    <div class="floor-guide">
+    <div class="floor-guide" id="school-hiramatsu">
       <!-- 校名・学科ヘッダー -->
       <div class="floor-guide__header">
         <h3 class="floor-guide__school-name">大分平松総合医療専門学校</h3>
@@ -80,25 +80,25 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
           <div class="floor-guide__floor">5F</div>
           <ul class="floor-guide__room-list">
             <li>
-              <a href="#room-link" class="floor-guide__room-link">
+              <a href="#room-ort-5f-1" class="floor-guide__room-link">
                 <span class="name">普通教室（※視能訓練学科専用教室）</span>
                 <span class="arrow"></span>
               </a>
             </li>
             <li>
-              <a href="#room-link" class="floor-guide__room-link">
+              <a href="#room-ort-5f-2" class="floor-guide__room-link">
                 <span class="name">視能訓練実習室</span>
                 <span class="arrow"></span>
               </a>
             </li>
             <li>
-              <a href="#room-link" class="floor-guide__room-link">
+              <a href="#room-ort-5f-3" class="floor-guide__room-link">
                 <span class="name">視能検査実習室</span>
                 <span class="arrow"></span>
               </a>
             </li>
             <li>
-              <a href="#room-link" class="floor-guide__room-link">
+              <a href="#room-ort-5f-4" class="floor-guide__room-link">
                 <span class="name">暗室</span>
                 <span class="arrow"></span>
               </a>
@@ -111,25 +111,25 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
           <div class="floor-guide__floor">4F</div>
           <ul class="floor-guide__room-list">
             <li>
-              <a href="#room-link" class="floor-guide__room-link">
+              <a href="#room-ce-4f-1" class="floor-guide__room-link">
                 <span class="name">普通教室（※臨床工学学科専用教室）</span>
                 <span class="arrow"></span>
               </a>
             </li>
             <li>
-              <a href="#room-link" class="floor-guide__room-link">
+              <a href="#room-ort-4f" class="floor-guide__room-link">
                 <span class="name">基礎実習室（※視能訓練学科専用）</span>
                 <span class="arrow"></span>
               </a>
             </li>
             <li>
-              <a href="#room-link" class="floor-guide__room-link">
+              <a href="#room-ce-4f-2" class="floor-guide__room-link">
                 <span class="name">基礎工学実習室</span>
                 <span class="arrow"></span>
               </a>
             </li>
             <li>
-              <a href="#room-link" class="floor-guide__room-link">
+              <a href="#room-ce-4f-3" class="floor-guide__room-link">
                 <span class="name">臨床工学実習室</span>
                 <span class="arrow"></span>
               </a>
@@ -142,25 +142,25 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
           <div class="floor-guide__floor">3F</div>
           <ul class="floor-guide__room-list">
             <li>
-              <a href="#room-link" class="floor-guide__room-link">
+              <a href="#room-common-3f-1" class="floor-guide__room-link">
                 <span class="name">検体検査室</span>
                 <span class="arrow"></span>
               </a>
             </li>
             <li>
-              <a href="#room-link" class="floor-guide__room-link">
+              <a href="#room-common-3f-2" class="floor-guide__room-link">
                 <span class="name">微生物学検査室</span>
                 <span class="arrow"></span>
               </a>
             </li>
             <li>
-              <a href="#room-link" class="floor-guide__room-link">
+              <a href="#room-common-3f-3" class="floor-guide__room-link">
                 <span class="name">生体検査室</span>
                 <span class="arrow"></span>
               </a>
             </li>
             <li>
-              <a href="#room-link" class="floor-guide__room-link">
+              <a href="#room-common-3f-4" class="floor-guide__room-link">
                 <span class="name">MSIT</span>
                 <span class="arrow"></span>
               </a>
@@ -173,25 +173,25 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
           <div class="floor-guide__floor">2F</div>
           <ul class="floor-guide__room-list">
             <li>
-              <a href="#room-link" class="floor-guide__room-link">
+              <a href="#room-lab-2f" class="floor-guide__room-link">
                 <span class="name">普通教室（※臨床検査学科専用教室）</span>
                 <span class="arrow"></span>
               </a>
             </li>
             <li>
-              <a href="#room-link" class="floor-guide__room-link">
+              <a href="#room-common-2f-1" class="floor-guide__room-link">
                 <span class="name">コモンスペース</span>
                 <span class="arrow"></span>
               </a>
             </li>
             <li>
-              <a href="#room-link" class="floor-guide__room-link">
+              <a href="#room-common-2f-2" class="floor-guide__room-link">
                 <span class="name">セミナーホール</span>
                 <span class="arrow"></span>
               </a>
             </li>
             <li>
-              <a href="#room-link" class="floor-guide__room-link">
+              <a href="#room-common-2f-3" class="floor-guide__room-link">
                 <span class="name">基礎医学実習室</span>
                 <span class="arrow"></span>
               </a>
@@ -204,25 +204,25 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
           <div class="floor-guide__floor">1F</div>
           <ul class="floor-guide__room-list">
             <li>
-              <a href="#room-link" class="floor-guide__room-link">
+              <a href="#room-common-1f-1" class="floor-guide__room-link">
                 <span class="name">図書館</span>
                 <span class="arrow"></span>
               </a>
             </li>
             <li>
-              <a href="#room-link" class="floor-guide__room-link">
+              <a href="#room-common-1f-2" class="floor-guide__room-link">
                 <span class="name">相談室</span>
                 <span class="arrow"></span>
               </a>
             </li>
             <li>
-              <a href="#room-link" class="floor-guide__room-link">
+              <a href="#room-common-1f-3" class="floor-guide__room-link">
                 <span class="name">保健室</span>
                 <span class="arrow"></span>
               </a>
             </li>
             <li>
-              <a href="#room-link" class="floor-guide__room-link">
+              <a href="#room-common-1f-4" class="floor-guide__room-link">
                 <span class="name">キャリアサポート</span>
                 <span class="arrow"></span>
               </a>
@@ -252,7 +252,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
     <div class="facility-card-grid">
 
       <!-- 1. 図書室 -->
-      <article class="facility-detail-card">
+      <article class="facility-detail-card" id="room-common-1f-1">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
             <img src="/images/facilities/common_1f_library.jpg" alt="1F 図書室">
@@ -270,7 +270,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       </article>
 
       <!-- 2. 相談室 -->
-      <article class="facility-detail-card">
+      <article class="facility-detail-card" id="room-common-1f-2">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
             <img src="/images/facilities/common_1f_consultation-room.jpg" alt="1F 相談室">
@@ -288,7 +288,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       </article>
 
       <!-- 3. 保健室 -->
-      <article class="facility-detail-card">
+      <article class="facility-detail-card" id="room-common-1f-3">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
             <img src="/images/facilities/common_1f_health-room.jpg" alt="1F 保健室">
@@ -306,7 +306,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       </article>
 
       <!-- 4. キャリアサポート -->
-      <article class="facility-detail-card">
+      <article class="facility-detail-card" id="room-common-1f-4">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
             <img src="/images/facilities/common_1f_career-support.jpg" alt="1F キャリアサポート">
@@ -324,7 +324,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       </article>
 
       <!-- 5. コモンスペース -->
-      <article class="facility-detail-card">
+      <article class="facility-detail-card" id="room-common-2f-1">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
             <img src="/images/facilities/common_2f_common-space.jpg" alt="2F コモンスペース">
@@ -342,7 +342,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       </article>
 
       <!-- 6. セミナーホール -->
-      <article class="facility-detail-card">
+      <article class="facility-detail-card" id="room-common-2f-2">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
             <img src="/images/facilities/common_2f_seminar-hall.jpg" alt="2F セミナーホール">
@@ -360,7 +360,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       </article>
 
       <!-- 7. 基礎医学実習室 -->
-      <article class="facility-detail-card">
+      <article class="facility-detail-card" id="room-common-2f-3">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
             <img src="/images/facilities/common_2f_basic-medicine-lab.jpg" alt="2F 基礎医学実習室">
@@ -378,7 +378,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       </article>
 
       <!-- 8. 検体検査室 -->
-      <article class="facility-detail-card">
+      <article class="facility-detail-card" id="room-common-3f-1">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
             <img src="/images/facilities/common_3f_specimen-lab.jpg" alt="3F 検体検査室">
@@ -396,7 +396,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       </article>
 
       <!-- 9. 微生物学検査室 -->
-      <article class="facility-detail-card">
+      <article class="facility-detail-card" id="room-common-3f-2">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
             <img src="/images/facilities/common_3f_microbiology-lab.jpg" alt="3F 微生物学検査室">
@@ -414,7 +414,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       </article>
 
       <!-- 10. 生体検査室 -->
-      <article class="facility-detail-card">
+      <article class="facility-detail-card" id="room-common-3f-3">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
             <img src="/images/facilities/common_3f_physiology-lab.jpg" alt="3F 生体検査室">
@@ -432,7 +432,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       </article>
 
       <!-- 11. MSIT -->
-      <article class="facility-detail-card">
+      <article class="facility-detail-card" id="room-common-3f-4">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
             <img src="/images/facilities/common_3f_msit.jpg" alt="3F MSIT">
@@ -468,7 +468,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
     <div class="facility-card-grid">
 
       <!-- 1. 普通教室 -->
-      <article class="facility-detail-card">
+      <article class="facility-detail-card" id="room-lab-2f">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
             <img src="/images/facilities/rinken_2f_classroom.jpg" alt="2F 普通教室">
@@ -505,7 +505,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
     <div class="facility-card-grid">
 
       <!-- 1. 普通教室 -->
-      <article class="facility-detail-card">
+      <article class="facility-detail-card" id="room-ce-4f-1">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
             <img src="/images/facilities/ce_4f_classroom.jpg" alt="4F 普通教室">
@@ -523,7 +523,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       </article>
 
       <!-- 2. 基礎工学実習室 -->
-      <article class="facility-detail-card">
+      <article class="facility-detail-card" id="room-ce-4f-2">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
             <img src="/images/facilities/ce_4f_basic-engineering-lab.jpg" alt="4F 基礎工学実習室">
@@ -541,7 +541,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       </article>
 
       <!-- 3. 臨床工学実習室 -->
-      <article class="facility-detail-card">
+      <article class="facility-detail-card" id="room-ce-4f-3">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
             <img src="/images/facilities/ce_4f_clinical-engineering-lab.jpg" alt="4F 臨床工学実習室">
@@ -578,7 +578,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
     <div class="facility-card-grid">
 
       <!-- 1. 基礎実習室 -->
-      <article class="facility-detail-card">
+      <article class="facility-detail-card" id="room-ort-4f">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
             <img src="/images/facilities/ort_4f_basic-lab.jpg" alt="4F 基礎実習室">
@@ -596,7 +596,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       </article>
 
       <!-- 2. 普通教室 -->
-      <article class="facility-detail-card">
+      <article class="facility-detail-card" id="room-ort-5f-1">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
             <img src="/images/facilities/ort_5f_classroom.jpg" alt="5F 普通教室">
@@ -614,7 +614,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       </article>
 
       <!-- 3. 視能訓練実習室 -->
-      <article class="facility-detail-card">
+      <article class="facility-detail-card" id="room-ort-5f-2">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
             <img src="/images/facilities/ort_5f_orthoptic-training-lab.jpg" alt="5F 視能訓練実習室">
@@ -632,7 +632,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       </article>
 
       <!-- 4. 視能検査実習室 -->
-      <article class="facility-detail-card">
+      <article class="facility-detail-card" id="room-ort-5f-3">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
             <img src="/images/facilities/ort_5f_eye-exam-lab.jpg" alt="5F 視能検査実習室">
@@ -650,7 +650,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       </article>
 
       <!-- 5. 暗室 -->
-      <article class="facility-detail-card">
+      <article class="facility-detail-card" id="room-ort-5f-4">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
             <img src="/images/facilities/ort_5f_darkroom.jpg" alt="5F 暗室">
@@ -683,7 +683,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
 <section class="section-facility-detail reveal">
   <div class="section__inner">
 
-    <div class="floor-guide -reha">
+    <div class="floor-guide -reha" id="school-reha">
       <!-- ヘッダー（校名・対象学科） -->
       <div class="floor-guide__header">
         <h3 class="floor-guide__school-name">大分リハビリテーション専門学校</h3>
@@ -701,7 +701,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
               <div class="floor-guide__floor">5F</div>
               <ul class="floor-guide__room-list">
                 <li>
-                  <a href="#room-link" class="floor-guide__room-link">
+                  <a href="#room-pt-5f" class="floor-guide__room-link">
                     <span class="name">大講義室</span>
                     <span class="arrow"></span>
                   </a>
@@ -713,7 +713,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
               <div class="floor-guide__floor">4F</div>
               <ul class="floor-guide__room-list">
                 <li>
-                  <a href="#room-link" class="floor-guide__room-link">
+                  <a href="#room-pt-4f" class="floor-guide__room-link">
                     <span class="name">基礎実習室</span>
                     <span class="arrow"></span>
                   </a>
@@ -725,13 +725,13 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
               <div class="floor-guide__floor">3F</div>
               <ul class="floor-guide__room-list">
                 <li>
-                  <a href="#room-link" class="floor-guide__room-link">
+                  <a href="#room-pt-3f-1" class="floor-guide__room-link">
                     <span class="name">機能訓練室</span>
                     <span class="arrow"></span>
                   </a>
                 </li>
                 <li>
-                  <a href="#room-link" class="floor-guide__room-link">
+                  <a href="#room-pt-3f-2" class="floor-guide__room-link">
                     <span class="name">学習室</span>
                     <span class="arrow"></span>
                   </a>
@@ -743,7 +743,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
               <div class="floor-guide__floor">2F</div>
               <ul class="floor-guide__room-list">
                 <li>
-                  <a href="#room-link" class="floor-guide__room-link">
+                  <a href="#room-pt-2f" class="floor-guide__room-link">
                     <span class="name">ADL室</span>
                     <span class="arrow"></span>
                   </a>
@@ -755,13 +755,13 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
               <div class="floor-guide__floor">1F</div>
               <ul class="floor-guide__room-list">
                 <li>
-                  <a href="#room-link" class="floor-guide__room-link">
+                  <a href="#room-pt-1f-1" class="floor-guide__room-link">
                     <span class="name">水治療法室</span>
                     <span class="arrow"></span>
                   </a>
                 </li>
                 <li>
-                  <a href="#room-link" class="floor-guide__room-link">
+                  <a href="#room-pt-1f-2" class="floor-guide__room-link">
                     <span class="name">図書室</span>
                     <span class="arrow"></span>
                   </a>
@@ -785,7 +785,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
               <div class="floor-guide__floor">6F</div>
               <ul class="floor-guide__room-list">
                 <li>
-                  <a href="#room-link" class="floor-guide__room-link">
+                  <a href="#room-ot-6f" class="floor-guide__room-link">
                     <span class="name">図書室</span>
                     <span class="arrow"></span>
                   </a>
@@ -802,13 +802,13 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
               <div class="floor-guide__floor">4F</div>
               <ul class="floor-guide__room-list">
                 <li>
-                  <a href="#room-link" class="floor-guide__room-link">
+                  <a href="#room-ot-4f-1" class="floor-guide__room-link">
                     <span class="name">木工室</span>
                     <span class="arrow"></span>
                   </a>
                 </li>
                 <li>
-                  <a href="#room-link" class="floor-guide__room-link">
+                  <a href="#room-ot-4f-2" class="floor-guide__room-link">
                     <span class="name">陶工室</span>
                     <span class="arrow"></span>
                   </a>
@@ -825,7 +825,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
               <div class="floor-guide__floor">2F</div>
               <ul class="floor-guide__room-list">
                 <li>
-                  <a href="#room-link" class="floor-guide__room-link">
+                  <a href="#room-ot-2f" class="floor-guide__room-link">
                     <span class="name">実技室</span>
                     <span class="arrow"></span>
                   </a>
@@ -849,7 +849,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
               <div class="floor-guide__floor">5F</div>
               <ul class="floor-guide__room-list">
                 <li>
-                  <a href="#room-link" class="floor-guide__room-link">
+                  <a href="#room-st-5f" class="floor-guide__room-link">
                     <span class="name">合同講義室</span>
                     <span class="arrow"></span>
                   </a>
@@ -861,13 +861,13 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
               <div class="floor-guide__floor">4F</div>
               <ul class="floor-guide__room-list">
                 <li>
-                  <a href="#room-link" class="floor-guide__room-link">
+                  <a href="#room-st-4f-1" class="floor-guide__room-link">
                     <span class="name">聴覚訓練室</span>
                     <span class="arrow"></span>
                   </a>
                 </li>
                 <li>
-                  <a href="#room-link" class="floor-guide__room-link">
+                  <a href="#room-st-4f-2" class="floor-guide__room-link">
                     <span class="name">聴覚観察室</span>
                     <span class="arrow"></span>
                   </a>
@@ -879,13 +879,13 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
               <div class="floor-guide__floor">3F</div>
               <ul class="floor-guide__room-list">
                 <li>
-                  <a href="#room-link" class="floor-guide__room-link">
+                  <a href="#room-st-3f-1" class="floor-guide__room-link">
                     <span class="name">聴覚検査室</span>
                     <span class="arrow"></span>
                   </a>
                 </li>
                 <li>
-                  <a href="#room-link" class="floor-guide__room-link">
+                  <a href="#room-st-3f-2" class="floor-guide__room-link">
                     <span class="name">防音室</span>
                     <span class="arrow"></span>
                   </a>
@@ -897,13 +897,13 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
               <div class="floor-guide__floor">2F</div>
               <ul class="floor-guide__room-list">
                 <li>
-                  <a href="#room-link" class="floor-guide__room-link">
+                  <a href="#room-st-2f-1" class="floor-guide__room-link">
                     <span class="name">普通教室</span>
                     <span class="arrow"></span>
                   </a>
                 </li>
                 <li>
-                  <a href="#room-link" class="floor-guide__room-link">
+                  <a href="#room-st-2f-2" class="floor-guide__room-link">
                     <span class="name">基礎実習室</span>
                     <span class="arrow"></span>
                   </a>
@@ -915,7 +915,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
               <div class="floor-guide__floor">1F</div>
               <ul class="floor-guide__room-list">
                 <li>
-                  <a href="#room-link" class="floor-guide__room-link">
+                  <a href="#room-st-1f" class="floor-guide__room-link">
                     <span class="name">図書室</span>
                     <span class="arrow"></span>
                   </a>
@@ -946,7 +946,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
     <div class="facility-card-grid">
 
       <!-- 1. 水治療法室 -->
-      <article class="facility-detail-card">
+      <article class="facility-detail-card" id="room-pt-1f-1">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
             <img src="/images/facilities/pt_1f_hydrotherapy-room.jpg" alt="1F 水治療法室">
@@ -964,7 +964,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       </article>
 
       <!-- 2. 図書室 -->
-      <article class="facility-detail-card">
+      <article class="facility-detail-card" id="room-pt-1f-2">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
             <img src="/images/facilities/pt_1f_library.jpg" alt="1F 図書室">
@@ -982,7 +982,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       </article>
 
       <!-- 3. ADL室 -->
-      <article class="facility-detail-card">
+      <article class="facility-detail-card" id="room-pt-2f">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
             <img src="/images/facilities/pt_2f_adl-room.jpg" alt="2F ADL室">
@@ -1000,7 +1000,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       </article>
 
       <!-- 4. 機能訓練室 -->
-      <article class="facility-detail-card">
+      <article class="facility-detail-card" id="room-pt-3f-1">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
             <img src="/images/facilities/pt_3f_training-room.jpg" alt="3F 機能訓練室">
@@ -1018,7 +1018,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       </article>
 
       <!-- 5. 学習室 -->
-      <article class="facility-detail-card">
+      <article class="facility-detail-card" id="room-pt-3f-2">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
             <img src="/images/facilities/pt_3f_study-room.jpg" alt="3F 学習室">
@@ -1036,7 +1036,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       </article>
 
       <!-- 6. 基礎実習室 -->
-      <article class="facility-detail-card">
+      <article class="facility-detail-card" id="room-pt-4f">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
             <img src="/images/facilities/pt_4f_basic-lab.jpg" alt="4F 基礎実習室">
@@ -1054,7 +1054,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       </article>
 
       <!-- 7. 大講義室 -->
-      <article class="facility-detail-card">
+      <article class="facility-detail-card" id="room-pt-5f">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
             <img src="/images/facilities/pt_5f_lecture-hall.jpg" alt="5F 大講義室">
@@ -1090,7 +1090,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
     <div class="facility-card-grid">
 
       <!-- 1. 実技室 -->
-      <article class="facility-detail-card">
+      <article class="facility-detail-card" id="room-ot-2f">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
             <img src="/images/facilities/ot_2f_practice-room.jpg" alt="2F 実技室">
@@ -1108,7 +1108,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       </article>
 
       <!-- 2. 木工室 -->
-      <article class="facility-detail-card">
+      <article class="facility-detail-card" id="room-ot-4f-1">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
             <img src="/images/facilities/ot_4f_woodwork-room.jpg" alt="4F 木工室">
@@ -1126,7 +1126,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       </article>
 
       <!-- 3. 陶工室 -->
-      <article class="facility-detail-card">
+      <article class="facility-detail-card" id="room-ot-4f-2">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
             <img src="/images/facilities/ot_4f_pottery-room.jpg" alt="4F 陶工室">
@@ -1144,7 +1144,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       </article>
 
       <!-- 4. 図書室 -->
-      <article class="facility-detail-card">
+      <article class="facility-detail-card" id="room-ot-6f">
         <a href="#" class="facility-detail-card__link">
           <div class="facility-detail-card__img-wrap">
             <img src="/images/facilities/ot_6f_library.jpg" alt="6F 図書室">
@@ -1333,7 +1333,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
 
 <section class="section-facility-detail reveal">
   <div class="section__inner">
-    <div class="floor-guide">
+    <div class="floor-guide" id="school-igijutsu">
       <!-- 校名・学科ヘッダー -->
       <div class="floor-guide__header">
         <h3 class="floor-guide__school-name">大分医学技術専門学校</h3>
@@ -1347,7 +1347,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
           <div class="floor-guide__floor">5F</div>
           <ul class="floor-guide__room-list">
             <li>
-              <a href="#room-link" class="floor-guide__room-link">
+              <a href="#room-judo-5f" class="floor-guide__room-link">
                 <span class="name">大講堂</span>
                 <span class="arrow"></span>
               </a>
@@ -1360,7 +1360,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
           <div class="floor-guide__floor">4F</div>
           <ul class="floor-guide__room-list">
             <li>
-              <a href="#room-link" class="floor-guide__room-link">
+              <a href="#room-judo-4f" class="floor-guide__room-link">
                 <span class="name">柔道場</span>
                 <span class="arrow"></span>
               </a>
@@ -1373,13 +1373,13 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
           <div class="floor-guide__floor">3F</div>
           <ul class="floor-guide__room-list">
             <li>
-              <a href="#room-link" class="floor-guide__room-link">
+              <a href="#room-judo-3f-1" class="floor-guide__room-link">
                 <span class="name">教室（大）</span>
                 <span class="arrow"></span>
               </a>
             </li>
             <li>
-              <a href="#room-link" class="floor-guide__room-link">
+              <a href="#room-judo-3f-2" class="floor-guide__room-link">
                 <span class="name">実技室</span>
                 <span class="arrow"></span>
               </a>
@@ -1392,7 +1392,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
           <div class="floor-guide__floor">2F</div>
           <ul class="floor-guide__room-list">
             <li>
-              <a href="#room-link" class="floor-guide__room-link">
+              <a href="#room-judo-2f" class="floor-guide__room-link">
                 <span class="name">教室</span>
                 <span class="arrow"></span>
               </a>
@@ -1405,7 +1405,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
           <div class="floor-guide__floor">1F</div>
           <ul class="floor-guide__room-list">
             <li>
-              <a href="#room-link" class="floor-guide__room-link">
+              <a href="#room-judo-1f" class="floor-guide__room-link">
                 <span class="name">図書館</span>
                 <span class="arrow"></span>
               </a>
@@ -1547,7 +1547,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
 
 <section class="section-facility-detail reveal">
   <div class="section__inner">
-    <div class="floor-guide">
+    <div class="floor-guide" id="school-shika">
       <!-- 校名・学科ヘッダー -->
       <div class="floor-guide__header">
         <h3 class="floor-guide__school-name">大分歯科専門学校</h3>
@@ -1562,19 +1562,19 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
           <div class="floor-guide__floor">2F</div>
           <ul class="floor-guide__room-list">
             <li>
-              <a href="#room-link" class="floor-guide__room-link">
+              <a href="#room-dh-2f-1" class="floor-guide__room-link">
                 <span class="name">普通教室III</span>
                 <span class="arrow"></span>
               </a>
             </li>
             <li>
-              <a href="#room-link" class="floor-guide__room-link">
+              <a href="#room-dh-2f-2" class="floor-guide__room-link">
                 <span class="name">実験室</span>
                 <span class="arrow"></span>
               </a>
             </li>
             <li>
-              <a href="#room-link" class="floor-guide__room-link">
+              <a href="#room-dh-2f-3" class="floor-guide__room-link">
                 <span class="name">基礎実習室</span>
                 <span class="arrow"></span>
               </a>

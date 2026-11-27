@@ -4458,6 +4458,20 @@ body {
   }
 }
 
+/* ==========================================================================
+   ANCHOR OFFSET (学内施設ページ：アンカーリンク遷移時の固定ヘッダー分の余白)
+   ========================================================================== */
+.floor-guide,
+.facility-detail-card {
+  scroll-margin-top: 100px;
+}
+@media screen and (max-width: 767px) {
+  .floor-guide,
+  .facility-detail-card {
+    scroll-margin-top: 80px;
+  }
+}
+
 .section-desc {
   margin-bottom: 80px;
 }

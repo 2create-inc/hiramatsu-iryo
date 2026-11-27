@@ -35,6 +35,86 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
+  /* --- F. アンカーリンク：スムーススクロール＋固定ヘッダー分の位置調整 --- */
+  // 対象のリンクは selector で指定（学内施設ページの学校ボタン・各施設ボタン）
+  const initAnchorScroll = (selector) => {
+    const links = document.querySelectorAll(selector);
+    if (!header || links.length === 0) return;
+
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const GAP = 24; // ヘッダーの下に空ける余白(px)
+
+    // 要素のレイアウト上のページ先頭からの距離（.reveal の translateY の影響を受けない）
+    const getDocTop = (el) => {
+      let y = 0;
+      while (el) { y += el.offsetTop; el = el.offsetParent; }
+      return y;
+    };
+
+    // 固定ヘッダー表示時の高さ（固定前は一時的にクラスを付けて計測）
+    const getFixedHeaderHeight = () => {
+      if (getComputedStyle(header).position === 'fixed') return header.offsetHeight;
+      header.classList.add('is-fixed');
+      const h = header.offsetHeight;
+      header.classList.remove('is-fixed');
+      return h;
+    };
+
+    // 移動先のスクロール位置を計算
+    // PCではMVを過ぎるとヘッダーが position: fixed になり、ヘッダー分だけ下の要素が上に詰まるため、その分も考慮する
+    const getScrollTop = (target) => {
+      const fixedH = getFixedHeaderHeight();
+      const mvHeight = mv ? mv.offsetHeight : 0;
+      const inFlow = getComputedStyle(header).position !== 'fixed';
+      let top = getDocTop(target);
+
+      if (inFlow && window.innerWidth >= 1025) {
+        const fixedTop = top - header.offsetHeight - fixedH - GAP;
+        return fixedTop > mvHeight ? fixedTop : Math.max(0, top - GAP);
+      }
+      return Math.max(0, top - fixedH - GAP);
+    };
+
+    // スクロール停止後に位置がずれていたら補正（ヘッダーの固定化などによるズレ対策）
+    const settleScroll = (target) => {
+      let last = -1;
+      let stable = 0;
+      const tick = () => {
+        const y = window.pageYOffset;
+        stable = Math.abs(y - last) < 1 ? stable + 1 : 0;
+        last = y;
+        if (stable < 8) { requestAnimationFrame(tick); return; }
+        const diff = getScrollTop(target) - y;
+        if (Math.abs(diff) > 2) window.scrollTo({ top: y + diff, behavior: 'auto' });
+      };
+      requestAnimationFrame(tick);
+    };
+
+    links.forEach((link) => {
+      link.addEventListener('click', (e) => {
+        const id = decodeURIComponent((link.getAttribute('href') || '').slice(1));
+        const target = id ? document.getElementById(id) : null;
+        if (!target) return;
+
+        e.preventDefault();
+        window.scrollTo({ top: getScrollTop(target), behavior: reduceMotion ? 'auto' : 'smooth' });
+        history.pushState(null, '', '#' + id);
+        settleScroll(target);
+      });
+    });
+
+    // URLにハッシュ付きで直接開いた場合も同じ位置に合わせる
+    window.addEventListener('load', () => {
+      const id = decodeURIComponent(location.hash.slice(1));
+      const target = id ? document.getElementById(id) : null;
+      if (target && document.querySelector(selector + '[href="#' + id + '"]')) {
+        window.scrollTo({ top: getScrollTop(target), behavior: 'auto' });
+      }
+    });
+  };
+
+  initAnchorScroll('.facilities-card[href^="#"], .floor-guide__room-link[href^="#"]');
+
   /* --- E. 各種イベント登録 --- */
   handleScrollHeader(); // 初回実行
   window.addEventListener('scroll', handleScrollHeader); // スクロール時
