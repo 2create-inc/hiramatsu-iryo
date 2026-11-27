@@ -301,7 +301,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
 
       <ul class="qualification-list">
         <li>臨床検査技師国家試験受験資格</li>
-        <li>専門技士（国家資格）</li>
+        <li>専門士（医療専門課程）</li>
         <li>毒物劇物取扱者（国家資格）</li>
         <li>有機溶剤作業主任者（国家資格）</li>
         <li>心電図検定（日本不整脈心電学会）</li>
@@ -309,6 +309,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
         <li>救急法救急員（日本赤十字社）</li>
         <li>赤十字健康生活支援員（日本赤十字社）</li>
         <li>赤十字幼児安全法支援員（日本赤十字社）</li>
+        <li>認知症サポーター</li>
       </ul>
     </div>
 

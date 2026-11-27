@@ -307,6 +307,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
           <li>赤十字ベーシックライフサポーター</li>
           <li>赤十字ファーストエイドプロバイダー</li>
           <li>障がい者スポーツアシスト講習修了証（日本デフビーチバレーボール協会）</li>
+          <li>認知症サポーター</li>
         </ul>
       </div>
 
