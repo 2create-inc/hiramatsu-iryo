@@ -151,7 +151,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <div class="faq-item js-faq-item">
         <dt class="faq-item__question js-faq-trigger">
           <span class="faq-item__q-icon">Q</span>
-          <span class="faq-item__q-text">学費以外に、教科書代や実習費で毎年いくらかかる追加でかかりますか？</span>
+          <span class="faq-item__q-text">学費以外に、教科書代や実習費で毎年いくら追加でかかりますか？</span>
           <span class="faq-item__toggle-icon"></span>
         </dt>
         <dd class="faq-item__answer js-faq-answer">

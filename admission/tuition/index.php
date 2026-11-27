@@ -174,7 +174,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
         平松学園医療系専門学校は本制度の認定を受けています。
       </p>
       <p class="link-text">
-        修学支援新制度について詳細は<a href="https://www.mext.go.jp/a_menu/koutou/shuyou/index.htm" target="_blank" rel="noopener noreferrer">コチラ</a>
+        修学支援新制度について詳細は<a href="https://www.mext.go.jp/a_menu/koutou/hutankeigen/index.htm" target="_blank" rel="noopener noreferrer">コチラ</a>
       </p>
     </div>
 
@@ -277,7 +277,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
         この制度は働く人の主体的で中長期的なキャリア形成を支援するために、一定の条件を満たした人に対して、本人が教育訓練施設（学校）に支払った金額（学費）の一部をハローワークを通して受給できるものです。
       </p>
       <p class="benefit-lead-block__link">
-        教育訓練給付制度について詳細は<a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roodou/shokugyounouryoku/kyouiku/index.html" target="_blank" rel="noopener noreferrer">コチラ</a>
+        教育訓練給付制度について詳細は<a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/jinzaikaihatsu/kyouiku.html" target="_blank" rel="noopener noreferrer">コチラ</a>
       </p>
     </div>
 
@@ -317,7 +317,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       ※詳細は、日本政策金融公庫のホームページをご覧ください。
     </p>
     <p class="scholarship-loan-block__link">
-      国の教育ローン（教育一般貸付）について詳細は<a href="https://www.jfc.go.jp/n/finance/search/kyouiku_m.html" target="_blank" rel="noopener noreferrer">コチラ</a>
+      国の教育ローン（教育一般貸付）について詳細は<a href="https://www.jfc.go.jp/n/finance/search/ippan.html" target="_blank" rel="noopener noreferrer">コチラ</a>
     </p>
   </div>
 
@@ -343,7 +343,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       ※詳細は、大分県信用組合の下記フリーダイヤルに直接お問い合わせください。 0120-393-528 受付時間／9:00〜17:00（土日・祝日を除く）
     </p>
     <p class="scholarship-loan-block__link">
-      株式会社オリエントコーポレーション学費サポートプランについて詳細は<a href="#" target="_blank" rel="noopener noreferrer">コチラ</a>
+      株式会社オリエントコーポレーション学費サポートプランについて詳細は<a href="https://orico-web.jp/gakuhi/index.html?clientid=17435249&amp;do=confirm" target="_blank" rel="noopener noreferrer">コチラ</a>
     </p>
   </div>
 

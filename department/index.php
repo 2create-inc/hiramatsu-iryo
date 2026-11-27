@@ -207,7 +207,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <div class="school-intro-grid">
         
         <!-- 1. 大分平松総合医療専門学校 -->
-        <a href="/medical/" class="school-intro-card">
+        <a href="/sogoiryo/" class="school-intro-card">
           <figure class="school-intro-card__img">
             <img src="/images/common/school_photo_01.jpg" alt="大分平松総合医療専門学校 外観" width="300" height="500" loading="lazy">
           </figure>
@@ -229,7 +229,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
         </a>
 
         <!-- 3. 大分医学技術専門学校 -->
-        <a href="/igaku/" class="school-intro-card">
+        <a href="/igisen/" class="school-intro-card">
           <figure class="school-intro-card__img">
             <img src="/images/common/school_photo_03.jpg" alt="大分医学技術専門学校 外観" width="300" height="500" loading="lazy">
           </figure>
@@ -240,7 +240,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
         </a>
 
         <!-- 4. 大分歯科専門学校 -->
-        <a href="/dental/" class="school-intro-card">
+        <a href="/shika/" class="school-intro-card">
           <figure class="school-intro-card__img">
             <img src="/images/common/school_photo_04.jpg" alt="大分歯科専門学校 外観" width="300" height="500" loading="lazy">
           </figure>

@@ -39,7 +39,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
           <li><a href="/school/campuslife/" class="sitemap-link -child">キャンパスライフ</a></li>
           <li><a href="/school/facilities/" class="sitemap-link -child">学内施設</a></li>
           <li><a href="/school/faq/" class="sitemap-link -child">よくある質問</a></li>
-          <li><a href="/school/pamphlet/" class="sitemap-link -child">電子パンフレット</a></li>
+          <li><a href="https://page.line.me/574beals" target="_blank" rel="noopener noreferrer" class="sitemap-link -child">電子パンフレット</a></li>
           <li><a href="/news/" class="sitemap-link -child">全体のお知らせ</a></li>
         </ul>
       </li>
@@ -131,10 +131,10 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
           <a href="/admission/" class="sitemap-link -parent">入学案内</a>
         </div>
         <ul class="sitemap-child-grid">
-          <li><a href="/pdf/bosyu_iryo.pdf" target="_blank" rel="noopener noreferrer" class="sitemap-link -child">募集要項［PDF］</a></li>
+          <li><a href="https://www.hiramatsu.ac.jp/wp-content/themes/hiramatsu/pdf/bosyu_iryo.pdf" target="_blank" rel="noopener noreferrer" class="sitemap-link -child">募集要項［PDF］</a></li>
           <li><a href="/admission/tuition/" class="sitemap-link -child">学費のご案内</a></li>
           <li><a href="/admission/tuition-support/" class="sitemap-link -child">学費サポート</a></li>
-          <li><a href="/admission/documents/" class="sitemap-link -child">出願書類ダウンロード</a></li>
+          <li><a href="https://www.hiramatsu.ac.jp/admissions" target="_blank" rel="noopener noreferrer" class="sitemap-link -child">出願書類ダウンロード</a></li>
         </ul>
       </li>
 

@@ -14,7 +14,7 @@
               <li><a href="/school/history/">沿革</a></li>
               <li><a href="/school/facilities/">学内施設</a></li>
               <li><a href="/school/faq/">よくある質問</a></li>
-              <li><a href="/school/pamphlet/">デジタルパンフレット</a></li>
+              <li><a href="https://page.line.me/574beals" target="_blank" rel="noopener noreferrer">デジタルパンフレット</a></li>
               <li><a href="/news/">全体のお知らせ</a></li>
             </ul>
           </div>
@@ -83,8 +83,8 @@
           <div class="nav-group">
             <h3 class="nav-heading"><a href="/admission/">入学案内</a></h3>
             <ul>
-              <li><a href="/pdf/bosyu_iryo.pdf" target="_blank" rel="noopener noreferrer">募集要項［PDF］</a></li>
-              <li><a href="/admission/documents/">出願書類ダウンロード</a></li>
+              <li><a href="https://www.hiramatsu.ac.jp/wp-content/themes/hiramatsu/pdf/bosyu_iryo.pdf" target="_blank" rel="noopener noreferrer">募集要項［PDF］</a></li>
+              <li><a href="https://www.hiramatsu.ac.jp/admissions" target="_blank" rel="noopener noreferrer">出願書類ダウンロード</a></li>
               <li><a href="/admission/tuition/">学費のご案内</a></li>
               <li><a href="/admission/tuition-support/">学費サポート</a></li>
               <li><a href="/admission/life-support/">生活サポート</a></li>
