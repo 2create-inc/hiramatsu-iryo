@@ -168,15 +168,15 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       <!-- Googleマップ埋め込みエリア（大きな角丸枠） -->
       <div class="school-access-map">
         <!-- Google Map iframe埋め込み例（レスポンシブ対応） -->
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3337.2889279024845!2d131.6030999!3d33.2327599!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35469f70d10d19bd%3A0x86bb8cf226b8964e!2z44CSODcwLTAwMzMg5aSnIeeUu-eCsumDveaCg-mDveWNg-S7o-eAuu-8keS4gTEtMjc!5e0!3m2!1sja!2sjp!4v1710000000000!5m2!1sja!2sjp" width="600" height="450" title="大分医学技術専門学校 アクセスマップ" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1668.457208759509!2d131.60526235687263!3d33.24254543662727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35469fb8b642bf35%3A0xd81e5f31d3382fa6!2z5aSn5YiG5Yy75a2m5oqA6KGT5bCC6ZaA5a2m5qCh!5e0!3m2!1sja!2sjp!4v1795740518148!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
       </div>
 
       <!-- 住所・連絡先テキストブロック -->
       <div class="school-access-info">
         <h3 class="school-access-info__name">大分医学技術専門学校</h3>
         <p class="school-access-info__detail">
-          <span class="address">〒870-0033 大分県大分市千代町1丁目1-27</span>
-          <span class="contact">TEL 097-535-0201 / FAX 097-573-3366</span>
+          <span class="address">〒870-0033 大分県大分市千代町1丁目1-10</span>
+          <span class="contact">TEL 097-535-0201 / FAX 097-538-8787</span>
         </p>
       </div>
 
