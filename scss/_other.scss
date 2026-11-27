@@ -188,6 +188,283 @@
   }
 }
 
+/* -----------------------------------------
+   追加：個人情報保護方針（2026.11改訂）用スタイル
+   ----------------------------------------- */
+
+/* 条文タイトル直下以外の本文段落の余白調整 */
+.privacy-article__intro:last-child {
+  margin-bottom: 0;
+}
+
+/* 表の直後の段落（表との間隔を確保） */
+.privacy-article__after-table {
+  margin-top: 24px;
+
+  @include mobile-fablet {
+    margin-top: 20px;
+  }
+}
+
+/* 2桁の番号（10.〜18.）がある番号付きリスト：番号幅を広げて本文の頭を揃える */
+.privacy-ol.-wide {
+  li .num {
+    width: 32px;
+  }
+
+  @include mobile-fablet {
+    li .num {
+      width: 28px;
+    }
+  }
+}
+
+/* -----------------------------------------
+   SUB TITLE (条文内の小見出し：第三者提供／業務委託／共同利用)
+   ----------------------------------------- */
+.privacy-article__subtitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #000000;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  margin: 28px 0 12px;
+  padding-left: 12px;
+  border-left: 4px solid #c5dc68; /* ライムグリーン */
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+
+  @include mobile-fablet {
+    font-size: 0.925rem;
+    margin: 22px 0 10px;
+  }
+}
+
+/* -----------------------------------------
+   BULLET LIST (中ポツ箇条書き)
+   ----------------------------------------- */
+.privacy-ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  li {
+    position: relative;
+    padding-left: 1.2em;
+    font-size: 0.925rem;
+    font-weight: 500;
+    line-height: 1.8;
+    color: #333333;
+    letter-spacing: 0.01em;
+
+    &::before {
+      content: "・";
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include mobile-fablet {
+    gap: 8px;
+
+    li {
+      font-size: 0.85rem;
+      line-height: 1.7;
+    }
+  }
+}
+
+/* -----------------------------------------
+   DEFINITION LIST (安全管理措置：見出し語＋説明)
+   ----------------------------------------- */
+.privacy-dl {
+  margin: 0 0 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  .privacy-dl__row {
+    display: flex;
+    align-items: flex-start;
+    font-size: 0.925rem;
+    line-height: 1.8;
+    color: #333333;
+    letter-spacing: 0.01em;
+  }
+
+  dt {
+    width: 9em;
+    flex-shrink: 0;
+    font-weight: 700;
+    color: #000000;
+  }
+
+  dd {
+    flex: 1;
+    margin: 0;
+    font-weight: 500;
+  }
+
+  @include mobile-fablet {
+    gap: 14px;
+
+    .privacy-dl__row {
+      flex-direction: column;
+      font-size: 0.85rem;
+      line-height: 1.7;
+    }
+
+    dt {
+      width: auto;
+    }
+  }
+}
+
+/* -----------------------------------------
+   TABLE (表：対象者／共同利用)
+   デザインカンプ準拠：左列＝グレー背景＋太字、ヘッダー左セルのみグレー
+   ----------------------------------------- */
+.privacy-table-wrap {
+  width: 100%;
+  margin: 8px 0 0;
+}
+
+.privacy-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #dcdcdc;
+  table-layout: fixed;
+  background-color: #ffffff;
+
+  th,
+  td {
+    border: 1px solid #dcdcdc;
+    padding: 20px 28px;
+    font-size: 0.925rem;
+    line-height: 1.8;
+    letter-spacing: 0.01em;
+    vertical-align: middle;
+  }
+
+  /* ヘッダー行：中央寄せ・太字 */
+  thead th {
+    text-align: center;
+    font-weight: 700;
+    color: #000000;
+    background-color: #ffffff;
+    padding-top: 18px;
+    padding-bottom: 18px;
+
+    &:first-child {
+      width: 31%;
+      background-color: #f4f4f4;
+    }
+  }
+
+  /* 左列（項目名）：グレー背景・太字・左寄せ */
+  tbody th {
+    width: 31%;
+    text-align: left;
+    font-weight: 700;
+    color: #000000;
+    background-color: #f4f4f4;
+  }
+
+  /* 左列内の折り返し位置の指定（SPで「む）」だけが孤立しないように） */
+  .nw {
+    white-space: nowrap;
+  }
+
+  /* 右列（内容） */
+  tbody td {
+    font-weight: 500;
+    color: #333333;
+    text-align: left;
+  }
+
+  @include mobile-fablet {
+    th,
+    td {
+      padding: 14px 12px;
+      font-size: 0.8rem;
+      line-height: 1.7;
+    }
+
+    thead th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+
+      &:first-child {
+        width: 34%;
+      }
+    }
+
+    tbody th {
+      width: 34%;
+    }
+  }
+}
+
+/* -----------------------------------------
+   CONTACT BOX (お問い合わせ窓口)
+   ----------------------------------------- */
+.privacy-contact-box {
+  padding: 28px 32px;
+  background-color: #f7f7f7;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  p {
+    margin: 0;
+    font-size: 0.925rem;
+    font-weight: 500;
+    line-height: 1.8;
+    color: #333333;
+  }
+
+  .privacy-contact-box__name {
+    font-weight: 700;
+    color: #000000;
+  }
+
+  @include mobile-fablet {
+    padding: 20px 18px;
+    border-radius: 14px;
+
+    p {
+      font-size: 0.85rem;
+      line-height: 1.7;
+    }
+  }
+}
+
+/* -----------------------------------------
+   制定日
+   ----------------------------------------- */
+.privacy-date {
+  margin: 8px 0 0;
+  text-align: right;
+  font-size: 0.925rem;
+  font-weight: 500;
+  color: #333333;
+
+  @include mobile-fablet {
+    font-size: 0.85rem;
+  }
+}
+
 /* ==========================================================================
    SITEMAP PAGE (サイトマップ)
    ========================================================================== */

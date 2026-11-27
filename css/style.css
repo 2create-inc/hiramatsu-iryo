@@ -13628,6 +13628,270 @@ body {
   color: #555555;
 }
 
+/* -----------------------------------------
+   追加：個人情報保護方針（2026.11改訂）用スタイル
+   ----------------------------------------- */
+/* 条文タイトル直下以外の本文段落の余白調整 */
+.privacy-article__intro:last-child {
+  margin-bottom: 0;
+}
+
+/* 表の直後の段落（表との間隔を確保） */
+.privacy-article__after-table {
+  margin-top: 24px;
+}
+@media screen and (max-width: 767px) {
+  .privacy-article__after-table {
+    margin-top: 20px;
+  }
+}
+
+/* 2桁の番号（10.〜18.）がある番号付きリスト：番号幅を広げて本文の頭を揃える */
+.privacy-ol.-wide li .num {
+  width: 32px;
+}
+@media screen and (max-width: 767px) {
+  .privacy-ol.-wide li .num {
+    width: 28px;
+  }
+}
+
+/* -----------------------------------------
+   SUB TITLE (条文内の小見出し：第三者提供／業務委託／共同利用)
+   ----------------------------------------- */
+.privacy-article__subtitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #000000;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  margin: 28px 0 12px;
+  padding-left: 12px;
+  border-left: 4px solid #c5dc68; /* ライムグリーン */
+}
+.privacy-article__subtitle:first-of-type {
+  margin-top: 0;
+}
+@media screen and (max-width: 767px) {
+  .privacy-article__subtitle {
+    font-size: 0.925rem;
+    margin: 22px 0 10px;
+  }
+}
+
+/* -----------------------------------------
+   BULLET LIST (中ポツ箇条書き)
+   ----------------------------------------- */
+.privacy-ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.privacy-ul li {
+  position: relative;
+  padding-left: 1.2em;
+  font-size: 0.925rem;
+  font-weight: 500;
+  line-height: 1.8;
+  color: #333333;
+  letter-spacing: 0.01em;
+}
+.privacy-ul li::before {
+  content: "・";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.privacy-ul:last-child {
+  margin-bottom: 0;
+}
+@media screen and (max-width: 767px) {
+  .privacy-ul {
+    gap: 8px;
+  }
+  .privacy-ul li {
+    font-size: 0.85rem;
+    line-height: 1.7;
+  }
+}
+
+/* -----------------------------------------
+   DEFINITION LIST (安全管理措置：見出し語＋説明)
+   ----------------------------------------- */
+.privacy-dl {
+  margin: 0 0 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.privacy-dl .privacy-dl__row {
+  display: flex;
+  align-items: flex-start;
+  font-size: 0.925rem;
+  line-height: 1.8;
+  color: #333333;
+  letter-spacing: 0.01em;
+}
+.privacy-dl dt {
+  width: 9em;
+  flex-shrink: 0;
+  font-weight: 700;
+  color: #000000;
+}
+.privacy-dl dd {
+  flex: 1;
+  margin: 0;
+  font-weight: 500;
+}
+@media screen and (max-width: 767px) {
+  .privacy-dl {
+    gap: 14px;
+  }
+  .privacy-dl .privacy-dl__row {
+    flex-direction: column;
+    font-size: 0.85rem;
+    line-height: 1.7;
+  }
+  .privacy-dl dt {
+    width: auto;
+  }
+}
+
+/* -----------------------------------------
+   TABLE (表：対象者／共同利用)
+   デザインカンプ準拠：左列＝グレー背景＋太字、ヘッダー左セルのみグレー
+   ----------------------------------------- */
+.privacy-table-wrap {
+  width: 100%;
+  margin: 8px 0 0;
+}
+
+.privacy-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #dcdcdc;
+  table-layout: fixed;
+  background-color: #ffffff;
+}
+.privacy-table th,
+.privacy-table td {
+  border: 1px solid #dcdcdc;
+  padding: 20px 28px;
+  font-size: 0.925rem;
+  line-height: 1.8;
+  letter-spacing: 0.01em;
+  vertical-align: middle;
+}
+.privacy-table {
+  /* ヘッダー行：中央寄せ・太字 */
+}
+.privacy-table thead th {
+  text-align: center;
+  font-weight: 700;
+  color: #000000;
+  background-color: #ffffff;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+.privacy-table thead th:first-child {
+  width: 31%;
+  background-color: #f4f4f4;
+}
+.privacy-table {
+  /* 左列（項目名）：グレー背景・太字・左寄せ */
+}
+.privacy-table tbody th {
+  width: 31%;
+  text-align: left;
+  font-weight: 700;
+  color: #000000;
+  background-color: #f4f4f4;
+}
+.privacy-table {
+  /* 左列内の折り返し位置の指定（SPで「む）」だけが孤立しないように） */
+}
+.privacy-table .nw {
+  white-space: nowrap;
+}
+.privacy-table {
+  /* 右列（内容） */
+}
+.privacy-table tbody td {
+  font-weight: 500;
+  color: #333333;
+  text-align: left;
+}
+@media screen and (max-width: 767px) {
+  .privacy-table th,
+  .privacy-table td {
+    padding: 14px 12px;
+    font-size: 0.8rem;
+    line-height: 1.7;
+  }
+  .privacy-table thead th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  .privacy-table thead th:first-child {
+    width: 34%;
+  }
+  .privacy-table tbody th {
+    width: 34%;
+  }
+}
+
+/* -----------------------------------------
+   CONTACT BOX (お問い合わせ窓口)
+   ----------------------------------------- */
+.privacy-contact-box {
+  padding: 28px 32px;
+  background-color: #f7f7f7;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.privacy-contact-box p {
+  margin: 0;
+  font-size: 0.925rem;
+  font-weight: 500;
+  line-height: 1.8;
+  color: #333333;
+}
+.privacy-contact-box .privacy-contact-box__name {
+  font-weight: 700;
+  color: #000000;
+}
+@media screen and (max-width: 767px) {
+  .privacy-contact-box {
+    padding: 20px 18px;
+    border-radius: 14px;
+  }
+  .privacy-contact-box p {
+    font-size: 0.85rem;
+    line-height: 1.7;
+  }
+}
+
+/* -----------------------------------------
+   制定日
+   ----------------------------------------- */
+.privacy-date {
+  margin: 8px 0 0;
+  text-align: right;
+  font-size: 0.925rem;
+  font-weight: 500;
+  color: #333333;
+}
+@media screen and (max-width: 767px) {
+  .privacy-date {
+    font-size: 0.85rem;
+  }
+}
+
 /* ==========================================================================
    SITEMAP PAGE (サイトマップ)
    ========================================================================== */
@@ -13875,6 +14139,4 @@ body {
   .sitemap-group-title {
     font-size: 1rem;
   }
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
