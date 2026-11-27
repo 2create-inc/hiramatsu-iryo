@@ -7,13 +7,13 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
 
 
 <section class="section-page-mv" id="js-mv">
-<div class="page-header">
-  <h1><span class="en">Contact</span>お問い合わせ</h1>
-  <ul class="pankuzu-list">
-    <li><a href="/">HOME</a></li>
-    <li>お問い合わせ</li>
-  </ul>
-</div>
+  <div class="page-header">
+    <h1><span class="en">Contact</span>お問い合わせ</h1>
+    <ul class="pankuzu-list">
+      <li><a href="/">HOME</a></li>
+      <li>お問い合わせ</li>
+    </ul>
+  </div>
 </section>
 
 
@@ -114,7 +114,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
           <span class="form-label__title">最終学歴</span>
           <span class="form-label__badge -required">必須</span>
         </label>
-        <input type="text" name="education" id="contact-education" class="form-input" placeholder="例：" required>
+        <input type="text" name="education" id="contact-education" class="form-input" placeholder="例：〇〇高校 普通科 卒業見込み ／ 〇〇大学 〇〇学部 卒業" required>
       </div>
 
       <!-- 8. お問い合わせ内容 -->

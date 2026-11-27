@@ -43,7 +43,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       </a>
 
       <!-- 3. 授業・勉強内容について -->
-      <a href="#faq-cat04" class="facilities-card">
+      <a href="#faq-cat03" class="facilities-card">
         <div class="facilities-card__text">
           <h3 class="facilities-card__name">授業・勉強内容について</h3>
         </div>
@@ -67,7 +67,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/header.php';
       </a> -->
 
       <!-- 6. 就職について -->
-      <a href="#faq-cat06" class="facilities-card ">
+      <a href="#faq-cat05" class="facilities-card">
 
         <div class="facilities-card__text">
           <h3 class="facilities-card__name">就職について</h3>

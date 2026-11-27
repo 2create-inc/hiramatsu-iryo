@@ -148,7 +148,7 @@
 
         <nav class="footer__sub-nav" aria-label="フッター補助ナビゲーション">
           <ul class="footer__sub-list">
-            <li><a href="#">学園概要（事業・財務報告等）</a></li>
+            <li><a href="https://www.hiramatsu.ac.jp/report" target="_blank" rel="noopener noreferrer">学園概要（事業・財務報告等）</a></li>
             <li><a href="/privacypolicy/">プライバシーポリシー</a></li>
             <li><a href="/sitemap/">サイトマップ</a></li>
           </ul>
